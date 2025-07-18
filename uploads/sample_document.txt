@@ -1,0 +1,14 @@
+Monthly Recurring Revenue (MRR): ₹3,50,000
+Burn Rate: ₹1,20,000
+Runway (in Months): 15.5 months
+Gross Margin (%): 72%
+MRR Growth Rate: 8%
+User Growth Rate: 10%
+Trial-to-Paid Conversion Rate: 22%
+Customer Acquisition Cost (CAC): ₹15,000
+Customer Lifetime Value (CLV): ₹60,000
+CAC-to-CLV Ratio: 4.0
+Customer Churn Rate: 3%
+Net Revenue Retention (NRR): 115%
+Onboarding Completion Rate: 85%
+Founder Commitment: Full-Time

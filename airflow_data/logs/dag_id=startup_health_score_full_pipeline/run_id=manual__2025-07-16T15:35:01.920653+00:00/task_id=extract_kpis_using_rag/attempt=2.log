@@ -1,0 +1,238 @@
+[2025-07-17T00:02:02.665+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-17T00:02:02.676+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-16T15:35:01.920653+00:00 [queued]>
+[2025-07-17T00:02:02.680+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-16T15:35:01.920653+00:00 [queued]>
+[2025-07-17T00:02:02.680+0530] {taskinstance.py:2884} INFO - Starting attempt 2 of 2
+[2025-07-17T00:02:02.686+0530] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): extract_kpis_using_rag> on 2025-07-16 15:35:01.920653+00:00
+[2025-07-17T00:02:02.695+0530] {standard_task_runner.py:72} INFO - Started process 3617 to run task
+[2025-07-17T00:02:02.702+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'startup_health_score_full_pipeline', 'extract_kpis_using_rag', 'manual__2025-07-16T15:35:01.920653+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/var/folders/gm/brh165c568qf0d9ggn2qd6zr0000gn/T/tmpcrnvgu9p']
+[2025-07-17T00:02:02.704+0530] {standard_task_runner.py:105} INFO - Job 7: Subtask extract_kpis_using_rag
+[2025-07-17T00:02:02.730+0530] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-16T15:35:01.920653+00:00 [running]> on host parths-macbook-air.local
+[2025-07-17T00:02:02.761+0530] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='extract_kpis_using_rag' AIRFLOW_CTX_EXECUTION_DATE='2025-07-16T15:35:01.920653+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-16T15:35:01.920653+00:00'
+[2025-07-17T00:02:02.762+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-07-17T00:02:02.763+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-07-17T00:02:02.763+0530] {logging_mixin.py:190} INFO - Current task name:extract_kpis_using_rag state:running start_date:2025-07-16 18:32:02.676529+00:00
+[2025-07-17T00:02:02.763+0530] {logging_mixin.py:190} INFO - Dag name:startup_health_score_full_pipeline and current dag run status:running
+[2025-07-17T00:02:02.764+0530] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-17T00:02:02.769+0530] {config_loader.py:43} INFO - Successfully loaded configuration from /Users/parth/Desktop/Engine/config/kpi_benchmarks.json
+[2025-07-17T00:02:02.770+0530] {kpi_rag_extractor.py:36} INFO - Loading Hugging Face model: google/flan-t5-large to CPU.
+[2025-07-17T00:02:14.373+0530] {kpi_rag_extractor.py:40} INFO - Hugging Face model loaded successfully on device: cpu.
+[2025-07-17T00:02:14.377+0530] {kpi_rag_extractor.py:27} INFO - KPIRAGExtractor initialized.
+[2025-07-17T00:10:07.484+0530] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-17T00:10:07.613+0530] {process_utils.py:132} INFO - Sending 15 to group 3617. PIDs of all processes in the group: [3617]
+[2025-07-17T00:10:07.623+0530] {process_utils.py:87} INFO - Sending the signal 15 to group 3617
+[2025-07-17T00:10:27.743+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-17T00:10:27.755+0530] {taskinstance.py:2621} INFO - Dependencies not met for <TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-16T15:35:01.920653+00:00 [running]>, dependency 'Task Instance State' FAILED: Task is in the 'running' state.
+[2025-07-17T00:10:27.761+0530] {taskinstance.py:2621} INFO - Dependencies not met for <TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-16T15:35:01.920653+00:00 [running]>, dependency 'Task Instance Not Running' FAILED: Task is in the running state
+[2025-07-17T00:10:27.766+0530] {local_task_job_runner.py:166} INFO - Task is not able to be run
+[2025-07-17T00:10:39.257+0530] {taskinstance.py:3117} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-07-17T00:10:40.083+0530] {taskinstance.py:3118} ERROR - Stacktrace: 
+  File "/Users/parth/Desktop/Engine/venv/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/__main__.py", line 62, in main
+    args.func(args)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py", line 107, in _extract_kpis_rag
+    kpi_dict = rag_extractor.extract_kpis(raw_text) # No await needed
+  File "/Users/parth/Desktop/Engine/src/core/kpi_rag_extractor.py", line 122, in extract_kpis
+    llm_output = text_generator(prompt)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/text2text_generation.py", line 167, in __call__
+    result = super().__call__(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/base.py", line 1254, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/base.py", line 1261, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/base.py", line 1161, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/text2text_generation.py", line 191, in _forward
+    output_ids = self.model.generate(**model_inputs, **generate_kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/generation/utils.py", line 1696, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/generation/utils.py", line 539, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 1106, in forward
+    layer_outputs = layer_module(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 686, in forward
+    self_attention_outputs = self.layer[0](
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 593, in forward
+    attention_output = self.SelfAttention(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 553, in forward
+    attn_weights = nn.functional.softmax(scores.float(), dim=-1).type_as(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/functional.py", line 1885, in softmax
+    ret = input.softmax(dim)
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3118, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-07-17T00:10:41.662+0530] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py", line 107, in _extract_kpis_rag
+    kpi_dict = rag_extractor.extract_kpis(raw_text) # No await needed
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/src/core/kpi_rag_extractor.py", line 122, in extract_kpis
+    llm_output = text_generator(prompt)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/text2text_generation.py", line 167, in __call__
+    result = super().__call__(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/base.py", line 1254, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/base.py", line 1261, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/base.py", line 1161, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/pipelines/text2text_generation.py", line 191, in _forward
+    output_ids = self.model.generate(**model_inputs, **generate_kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/generation/utils.py", line 1696, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/generation/utils.py", line 539, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 1106, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 686, in forward
+    self_attention_outputs = self.layer[0](
+                             ^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 593, in forward
+    attention_output = self.SelfAttention(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/transformers/models/t5/modeling_t5.py", line 553, in forward
+    attn_weights = nn.functional.softmax(scores.float(), dim=-1).type_as(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/torch/nn/functional.py", line 1885, in softmax
+    ret = input.softmax(dim)
+          ^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3120, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-07-17T00:10:41.856+0530] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-07-17T00:10:41.867+0530] {logging_mixin.py:190} INFO - Task start:2025-07-16 18:32:02.676529+00:00 end:2025-07-16 18:40:41.761561+00:00 duration:519.085032
+[2025-07-17T00:10:41.882+0530] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): extract_kpis_using_rag> dag:<DAG: startup_health_score_full_pipeline> dagrun:<DagRun startup_health_score_full_pipeline @ 2025-07-16 15:35:01.920653+00:00: manual__2025-07-16T15:35:01.920653+00:00, state:running, queued_at: 2025-07-16 15:35:01.929689+00:00. externally triggered: True>
+[2025-07-17T00:10:41.882+0530] {logging_mixin.py:190} INFO - Failure caused by Task received SIGTERM signal
+[2025-07-17T00:10:41.883+0530] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=startup_health_score_full_pipeline, task_id=extract_kpis_using_rag, run_id=manual__2025-07-16T15:35:01.920653+00:00, execution_date=20250716T153501, start_date=20250716T183202, end_date=20250716T184041
+[2025-07-17T00:10:42.165+0530] {taskinstance.py:349} INFO - ::group::Post task execution logs

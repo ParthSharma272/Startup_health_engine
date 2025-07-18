@@ -1,0 +1,114 @@
+[
+  {
+    "kpi": "Monthly Recurring Revenue (MRR)",
+    "normalization": "log_scale",
+    "formula": "log(value+1) / log(10000000+1) * 100",
+    "params": {"max_MRR": 10000000},
+    "benchmark": "Only ~14 Indian SaaS have reached $100M ARR (≈INR 8M MRR); log-scale handles wide range.",
+    "source": "BVP Atlas: Rise of SaaS in India"
+  },
+  {
+    "kpi": "Burn Rate",
+    "normalization": "inverse_scaling",
+    "formula": "500000 / (value + 500000) * 100",
+    "params": {"reference_Burn": 500000},
+    "benchmark": "Indian SaaS often run with high capital efficiency; lean operations typical.",
+    "source": "BVP: Rise of SaaS in India"
+  },
+  {
+    "kpi": "Runway (in Months)",
+    "normalization": "linear_capped",
+    "formula": "min(value / 18 * 100, 100)",
+    "params": {"target_Runway": 18},
+    "benchmark": "12–18 months runway is standard in India.",
+    "source": "McKinsey: Turning India into a SaaS Power"
+  },
+  {
+    "kpi": "Gross Margin (%)",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
+    "params": {},
+    "benchmark": "Indian SaaS typically see 70–80% margins.",
+    "source": "India SaaS Survey"
+  },
+  {
+    "kpi": "MRR Growth Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
+    "params": {},
+    "benchmark": "Indian SaaS target 50–70% YoY growth; global median ~30%.",
+    "source": "Bain & McKinsey: Rule of 40"
+  },
+  {
+    "kpi": "User Growth Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
+    "params": {},
+    "benchmark": "Sequoia Surge recommends fast user expansion (20–50%).",
+    "source": "Sequoia Surge"
+  },
+  {
+    "kpi": "Net Revenue Retention (NRR)",
+    "normalization": "linear_capped",
+    "formula": "min(value / 120 * 100, 100)",
+    "params": {"target_NRR": 120},
+    "benchmark": "Top Indian SaaS report NRR in 120–130% range.",
+    "source": "BCG India: Lean Scaling"
+  },
+  {
+    "kpi": "Customer Churn Rate",
+    "normalization": "reverse_scaling",
+    "formula": "100 - value",
+    "params": {},
+    "benchmark": "Annual churn <10% (enterprise) or <5% (SMB); 5% monthly = danger zone.",
+    "source": "Stellaris: How Founders Assess Churn"
+  },
+  {
+    "kpi": "Customer Acquisition Cost (CAC)",
+    "normalization": "inverse_scaling",
+    "formula": "50000 / (value + 50000) * 100",
+    "params": {"reference_CAC": 50000},
+    "benchmark": "Product-led SaaS aim for CAC < ₹50k.",
+    "source": "Sequoia / Tracxn CRM Analysis"
+  },
+  {
+    "kpi": "Customer Lifetime Value (CLV)",
+    "normalization": "log_scale",
+    "formula": "log(value+1) / log(10000000+1) * 100",
+    "params": {"max_CLV": 10000000},
+    "benchmark": "Median customer lifetime ~24 months.",
+    "source": "India SaaS Survey"
+  },
+  {
+    "kpi": "CAC-to-CLV Ratio",
+    "normalization": "linear_capped",
+    "formula": "min((value)/3 * 100, 100)",
+    "params": {"target_ratio": 3},
+    "benchmark": "Ideal benchmark is 3:1 LTV:CAC.",
+    "source": "BCG India & Bain"
+  },
+  {
+    "kpi": "Trial-to-Paid Conversion Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
+    "params": {},
+    "benchmark": "Average B2B SaaS conversions ~14–25%.",
+    "source": "ChartMogul / Global SaaS Reports"
+  },
+  {
+    "kpi": "Onboarding Completion Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
+    "params": {},
+    "benchmark": "Strong onboarding correlates with lower churn.",
+    "source": "BCG India: Lean Scaling"
+  },
+  {
+    "kpi": "Founder Commitment",
+    "normalization": "predefined",
+    "formula": "Full-Time: 100, Part-Time: 50, Not Involved: 0",
+    "params": {"Full-Time": 100, "Part-Time": 50, "Not Involved": 0},
+    "benchmark": "Strong founder involvement leads to better outcomes.",
+    "source": "Sequoia Surge"
+  }
+]

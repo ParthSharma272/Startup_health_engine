@@ -1,0 +1,71 @@
+[2025-07-17T00:12:56.434+0530] {processor.py:186} INFO - Started process (PID=8264) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:12:56.435+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:12:56.435+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.435+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:12:56.460+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:12:56.569+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.568+0530] {override.py:1930} INFO - Created Permission View: can read on DAG:example_display_name
+[2025-07-17T00:12:56.574+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.574+0530] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_display_name
+[2025-07-17T00:12:56.577+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.577+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_display_name
+[2025-07-17T00:12:56.582+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.582+0530] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_display_name
+[2025-07-17T00:12:56.585+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.585+0530] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_display_name
+[2025-07-17T00:12:56.589+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.589+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_display_name
+[2025-07-17T00:12:56.592+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.592+0530] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_display_name
+[2025-07-17T00:12:56.592+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.592+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:12:56.648+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.648+0530] {dag.py:3262} INFO - Creating ORM DAG for example_display_name
+[2025-07-17T00:12:56.649+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:56.649+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:12:56.658+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.227 seconds
+[2025-07-17T00:15:39.074+0530] {processor.py:186} INFO - Started process (PID=9337) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:15:39.075+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:15:39.076+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:15:39.076+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:15:39.100+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:15:39.158+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:15:39.158+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:15:39.165+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:15:39.165+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:15:39.176+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.105 seconds
+[2025-07-17T00:20:47.350+0530] {processor.py:186} INFO - Started process (PID=11398) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:20:47.351+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:20:47.352+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:20:47.352+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:20:47.379+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:20:47.444+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:20:47.444+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:20:47.451+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:20:47.451+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:20:47.463+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.115 seconds
+[2025-07-17T00:25:07.625+0530] {processor.py:186} INFO - Started process (PID=13274) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:25:07.626+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:25:07.627+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:25:07.627+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:25:07.655+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:25:07.721+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:25:07.721+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:25:07.729+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:25:07.729+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:25:07.742+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.120 seconds
+[2025-07-17T00:29:09.239+0530] {processor.py:186} INFO - Started process (PID=14885) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:29:09.240+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:29:09.241+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:29:09.241+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:29:09.266+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:29:09.324+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:29:09.324+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:29:09.332+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:29:09.332+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:29:09.343+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.106 seconds
+[2025-07-17T00:32:54.026+0530] {processor.py:186} INFO - Started process (PID=16358) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:32:54.027+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:32:54.028+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:32:54.027+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:32:54.052+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:32:54.110+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:32:54.110+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:32:54.116+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:32:54.116+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:32:54.127+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.104 seconds
+[2025-07-17T00:36:57.214+0530] {processor.py:186} INFO - Started process (PID=17942) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:36:57.215+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:36:57.216+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:36:57.216+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:36:57.244+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:36:57.309+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:36:57.309+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:36:57.316+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:36:57.316+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:36:57.328+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.117 seconds
+[2025-07-17T00:41:21.682+0530] {processor.py:186} INFO - Started process (PID=19729) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:41:21.683+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:41:21.684+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:41:21.683+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:41:21.716+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:41:21.777+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:41:21.777+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:41:21.784+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:41:21.784+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:41:21.796+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.117 seconds
+[2025-07-17T00:45:38.280+0530] {processor.py:186} INFO - Started process (PID=21400) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:45:38.281+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py for tasks to queue
+[2025-07-17T00:45:38.282+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:45:38.282+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:45:38.312+0530] {processor.py:925} INFO - DAG(s) 'example_display_name' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py
+[2025-07-17T00:45:38.384+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:45:38.384+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:45:38.393+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:45:38.392+0530] {dag.py:4180} INFO - Setting next_dagrun for example_display_name to None, run_after=None
+[2025-07-17T00:45:38.407+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_display_name.py took 0.130 seconds

@@ -1,0 +1,71 @@
+[2025-07-17T00:13:22.767+0530] {processor.py:186} INFO - Started process (PID=8442) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:13:22.768+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:13:22.768+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.768+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:13:22.776+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:13:22.900+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.900+0530] {override.py:1930} INFO - Created Permission View: can read on DAG:example_branch_labels
+[2025-07-17T00:13:22.906+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.905+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_branch_labels
+[2025-07-17T00:13:22.909+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.909+0530] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_branch_labels
+[2025-07-17T00:13:22.914+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.914+0530] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_branch_labels
+[2025-07-17T00:13:22.917+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.917+0530] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_branch_labels
+[2025-07-17T00:13:22.921+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.921+0530] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_branch_labels
+[2025-07-17T00:13:22.925+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.925+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_branch_labels
+[2025-07-17T00:13:22.926+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.925+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:13:22.933+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.933+0530] {dag.py:3262} INFO - Creating ORM DAG for example_branch_labels
+[2025-07-17T00:13:22.938+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:22.938+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:13:22.948+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.184 seconds
+[2025-07-17T00:17:41.261+0530] {processor.py:186} INFO - Started process (PID=10131) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:17:41.262+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:17:41.263+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:17:41.263+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:17:41.269+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:17:41.332+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:17:41.332+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:17:41.344+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:17:41.344+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:17:41.355+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.096 seconds
+[2025-07-17T00:23:03.390+0530] {processor.py:186} INFO - Started process (PID=12430) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:23:03.392+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:23:03.393+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:23:03.393+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:23:03.401+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:23:03.470+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:23:03.469+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:23:03.484+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:23:03.484+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:23:03.496+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.108 seconds
+[2025-07-17T00:27:00.174+0530] {processor.py:186} INFO - Started process (PID=14047) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:27:00.176+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:27:00.177+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:27:00.176+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:27:00.183+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:27:00.244+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:27:00.244+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:27:00.255+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:27:00.255+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:27:00.266+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.094 seconds
+[2025-07-17T00:31:01.299+0530] {processor.py:186} INFO - Started process (PID=15628) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:31:01.300+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:31:01.300+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:31:01.300+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:31:01.306+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:31:01.368+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:31:01.368+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:31:01.380+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:31:01.380+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:31:01.391+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.095 seconds
+[2025-07-17T00:34:50.640+0530] {processor.py:186} INFO - Started process (PID=17124) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:34:50.641+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:34:50.642+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:34:50.642+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:34:50.648+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:34:50.709+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:34:50.709+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:34:50.721+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:34:50.721+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:34:50.731+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.094 seconds
+[2025-07-17T00:38:57.218+0530] {processor.py:186} INFO - Started process (PID=18721) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:38:57.219+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:38:57.220+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:38:57.220+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:38:57.227+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:38:57.289+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:38:57.289+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:38:57.301+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:38:57.301+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:38:57.312+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.096 seconds
+[2025-07-17T00:43:29.875+0530] {processor.py:186} INFO - Started process (PID=20567) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:43:29.876+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:43:29.877+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:43:29.877+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:43:29.883+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:43:29.944+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:43:29.944+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:43:29.955+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:43:29.955+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:43:29.966+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.093 seconds
+[2025-07-17T00:47:32.357+0530] {processor.py:186} INFO - Started process (PID=22128) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:47:32.358+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2025-07-17T00:47:32.359+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:47:32.359+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:47:32.365+0530] {processor.py:925} INFO - DAG(s) 'example_branch_labels' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py
+[2025-07-17T00:47:32.428+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:47:32.428+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:47:32.440+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:47:32.440+0530] {dag.py:4180} INFO - Setting next_dagrun for example_branch_labels to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:47:32.451+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_branch_labels.py took 0.096 seconds

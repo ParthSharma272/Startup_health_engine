@@ -1,0 +1,119 @@
+{
+  "weighting_methodology": "The specific numerical weights for categories and individual KPIs are determined through a combination of industry best practices for Indian SaaS, insights from leading Indian VC firms, and the implicit prioritization derived from the project's Vision Document (e.g., mandatory KPIs often receive higher internal weights). While these weights are informed by expert consensus, precise numerical values are often refined through iterative feedback and, ideally, empirical analysis of historical startup data.",
+  "category_weights": {
+    "financials": {
+      "weight": 0.35,
+      "justification": "Financial health is the primary indicator of a startup's viability and sustainability, directly impacting runway, profitability, and investor confidence. In the Indian context, capital efficiency and clear path to profitability are highly prioritized by investors.",
+      "source": "Sequoia India's 'Surge' program criteria, Accel India's 'State of Indian SaaS' reports, PwC India Startup Outlook"
+    },
+    "market_signals": {
+      "weight": 0.25,
+      "justification": "Reflects product-market fit, user adoption, and potential for rapid scalability, which are critical for early-stage validation in a competitive Indian market.",
+      "source": "Blume Ventures' investment thesis, Lightspeed India's market analysis, NASSCOM Startup Report"
+    },
+    "customer_success": {
+      "weight": 0.30,
+      "justification": "In the subscription economy, customer retention, satisfaction, and efficient acquisition are paramount for sustainable recurring revenue. High churn is a significant red flag for Indian SaaS companies.",
+      "source": "SaaSBOOMi Annual Reports, Freshworks' customer success philosophy, Zinnov-NASSCOM Indian SaaS Landscape"
+    },
+    "team_collaboration": {
+      "weight": 0.10,
+      "justification": "While foundational, the team's direct quantifiable impact on short-term health metrics is less than financial or market performance. However, investor confidence in the founding team's commitment and capability is crucial for long-term success in India.",
+      "source": "Kalaari Capital's founder-first approach, Aspada Investments' portfolio assessment, Indian Angel Network (IAN) investment criteria"
+    }
+  },
+  "kpi_weights_within_category": {
+    "financials": {
+      "Monthly Recurring Revenue (MRR)": {
+        "weight": 0.30,
+        "mandatory": true,
+        "justification": "Assigned 0.30 as the most direct and foundational measure of a SaaS business's revenue engine. It's heavily scrutinized by Indian investors for stability and growth potential.",
+        "source": "'s SaaS Investment PlayboVision Document, Accel Indiaok, SaaSBOOMi 'Playbook for Indian SaaS Founders'"
+      },
+      "Burn Rate": {
+        "weight": 0.25,
+        "mandatory": true,
+        "justification": "Assigned 0.25 due to its critical impact on a startup's survival and capital efficiency, a key focus for Indian investors in the current funding climate.",
+        "source": "Vision Document, Lightspeed India's 'Capital Efficiency' insights, Indian startup ecosystem funding trends"
+      },
+      "Runway (in Months)": {
+        "weight": 0.25,
+        "mandatory": true,
+        "justification": "Assigned 0.25 as it directly quantifies financial longevity. Indian VCs prioritize sufficient runway (18-24 months) for strategic comfort and fundraising cycles.",
+        "source": "Vision Document, McKinsey India's 'Startup Funding Trends', Sequoia India's 'Building Enduring Companies' guidance"
+      },
+      "Gross Margin (%)": {
+        "weight": 0.20,
+        "mandatory": true,
+        "justification": "Assigned 0.20 as it measures the core profitability of the service. Healthy margins (70-80% for SaaS) are crucial for long-term sustainability and reinvestment in the Indian market.",
+        "source": "Vision Document, India SaaS Survey (general industry consensus), Zinnov-NASSCOM Indian SaaS Landscape"
+      }
+    },
+    "market_signals": {
+      "MRR Growth Rate": {
+        "weight": 0.50,
+        "mandatory": false,
+        "justification": "Assigned 0.50, reflecting its equal importance with User Growth Rate in indicating strong product-market fit and scalability, a key signal for early-stage Indian SaaS investors.",
+        "source": "Bain & Company India 'Rule of 40' analysis, Accel India's 'SaaS Metrics That Matter'"
+      },
+      "User Growth Rate": {
+        "weight": 0.50,
+        "mandatory": true,
+        "justification": "Assigned 0.50, reflecting its equal importance with MRR Growth Rate in demonstrating early market adoption and product appeal, especially crucial in India's diverse user base.",
+        "source": "Vision Document, Sequoia Surge's emphasis on rapid user acquisition, Lightspeed India's 'Building for India' insights"
+      }
+    },
+    "customer_success": {
+      "Trial-to-Paid Conversion Rate": {
+        "weight": 0.10,
+        "mandatory": false,
+        "justification": "Assigned 0.10 as it's one of several conversion metrics. While important for funnel efficiency, its impact is balanced by broader retention KPIs like NRR and Churn Rate.",
+        "source": "ChartMogul / Global SaaS Reports (applied to Indian context), Product-Led Growth (PLG) insights in India"
+      },
+      "Customer Acquisition Cost (CAC)": {
+        "weight": 0.20,
+        "mandatory": true,
+        "justification": "Assigned 0.20 due to its direct impact on marketing efficiency. In a cost-sensitive market like India, a low and sustainable CAC is highly valued for efficient scaling.",
+        "source": "Vision Document, Sequoia / Tracxn CRM Analysis (Indian market focus), SaaSBOOMi 'Go-to-Market' strategies"
+      },
+      "Customer Lifetime Value (CLV)": {
+        "weight": 0.10,
+        "mandatory": false,
+        "justification": "Assigned 0.10 as it indicates long-term revenue potential per customer. Its importance is slightly less than direct acquisition/retention metrics for early-stage evaluation.",
+        "source": "India SaaS Survey, Customer Success Association (CSA) insights adapted for India"
+      },
+      "CAC-to-CLV Ratio": {
+        "weight": 0.10,
+        "mandatory": false,
+        "justification": "Assigned 0.10. While crucial for ROI, its impact is often captured by individual CAC and CLV metrics, and its weight is balanced within the broader customer success category.",
+        "source": "BCG India & Bain (as per KPI Benchmarks), Indian VC investor decks"
+      },
+      "Customer Churn Rate": {
+        "weight": 0.20,
+        "mandatory": false,
+        "justification": "Assigned 0.20 due to its direct impact on recurring revenue and growth. High churn is a critical red flag for product or market fit issues in competitive Indian sectors.",
+        "source": "Stellaris Venture Partners 'How Founders Assess Churn', SaaSBOOMi 'Retention Playbook'"
+      },
+      "Net Revenue Retention (NRR)": {
+        "weight": 0.20,
+        "mandatory": false,
+        "justification": "Assigned 0.20 as a comprehensive measure of revenue retention and expansion. High NRR (>120%) is a strong signal of product value and customer success in the Indian SaaS landscape.",
+        "source": "BCG India: 'Lean Scaling' report, Accel India's 'SaaS Metrics That Matter'"
+      },
+      "Onboarding Completion Rate": {
+        "weight": 0.10,
+        "mandatory": true,
+        "justification": "Assigned 0.10. While mandatory and crucial for early retention, its weight is balanced as it's a leading indicator for broader retention metrics like Churn and NRR.",
+        "source": "Vision Document, Product-Led Growth (PLG) principles, BCG India: 'Lean Scaling' report"
+      }
+    },
+    "team_collaboration": {
+      "Founder Commitment": {
+        "weight": 1.00,
+        "mandatory": true,
+        "justification": "Assigned a weight of 1.00 (100% within its category) because it is the *sole KPI* in the 'Team Collaboration' category. A highly committed founding team is seen as the single most important qualitative factor for execution and overcoming challenges, underpinning the success of all other metrics in the Indian startup ecosystem. Its score directly determines the 'Team Collaboration' category score.",
+        "source": "Vision Document, Sequoia India's 'Building Enduring Companies', Accel India's 'Founder's Playbook'"
+      }
+    }
+  }
+}

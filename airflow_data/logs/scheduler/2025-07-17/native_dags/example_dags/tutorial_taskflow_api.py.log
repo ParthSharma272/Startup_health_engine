@@ -1,0 +1,252 @@
+[2025-07-17T07:15:49.961+0530] {processor.py:186} INFO - Started process (PID=23337) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:15:49.962+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:15:49.963+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:15:49.963+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:15:49.987+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:15:50.046+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:15:50.046+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:15:50.052+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:15:50.052+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:15:50.064+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T07:24:20.506+0530] {processor.py:186} INFO - Started process (PID=24341) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:24:20.507+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:24:20.507+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:24:20.507+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:24:20.532+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:24:20.592+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:24:20.591+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:24:20.599+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:24:20.599+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:24:20.610+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.106 seconds
+[2025-07-17T07:26:15.388+0530] {processor.py:186} INFO - Started process (PID=25072) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:26:15.389+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:26:15.390+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:26:15.390+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:26:15.415+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:26:15.474+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:26:15.474+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:26:15.480+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:26:15.480+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:26:15.491+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T07:28:04.097+0530] {processor.py:186} INFO - Started process (PID=25781) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:28:04.098+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:28:04.098+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:28:04.098+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:28:04.122+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:28:04.182+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:28:04.182+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:28:04.188+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:28:04.188+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:28:04.199+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T07:29:47.473+0530] {processor.py:186} INFO - Started process (PID=26443) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:29:47.474+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:29:47.474+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:29:47.474+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:29:47.499+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:29:47.558+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:29:47.557+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:29:47.564+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:29:47.564+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:29:47.574+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T07:31:33.194+0530] {processor.py:186} INFO - Started process (PID=27128) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:31:33.195+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:31:33.195+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:31:33.195+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:31:33.220+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:31:33.279+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:31:33.279+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:31:33.285+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:31:33.285+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:31:33.297+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T07:33:18.974+0530] {processor.py:186} INFO - Started process (PID=27827) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:33:18.975+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:33:18.976+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:33:18.976+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:33:19.000+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:33:19.059+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:33:19.058+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:33:19.065+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:33:19.065+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:33:19.076+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T07:35:08.225+0530] {processor.py:186} INFO - Started process (PID=28551) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:35:08.226+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:35:08.227+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:35:08.227+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:35:08.254+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:35:08.318+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:35:08.318+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:35:08.326+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:35:08.325+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:35:08.339+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.117 seconds
+[2025-07-17T07:37:07.872+0530] {processor.py:186} INFO - Started process (PID=29327) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:37:07.872+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:37:07.873+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:37:07.873+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:37:07.898+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:37:07.957+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:37:07.956+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:37:07.963+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:37:07.963+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:37:07.974+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T07:38:56.359+0530] {processor.py:186} INFO - Started process (PID=30036) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:38:56.360+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:38:56.361+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:38:56.361+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:38:56.387+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:38:56.448+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:38:56.448+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:38:56.454+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:38:56.454+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:38:56.466+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.109 seconds
+[2025-07-17T07:40:50.286+0530] {processor.py:186} INFO - Started process (PID=30786) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:40:50.287+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:40:50.287+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:40:50.287+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:40:50.312+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:40:50.372+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:40:50.371+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:40:50.378+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:40:50.378+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:40:50.390+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.107 seconds
+[2025-07-17T07:42:54.305+0530] {processor.py:186} INFO - Started process (PID=31594) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:42:54.305+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:42:54.306+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:42:54.306+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:42:54.332+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:42:54.390+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:42:54.390+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:42:54.396+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:42:54.396+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:42:54.407+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T07:45:53.055+0530] {processor.py:186} INFO - Started process (PID=32831) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:45:53.056+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:45:53.058+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:45:53.058+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:45:53.115+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:45:53.254+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:45:53.254+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:45:53.270+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:45:53.269+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:45:53.295+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.246 seconds
+[2025-07-17T07:48:13.788+0530] {processor.py:186} INFO - Started process (PID=33875) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:48:13.789+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:48:13.790+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:48:13.790+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:48:13.831+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:48:13.923+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:48:13.923+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:48:13.933+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:48:13.933+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:48:13.950+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.166 seconds
+[2025-07-17T07:50:19.367+0530] {processor.py:186} INFO - Started process (PID=34705) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:50:19.368+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:50:19.368+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:50:19.368+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:50:19.396+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:50:19.464+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:50:19.464+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:50:19.471+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:50:19.471+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:50:19.484+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.119 seconds
+[2025-07-17T07:53:15.169+0530] {processor.py:186} INFO - Started process (PID=35863) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:53:15.169+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:53:15.170+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:53:15.170+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:53:15.197+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:53:15.257+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:53:15.257+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:53:15.264+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:53:15.264+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:53:15.276+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.109 seconds
+[2025-07-17T07:55:46.058+0530] {processor.py:186} INFO - Started process (PID=37019) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:55:46.058+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:55:46.059+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:55:46.059+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:55:46.087+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:55:46.149+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:55:46.149+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:55:46.157+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:55:46.157+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:55:46.171+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.115 seconds
+[2025-07-17T07:57:45.507+0530] {processor.py:186} INFO - Started process (PID=37826) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:57:45.508+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:57:45.509+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:57:45.508+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:57:45.533+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:57:45.592+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:57:45.592+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:57:45.599+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:57:45.599+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:57:45.609+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T07:59:43.552+0530] {processor.py:186} INFO - Started process (PID=38582) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:59:43.553+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T07:59:43.554+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:59:43.554+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:59:43.592+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T07:59:43.671+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:59:43.671+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:59:43.679+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:59:43.679+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T07:59:43.694+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.145 seconds
+[2025-07-17T08:02:01.712+0530] {processor.py:186} INFO - Started process (PID=39476) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:02:01.713+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:02:01.713+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:02:01.713+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:02:01.738+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:02:01.798+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:02:01.797+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:02:01.805+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:02:01.805+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:02:01.817+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.108 seconds
+[2025-07-17T08:04:07.042+0530] {processor.py:186} INFO - Started process (PID=40307) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:04:07.043+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:04:07.043+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:04:07.043+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:04:07.067+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:04:07.126+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:04:07.126+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:04:07.132+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:04:07.132+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:04:07.143+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:06:16.867+0530] {processor.py:186} INFO - Started process (PID=41250) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:06:16.868+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:06:16.868+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:06:16.868+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:06:16.893+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:06:16.952+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:06:16.952+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:06:16.959+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:06:16.959+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:06:16.971+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.106 seconds
+[2025-07-17T08:08:15.320+0530] {processor.py:186} INFO - Started process (PID=42010) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:08:15.320+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:08:15.321+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:08:15.321+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:08:15.345+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:08:15.406+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:08:15.405+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:08:15.412+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:08:15.412+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:08:15.424+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.106 seconds
+[2025-07-17T08:10:25.733+0530] {processor.py:186} INFO - Started process (PID=42922) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:10:25.734+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:10:25.734+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:10:25.734+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:10:25.759+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:10:25.818+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:10:25.818+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:10:25.824+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:10:25.824+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:10:25.835+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T08:16:37.975+0530] {processor.py:186} INFO - Started process (PID=43683) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:16:37.976+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:16:37.977+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:16:37.977+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:16:38.001+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:16:38.061+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:16:38.061+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:16:38.067+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:16:38.067+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:16:38.078+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T08:18:24.599+0530] {processor.py:186} INFO - Started process (PID=44370) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:18:24.600+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:18:24.601+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:18:24.600+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:18:24.625+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:18:24.684+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:18:24.684+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:18:24.691+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:18:24.691+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:18:24.701+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:20:31.306+0530] {processor.py:186} INFO - Started process (PID=45089) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:20:31.307+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:20:31.307+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:20:31.307+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:20:31.332+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:20:31.391+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:20:31.391+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:20:31.397+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:20:31.397+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:20:31.408+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T08:22:16.698+0530] {processor.py:186} INFO - Started process (PID=45778) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:22:16.699+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:22:16.700+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:22:16.700+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:22:16.724+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:22:16.783+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:22:16.782+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:22:16.789+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:22:16.789+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:22:16.800+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:24:03.493+0530] {processor.py:186} INFO - Started process (PID=46476) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:24:03.494+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:24:03.494+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:24:03.494+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:24:03.519+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:24:03.578+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:24:03.578+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:24:03.584+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:24:03.584+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:24:03.595+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:25:49.060+0530] {processor.py:186} INFO - Started process (PID=47199) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:25:49.061+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:25:49.061+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:25:49.061+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:25:49.085+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:25:49.145+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:25:49.145+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:25:49.151+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:25:49.151+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:25:49.162+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:27:33.835+0530] {processor.py:186} INFO - Started process (PID=47898) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:27:33.836+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:27:33.836+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:27:33.836+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:27:33.860+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:27:33.919+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:27:33.919+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:27:33.926+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:27:33.925+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:27:33.936+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:29:33.912+0530] {processor.py:186} INFO - Started process (PID=48791) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:29:33.913+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:29:33.914+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:29:33.914+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:29:33.938+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:29:33.999+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:29:33.998+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:29:34.005+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:29:34.005+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:29:34.016+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.106 seconds
+[2025-07-17T08:35:47.254+0530] {processor.py:186} INFO - Started process (PID=49562) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:35:47.255+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:35:47.256+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:35:47.256+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:35:47.280+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:35:47.339+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:35:47.339+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:35:47.345+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:35:47.345+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:35:47.356+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.104 seconds
+[2025-07-17T08:37:33.792+0530] {processor.py:186} INFO - Started process (PID=50247) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:37:33.794+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:37:33.794+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:37:33.794+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:37:33.819+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:37:33.878+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:37:33.878+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:37:33.884+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:37:33.884+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:37:33.895+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T08:39:18.378+0530] {processor.py:186} INFO - Started process (PID=50928) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:39:18.379+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:39:18.380+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:39:18.380+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:39:18.404+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:39:18.464+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:39:18.463+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:39:18.470+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:39:18.470+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:39:18.481+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.105 seconds
+[2025-07-17T08:41:04.159+0530] {processor.py:186} INFO - Started process (PID=51628) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:41:04.160+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-07-17T08:41:04.161+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:41:04.160+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:41:04.186+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-07-17T08:41:04.245+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:41:04.245+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:41:04.252+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:41:04.252+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-07-17T08:41:04.262+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.106 seconds

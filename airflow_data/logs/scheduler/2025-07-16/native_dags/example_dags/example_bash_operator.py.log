@@ -1,0 +1,71 @@
+[2025-07-17T00:13:29.899+0530] {processor.py:186} INFO - Started process (PID=8483) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:13:29.900+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:13:29.900+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:29.900+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:13:29.911+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:13:30.046+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.045+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_bash_operator
+[2025-07-17T00:13:30.052+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.052+0530] {override.py:1930} INFO - Created Permission View: can read on DAG:example_bash_operator
+[2025-07-17T00:13:30.057+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.057+0530] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_bash_operator
+[2025-07-17T00:13:30.063+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.063+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_bash_operator
+[2025-07-17T00:13:30.067+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.067+0530] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_bash_operator
+[2025-07-17T00:13:30.072+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.072+0530] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_bash_operator
+[2025-07-17T00:13:30.076+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.076+0530] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_bash_operator
+[2025-07-17T00:13:30.077+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.076+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:13:30.085+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.085+0530] {dag.py:3262} INFO - Creating ORM DAG for example_bash_operator
+[2025-07-17T00:13:30.093+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:13:30.093+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:13:30.106+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.210 seconds
+[2025-07-17T00:17:48.876+0530] {processor.py:186} INFO - Started process (PID=10190) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:17:48.877+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:17:48.878+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:17:48.878+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:17:48.888+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:17:48.961+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:17:48.960+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:17:48.975+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:17:48.975+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:17:48.986+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.113 seconds
+[2025-07-17T00:23:10.086+0530] {processor.py:186} INFO - Started process (PID=12471) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:23:10.087+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:23:10.088+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:23:10.088+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:23:10.096+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:23:10.160+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:23:10.160+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:23:10.171+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:23:10.171+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:23:10.182+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.099 seconds
+[2025-07-17T00:27:06.606+0530] {processor.py:186} INFO - Started process (PID=14088) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:27:06.607+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:27:06.608+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:27:06.607+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:27:06.615+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:27:06.680+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:27:06.680+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:27:06.692+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:27:06.692+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:27:06.703+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.100 seconds
+[2025-07-17T00:31:08.180+0530] {processor.py:186} INFO - Started process (PID=15680) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:31:08.181+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:31:08.182+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:31:08.182+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:31:08.190+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:31:08.257+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:31:08.257+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:31:08.270+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:31:08.270+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:31:08.282+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.104 seconds
+[2025-07-17T00:34:57.206+0530] {processor.py:186} INFO - Started process (PID=17165) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:34:57.207+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:34:57.208+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:34:57.208+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:34:57.217+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:34:57.282+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:34:57.282+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:34:57.294+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:34:57.294+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:34:57.304+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.101 seconds
+[2025-07-17T00:39:04.984+0530] {processor.py:186} INFO - Started process (PID=18775) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:39:04.985+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:39:04.985+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:39:04.985+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:39:04.995+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:39:05.061+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:39:05.061+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:39:05.074+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:39:05.074+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:39:05.084+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.103 seconds
+[2025-07-17T00:43:36.591+0530] {processor.py:186} INFO - Started process (PID=20608) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:43:36.592+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:43:36.593+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:43:36.593+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:43:36.603+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:43:36.670+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:43:36.670+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:43:36.682+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:43:36.682+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:43:36.693+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.104 seconds
+[2025-07-17T00:47:38.836+0530] {processor.py:186} INFO - Started process (PID=22169) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:47:38.837+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2025-07-17T00:47:38.838+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:47:38.838+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:47:38.846+0530] {processor.py:925} INFO - DAG(s) 'example_bash_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py
+[2025-07-17T00:47:38.911+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:47:38.911+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:47:38.923+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:47:38.923+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_operator to 2025-07-15 00:00:00+00:00, run_after=2025-07-16 00:00:00+00:00
+[2025-07-17T00:47:38.934+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_operator.py took 0.100 seconds

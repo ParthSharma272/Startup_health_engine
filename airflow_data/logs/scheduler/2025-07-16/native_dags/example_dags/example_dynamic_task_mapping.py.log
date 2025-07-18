@@ -1,0 +1,71 @@
+[2025-07-17T00:12:53.766+0530] {processor.py:186} INFO - Started process (PID=8251) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:12:53.767+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:12:53.767+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.767+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:12:53.793+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:12:53.905+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.904+0530] {override.py:1930} INFO - Created Permission View: can edit on DAG:example_dynamic_task_mapping
+[2025-07-17T00:12:53.911+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.910+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG:example_dynamic_task_mapping
+[2025-07-17T00:12:53.914+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.914+0530] {override.py:1930} INFO - Created Permission View: can read on DAG:example_dynamic_task_mapping
+[2025-07-17T00:12:53.919+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.918+0530] {override.py:1930} INFO - Created Permission View: can create on DAG Run:example_dynamic_task_mapping
+[2025-07-17T00:12:53.922+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.922+0530] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:example_dynamic_task_mapping
+[2025-07-17T00:12:53.925+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.925+0530] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:example_dynamic_task_mapping
+[2025-07-17T00:12:53.928+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.928+0530] {override.py:1930} INFO - Created Permission View: can read on DAG Run:example_dynamic_task_mapping
+[2025-07-17T00:12:53.929+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.929+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:12:53.988+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.988+0530] {dag.py:3262} INFO - Creating ORM DAG for example_dynamic_task_mapping
+[2025-07-17T00:12:53.988+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:12:53.988+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:12:53.997+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.234 seconds
+[2025-07-17T00:15:36.591+0530] {processor.py:186} INFO - Started process (PID=9311) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:15:36.593+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:15:36.593+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:15:36.593+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:15:36.618+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:15:36.676+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:15:36.676+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:15:36.683+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:15:36.683+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:15:36.693+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.104 seconds
+[2025-07-17T00:20:43.769+0530] {processor.py:186} INFO - Started process (PID=11370) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:20:43.773+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:20:43.774+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:20:43.774+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:20:43.838+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:20:43.987+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:20:43.987+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:20:44.004+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:20:44.003+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:20:44.030+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.267 seconds
+[2025-07-17T00:25:04.846+0530] {processor.py:186} INFO - Started process (PID=13261) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:25:04.847+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:25:04.848+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:25:04.847+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:25:04.873+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:25:04.932+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:25:04.931+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:25:04.938+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:25:04.938+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:25:04.948+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.105 seconds
+[2025-07-17T00:29:06.714+0530] {processor.py:186} INFO - Started process (PID=14870) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:29:06.714+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:29:06.715+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:29:06.715+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:29:06.740+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:29:06.799+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:29:06.799+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:29:06.806+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:29:06.806+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:29:06.817+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.105 seconds
+[2025-07-17T00:32:52.136+0530] {processor.py:186} INFO - Started process (PID=16352) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:32:52.137+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:32:52.138+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:32:52.138+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:32:52.165+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:32:52.224+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:32:52.224+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:32:52.231+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:32:52.231+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:32:52.242+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.109 seconds
+[2025-07-17T00:36:54.531+0530] {processor.py:186} INFO - Started process (PID=17918) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:36:54.532+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:36:54.533+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:36:54.532+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:36:54.563+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:36:54.640+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:36:54.640+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:36:54.650+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:36:54.650+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:36:54.668+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.140 seconds
+[2025-07-17T00:41:18.510+0530] {processor.py:186} INFO - Started process (PID=19701) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:41:18.512+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:41:18.513+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:41:18.513+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:41:18.552+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:41:18.639+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:41:18.638+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:41:18.647+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:41:18.647+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:41:18.660+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.153 seconds
+[2025-07-17T00:45:35.610+0530] {processor.py:186} INFO - Started process (PID=21376) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:45:35.611+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py for tasks to queue
+[2025-07-17T00:45:35.612+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:45:35.612+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:45:35.637+0530] {processor.py:925} INFO - DAG(s) 'example_dynamic_task_mapping' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py
+[2025-07-17T00:45:35.696+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:45:35.696+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T00:45:35.703+0530] {logging_mixin.py:190} INFO - [2025-07-17T00:45:35.702+0530] {dag.py:4180} INFO - Setting next_dagrun for example_dynamic_task_mapping to None, run_after=None
+[2025-07-17T00:45:35.714+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_dynamic_task_mapping.py took 0.107 seconds

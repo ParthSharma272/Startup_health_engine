@@ -1,0 +1,255 @@
+[2025-07-17T07:15:24.532+0530] {processor.py:186} INFO - Started process (PID=23150) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:15:24.533+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:15:24.534+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:15:24.534+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:15:27.774+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:15:28.042+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:15:28.041+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:15:28.063+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:15:28.063+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:15:28.082+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 3.555 seconds
+[2025-07-17T07:23:57.329+0530] {processor.py:186} INFO - Started process (PID=24184) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:23:57.330+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:23:57.330+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:23:57.330+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:24:00.771+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:24:00.950+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:24:00.950+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:24:00.959+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:24:00.959+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:24:00.973+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 3.648 seconds
+[2025-07-17T07:25:53.929+0530] {processor.py:186} INFO - Started process (PID=24938) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:25:53.929+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:25:53.930+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:25:53.930+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:25:56.316+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:25:56.461+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:25:56.461+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:25:56.468+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:25:56.467+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:25:56.479+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.553 seconds
+[2025-07-17T07:27:43.230+0530] {processor.py:186} INFO - Started process (PID=25647) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:27:43.231+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:27:43.231+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:27:43.231+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:27:45.830+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:27:45.975+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:27:45.974+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:27:45.981+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:27:45.981+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:27:45.993+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.765 seconds
+[2025-07-17T07:29:26.524+0530] {processor.py:186} INFO - Started process (PID=26307) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:29:26.524+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:29:26.525+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:29:26.525+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:29:28.834+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:29:28.976+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:29:28.975+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:29:28.982+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:29:28.982+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:29:28.993+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.472 seconds
+[2025-07-17T07:31:12.546+0530] {processor.py:186} INFO - Started process (PID=26993) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:31:12.547+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:31:12.547+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:31:12.547+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:31:14.828+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:31:14.976+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:31:14.976+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:31:14.983+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:31:14.983+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:31:14.994+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.450 seconds
+[2025-07-17T07:32:58.447+0530] {processor.py:186} INFO - Started process (PID=27692) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:32:58.448+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:32:58.448+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:32:58.448+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:33:00.732+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:33:00.876+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:33:00.876+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:33:00.883+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:33:00.883+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:33:00.894+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.450 seconds
+[2025-07-17T07:34:46.884+0530] {processor.py:186} INFO - Started process (PID=28401) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:34:46.884+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:34:46.885+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:34:46.885+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:34:49.262+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:34:49.413+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:34:49.412+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:34:49.419+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:34:49.419+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:34:49.430+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.549 seconds
+[2025-07-17T07:36:47.091+0530] {processor.py:186} INFO - Started process (PID=29193) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:36:47.092+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:36:47.093+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:36:47.093+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:36:49.504+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:36:49.651+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:36:49.651+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:36:49.658+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:36:49.658+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:36:49.669+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.580 seconds
+[2025-07-17T07:38:33.927+0530] {processor.py:186} INFO - Started process (PID=29886) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:38:33.928+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:38:33.928+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:38:33.928+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:38:36.321+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:38:36.467+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:38:36.466+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:38:36.473+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:38:36.473+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:38:36.485+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.561 seconds
+[2025-07-17T07:40:26.378+0530] {processor.py:186} INFO - Started process (PID=30622) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:40:26.379+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:40:26.379+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:40:26.379+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:40:28.725+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:40:28.869+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:40:28.869+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:40:28.876+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:40:28.875+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:40:28.887+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.511 seconds
+[2025-07-17T07:42:28.859+0530] {processor.py:186} INFO - Started process (PID=31425) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:42:28.861+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:42:28.863+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:42:28.863+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:42:32.160+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:42:32.357+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:42:32.356+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:42:32.366+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:42:32.366+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:42:32.381+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 3.530 seconds
+[2025-07-17T07:45:08.978+0530] {processor.py:186} INFO - Started process (PID=32566) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:45:08.980+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:45:08.982+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:45:08.982+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:45:15.366+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:45:15.685+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:45:15.685+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:45:15.704+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:45:15.703+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:45:15.733+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 6.764 seconds
+[2025-07-17T07:47:50.061+0530] {processor.py:186} INFO - Started process (PID=33716) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:47:50.062+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:47:50.063+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:47:50.063+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:47:52.313+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:47:52.457+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:47:52.456+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:47:52.463+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:47:52.463+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:47:52.474+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.415 seconds
+[2025-07-17T07:49:55.616+0530] {processor.py:186} INFO - Started process (PID=34531) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:49:55.617+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:49:55.618+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:49:55.618+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:49:58.141+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:49:58.362+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:49:58.361+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:49:58.370+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:49:58.370+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:49:58.384+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.771 seconds
+[2025-07-17T07:52:33.713+0530] {processor.py:186} INFO - Started process (PID=35607) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:52:33.715+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:52:33.716+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:52:33.716+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:52:40.052+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:52:40.362+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:52:40.361+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:52:40.381+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:52:40.380+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:52:40.409+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 6.702 seconds
+[2025-07-17T07:55:19.363+0530] {processor.py:186} INFO - Started process (PID=36826) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:55:19.364+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:55:19.365+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:55:19.365+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:55:21.974+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:55:22.127+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:55:22.126+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:55:22.133+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:55:22.133+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:55:22.146+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.785 seconds
+[2025-07-17T07:57:24.076+0530] {processor.py:186} INFO - Started process (PID=37683) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:57:24.076+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:57:24.077+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:57:24.077+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:57:26.573+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:57:26.713+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:57:26.713+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:57:26.719+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:57:26.719+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:57:26.730+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.657 seconds
+[2025-07-17T07:59:18.056+0530] {processor.py:186} INFO - Started process (PID=38434) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:59:18.057+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T07:59:18.057+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:59:18.057+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:59:21.223+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T07:59:21.462+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:59:21.462+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T07:59:21.474+0530] {logging_mixin.py:190} INFO - [2025-07-17T07:59:21.474+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T07:59:21.497+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 3.444 seconds
+[2025-07-17T08:01:35.326+0530] {processor.py:186} INFO - Started process (PID=39315) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:01:35.327+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:01:35.327+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:01:35.327+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:01:37.997+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:01:38.176+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:01:38.175+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:01:38.185+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:01:38.185+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:01:38.200+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.876 seconds
+[2025-07-17T08:03:43.250+0530] {processor.py:186} INFO - Started process (PID=40149) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:03:43.251+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:03:43.252+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:03:43.252+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:03:45.749+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:03:45.892+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:03:45.892+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:03:45.900+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:03:45.899+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:03:45.911+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.663 seconds
+[2025-07-17T08:05:51.173+0530] {processor.py:186} INFO - Started process (PID=41072) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:05:51.174+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:05:51.174+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:05:51.174+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:05:54.904+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:05:55.051+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:05:55.051+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:05:55.058+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:05:55.058+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:05:55.070+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 3.900 seconds
+[2025-07-17T08:07:53.006+0530] {processor.py:186} INFO - Started process (PID=41873) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:07:53.007+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:07:53.008+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:07:53.008+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:07:55.442+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:07:55.584+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:07:55.584+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:07:55.591+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:07:55.591+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:07:55.602+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.599 seconds
+[2025-07-17T08:10:03.732+0530] {processor.py:186} INFO - Started process (PID=42775) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:10:03.733+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:10:03.734+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:10:03.734+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:10:06.415+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:10:06.557+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:10:06.557+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:10:06.565+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:10:06.565+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:10:06.576+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.846 seconds
+[2025-07-17T08:11:56.915+0530] {processor.py:186} INFO - Started process (PID=43520) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:11:56.916+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:11:56.917+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:11:56.916+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:12:00.054+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:12:00.213+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:12:00.213+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:12:00.220+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:12:00.220+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:12:00.231+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 3.318 seconds
+[2025-07-17T08:18:02.370+0530] {processor.py:186} INFO - Started process (PID=44223) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:18:02.371+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:18:02.371+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:18:02.371+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:18:04.754+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:18:04.897+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:18:04.896+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:18:04.903+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:18:04.903+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:18:04.915+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.547 seconds
+[2025-07-17T08:20:10.600+0530] {processor.py:186} INFO - Started process (PID=44954) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:20:10.600+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:20:10.601+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:20:10.601+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:20:13.046+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:20:13.190+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:20:13.189+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:20:13.196+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:20:13.196+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:20:13.207+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.610 seconds
+[2025-07-17T08:21:55.755+0530] {processor.py:186} INFO - Started process (PID=45640) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:21:55.756+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:21:55.756+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:21:55.756+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:21:58.113+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:21:58.255+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:21:58.254+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:21:58.261+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:21:58.261+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:21:58.272+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.520 seconds
+[2025-07-17T08:23:41.603+0530] {processor.py:186} INFO - Started process (PID=46330) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:23:41.603+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:23:41.604+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:23:41.604+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:23:43.965+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:23:44.109+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:23:44.109+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:23:44.116+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:23:44.116+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:23:44.127+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.526 seconds
+[2025-07-17T08:25:28.035+0530] {processor.py:186} INFO - Started process (PID=47051) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:25:28.036+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:25:28.036+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:25:28.036+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:25:30.447+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:25:30.590+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:25:30.590+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:25:30.598+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:25:30.597+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:25:30.609+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.578 seconds
+[2025-07-17T08:27:12.927+0530] {processor.py:186} INFO - Started process (PID=47773) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:27:12.928+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:27:12.929+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:27:12.929+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:27:15.223+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:27:15.372+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:27:15.372+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:27:15.379+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:27:15.379+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:27:15.390+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.466 seconds
+[2025-07-17T08:29:13.633+0530] {processor.py:186} INFO - Started process (PID=48649) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:29:13.633+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:29:13.634+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:29:13.634+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:29:16.175+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:29:16.318+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:29:16.318+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:29:16.325+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:29:16.325+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:29:16.337+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.707 seconds
+[2025-07-17T08:35:26.240+0530] {processor.py:186} INFO - Started process (PID=49425) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:35:26.241+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:35:26.242+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:35:26.242+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:35:28.664+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:35:28.805+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:35:28.805+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:35:28.812+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:35:28.812+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:35:28.823+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.585 seconds
+[2025-07-17T08:37:13.331+0530] {processor.py:186} INFO - Started process (PID=50124) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:37:13.332+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:37:13.333+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:37:13.332+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:37:15.602+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:37:15.747+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:37:15.747+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:37:15.754+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:37:15.754+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:37:15.766+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.437 seconds
+[2025-07-17T08:38:55.874+0530] {processor.py:186} INFO - Started process (PID=50790) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:38:55.875+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:38:55.876+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:38:55.876+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:38:58.113+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:38:58.257+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:38:58.257+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:38:58.264+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:38:58.264+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:38:58.275+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.404 seconds
+[2025-07-17T08:40:43.030+0530] {processor.py:186} INFO - Started process (PID=51475) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:40:43.031+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T08:40:43.032+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:40:43.032+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:40:45.373+0530] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T08:40:45.517+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:40:45.517+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-17T08:40:45.523+0530] {logging_mixin.py:190} INFO - [2025-07-17T08:40:45.523+0530] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-17T08:40:45.534+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py took 2.506 seconds
+[2025-07-17T10:01:25.357+0530] {processor.py:186} INFO - Started process (PID=52481) to work on /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
+[2025-07-17T10:01:25.357+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-17T10:01:25.358+0530] {logging_mixin.py:190} INFO - [2025-07-17T10:01:25.358+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py
