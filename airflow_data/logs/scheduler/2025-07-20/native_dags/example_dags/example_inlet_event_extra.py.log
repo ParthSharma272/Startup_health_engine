@@ -6,3 +6,11 @@
 [2025-07-20T16:21:13.787+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:21:13.786+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
 [2025-07-20T16:21:13.790+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:21:13.790+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event_from_classic to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
 [2025-07-20T16:21:13.803+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_inlet_event_extra.py took 0.156 seconds
+[2025-07-20T16:24:11.642+0530] {processor.py:186} INFO - Started process (PID=36210) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_inlet_event_extra.py
+[2025-07-20T16:24:11.643+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_inlet_event_extra.py for tasks to queue
+[2025-07-20T16:24:11.644+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:11.644+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_inlet_event_extra.py
+[2025-07-20T16:24:11.709+0530] {processor.py:925} INFO - DAG(s) 'read_dataset_event', 'read_dataset_event_from_classic' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_inlet_event_extra.py
+[2025-07-20T16:24:11.782+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:11.782+0530] {dag.py:3239} INFO - Sync 2 DAGs
+[2025-07-20T16:24:11.795+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:11.795+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:24:11.799+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:11.798+0530] {dag.py:4180} INFO - Setting next_dagrun for read_dataset_event_from_classic to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:24:11.812+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_inlet_event_extra.py took 0.173 seconds
