@@ -12,3 +12,31 @@
 [2025-07-20T16:23:20.830+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:20.830+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:23:20.838+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:20.838+0530] {dag.py:4180} INFO - Setting next_dagrun for example_short_circuit_operator to None, run_after=None
 [2025-07-20T16:23:20.851+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.112 seconds
+[2025-07-20T16:25:39.618+0530] {processor.py:186} INFO - Started process (PID=36837) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:25:39.619+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py for tasks to queue
+[2025-07-20T16:25:39.620+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:39.620+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:25:39.640+0530] {processor.py:925} INFO - DAG(s) 'example_short_circuit_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:25:39.703+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:39.703+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:25:39.709+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:39.709+0530] {dag.py:4180} INFO - Setting next_dagrun for example_short_circuit_operator to None, run_after=None
+[2025-07-20T16:25:39.721+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.105 seconds
+[2025-07-20T16:27:46.284+0530] {processor.py:186} INFO - Started process (PID=37687) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:27:46.285+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py for tasks to queue
+[2025-07-20T16:27:46.285+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:46.285+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:27:46.306+0530] {processor.py:925} INFO - DAG(s) 'example_short_circuit_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:27:46.370+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:46.369+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:46.377+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:46.376+0530] {dag.py:4180} INFO - Setting next_dagrun for example_short_circuit_operator to None, run_after=None
+[2025-07-20T16:27:46.390+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.108 seconds
+[2025-07-20T16:29:53.331+0530] {processor.py:186} INFO - Started process (PID=38581) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:29:53.333+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py for tasks to queue
+[2025-07-20T16:29:53.334+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:53.334+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:29:53.355+0530] {processor.py:925} INFO - DAG(s) 'example_short_circuit_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:29:53.418+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:53.418+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:53.425+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:53.425+0530] {dag.py:4180} INFO - Setting next_dagrun for example_short_circuit_operator to None, run_after=None
+[2025-07-20T16:29:53.438+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.109 seconds
+[2025-07-20T16:32:01.958+0530] {processor.py:186} INFO - Started process (PID=39538) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:32:01.959+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py for tasks to queue
+[2025-07-20T16:32:01.959+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:01.959+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:32:01.979+0530] {processor.py:925} INFO - DAG(s) 'example_short_circuit_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2025-07-20T16:32:02.042+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:02.042+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:32:02.049+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:02.048+0530] {dag.py:4180} INFO - Setting next_dagrun for example_short_circuit_operator to None, run_after=None
+[2025-07-20T16:32:02.060+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_short_circuit_operator.py took 0.104 seconds

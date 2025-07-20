@@ -12,3 +12,31 @@
 [2025-07-20T16:22:49.988+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:49.988+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:22:49.996+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:49.996+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
 [2025-07-20T16:22:50.012+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.132 seconds
+[2025-07-20T16:25:14.759+0530] {processor.py:186} INFO - Started process (PID=36666) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:25:14.761+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-07-20T16:25:14.762+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:14.761+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:25:14.799+0530] {processor.py:925} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:25:14.871+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:14.871+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:25:14.878+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:14.878+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-07-20T16:25:14.891+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.135 seconds
+[2025-07-20T16:27:23.849+0530] {processor.py:186} INFO - Started process (PID=37530) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:27:23.850+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-07-20T16:27:23.851+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:23.851+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:27:23.877+0530] {processor.py:925} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:27:23.936+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:23.936+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:23.943+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:23.943+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-07-20T16:27:23.954+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.107 seconds
+[2025-07-20T16:29:33.978+0530] {processor.py:186} INFO - Started process (PID=38446) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:29:33.979+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-07-20T16:29:33.980+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:33.980+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:29:34.006+0530] {processor.py:925} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:29:34.069+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:34.069+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:34.075+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:34.075+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-07-20T16:29:34.086+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.111 seconds
+[2025-07-20T16:31:40.247+0530] {processor.py:186} INFO - Started process (PID=39404) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:31:40.248+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-07-20T16:31:40.249+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:40.249+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:31:40.274+0530] {processor.py:925} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:31:40.334+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:40.334+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:31:40.340+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:40.340+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-07-20T16:31:40.351+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.107 seconds

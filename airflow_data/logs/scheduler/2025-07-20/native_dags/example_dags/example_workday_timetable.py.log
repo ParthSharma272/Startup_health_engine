@@ -12,3 +12,31 @@
 [2025-07-20T16:22:46.378+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:46.377+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:22:46.437+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:46.436+0530] {dag.py:4180} INFO - Setting next_dagrun for example_workday_timetable to 2021-01-04 00:00:00+00:00, run_after=2021-01-05 00:00:00+00:00
 [2025-07-20T16:22:46.461+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py took 1.220 seconds
+[2025-07-20T16:25:11.211+0530] {processor.py:186} INFO - Started process (PID=36640) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:25:11.212+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py for tasks to queue
+[2025-07-20T16:25:11.213+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:11.212+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:25:11.952+0530] {processor.py:925} INFO - DAG(s) 'example_workday_timetable' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:25:12.025+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:12.025+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:25:12.068+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:12.068+0530] {dag.py:4180} INFO - Setting next_dagrun for example_workday_timetable to 2021-01-04 00:00:00+00:00, run_after=2021-01-05 00:00:00+00:00
+[2025-07-20T16:25:12.083+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py took 0.874 seconds
+[2025-07-20T16:27:20.520+0530] {processor.py:186} INFO - Started process (PID=37511) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:27:20.522+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py for tasks to queue
+[2025-07-20T16:27:20.522+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:20.522+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:27:21.204+0530] {processor.py:925} INFO - DAG(s) 'example_workday_timetable' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:27:21.273+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:21.272+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:21.310+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:21.310+0530] {dag.py:4180} INFO - Setting next_dagrun for example_workday_timetable to 2021-01-04 00:00:00+00:00, run_after=2021-01-05 00:00:00+00:00
+[2025-07-20T16:27:21.322+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py took 0.804 seconds
+[2025-07-20T16:29:31.435+0530] {processor.py:186} INFO - Started process (PID=38427) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:29:31.437+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py for tasks to queue
+[2025-07-20T16:29:31.438+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:31.438+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:29:32.024+0530] {processor.py:925} INFO - DAG(s) 'example_workday_timetable' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:29:32.092+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:32.092+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:32.121+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:32.120+0530] {dag.py:4180} INFO - Setting next_dagrun for example_workday_timetable to 2021-01-04 00:00:00+00:00, run_after=2021-01-05 00:00:00+00:00
+[2025-07-20T16:29:32.134+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py took 0.701 seconds
+[2025-07-20T16:31:37.021+0530] {processor.py:186} INFO - Started process (PID=39378) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:31:37.022+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py for tasks to queue
+[2025-07-20T16:31:37.023+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:37.023+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:31:37.650+0530] {processor.py:925} INFO - DAG(s) 'example_workday_timetable' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py
+[2025-07-20T16:31:37.718+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:37.718+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:31:37.746+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:37.746+0530] {dag.py:4180} INFO - Setting next_dagrun for example_workday_timetable to 2021-01-04 00:00:00+00:00, run_after=2021-01-05 00:00:00+00:00
+[2025-07-20T16:31:37.760+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_workday_timetable.py took 0.741 seconds

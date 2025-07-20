@@ -12,3 +12,31 @@
 [2025-07-20T16:23:26.218+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:26.218+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:23:26.226+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:26.226+0530] {dag.py:4180} INFO - Setting next_dagrun for example_setup_teardown_taskflow to None, run_after=None
 [2025-07-20T16:23:26.240+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py took 0.119 seconds
+[2025-07-20T16:25:44.960+0530] {processor.py:186} INFO - Started process (PID=36876) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:25:44.961+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py for tasks to queue
+[2025-07-20T16:25:44.962+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:44.962+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:25:44.991+0530] {processor.py:925} INFO - DAG(s) 'example_setup_teardown_taskflow' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:25:45.058+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:45.058+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:25:45.065+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:45.065+0530] {dag.py:4180} INFO - Setting next_dagrun for example_setup_teardown_taskflow to None, run_after=None
+[2025-07-20T16:25:45.078+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py took 0.120 seconds
+[2025-07-20T16:27:51.586+0530] {processor.py:186} INFO - Started process (PID=37715) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:27:51.587+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py for tasks to queue
+[2025-07-20T16:27:51.588+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:51.587+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:27:51.615+0530] {processor.py:925} INFO - DAG(s) 'example_setup_teardown_taskflow' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:27:51.676+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:51.676+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:51.683+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:51.682+0530] {dag.py:4180} INFO - Setting next_dagrun for example_setup_teardown_taskflow to None, run_after=None
+[2025-07-20T16:27:51.694+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py took 0.110 seconds
+[2025-07-20T16:29:58.592+0530] {processor.py:186} INFO - Started process (PID=38624) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:29:58.594+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py for tasks to queue
+[2025-07-20T16:29:58.595+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:58.594+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:29:58.623+0530] {processor.py:925} INFO - DAG(s) 'example_setup_teardown_taskflow' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:29:58.686+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:58.686+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:58.693+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:58.692+0530] {dag.py:4180} INFO - Setting next_dagrun for example_setup_teardown_taskflow to None, run_after=None
+[2025-07-20T16:29:58.704+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py took 0.115 seconds
+[2025-07-20T16:32:07.314+0530] {processor.py:186} INFO - Started process (PID=39571) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:32:07.315+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py for tasks to queue
+[2025-07-20T16:32:07.316+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:07.316+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:32:07.344+0530] {processor.py:925} INFO - DAG(s) 'example_setup_teardown_taskflow' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py
+[2025-07-20T16:32:07.406+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:07.406+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:32:07.413+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:07.413+0530] {dag.py:4180} INFO - Setting next_dagrun for example_setup_teardown_taskflow to None, run_after=None
+[2025-07-20T16:32:07.424+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_setup_teardown_taskflow.py took 0.113 seconds

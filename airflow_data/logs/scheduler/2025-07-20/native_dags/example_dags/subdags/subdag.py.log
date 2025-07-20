@@ -13,3 +13,18 @@
 [2025-07-20T16:24:36.500+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:36.500+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
 [2025-07-20T16:24:36.502+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
 [2025-07-20T16:24:36.561+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py took 0.066 seconds
+[2025-07-20T16:26:47.997+0530] {processor.py:186} INFO - Started process (PID=37289) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:26:47.998+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2025-07-20T16:26:47.998+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:26:47.998+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:26:48.000+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:26:48.057+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py took 0.062 seconds
+[2025-07-20T16:28:53.933+0530] {processor.py:186} INFO - Started process (PID=38158) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:28:53.934+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2025-07-20T16:28:53.936+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:28:53.936+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:28:53.938+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:28:54.038+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py took 0.111 seconds
+[2025-07-20T16:31:00.677+0530] {processor.py:186} INFO - Started process (PID=39136) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:31:00.677+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2025-07-20T16:31:00.678+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:00.678+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:31:00.680+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py
+[2025-07-20T16:31:00.737+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/subdags/subdag.py took 0.063 seconds

@@ -19,3 +19,24 @@
 [2025-07-20T16:24:49.850+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:49.850+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:24:49.861+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:24:49.861+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_templates to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
 [2025-07-20T16:24:49.872+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py took 0.118 seconds
+[2025-07-20T16:26:59.898+0530] {processor.py:186} INFO - Started process (PID=37363) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:26:59.898+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py for tasks to queue
+[2025-07-20T16:26:59.899+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:26:59.899+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:26:59.932+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_templates' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:26:59.998+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:26:59.998+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:00.009+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:00.009+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_templates to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:27:00.020+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py took 0.125 seconds
+[2025-07-20T16:29:09.700+0530] {processor.py:186} INFO - Started process (PID=38272) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:29:09.702+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py for tasks to queue
+[2025-07-20T16:29:09.702+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:09.702+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:29:09.742+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_templates' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:29:09.809+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:09.809+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:09.821+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:09.821+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_templates to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:29:09.834+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py took 0.136 seconds
+[2025-07-20T16:31:15.479+0530] {processor.py:186} INFO - Started process (PID=39237) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:31:15.480+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py for tasks to queue
+[2025-07-20T16:31:15.481+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:15.480+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:31:15.515+0530] {processor.py:925} INFO - DAG(s) 'tutorial_taskflow_templates' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py
+[2025-07-20T16:31:15.581+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:15.580+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:31:15.593+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:15.592+0530] {dag.py:4180} INFO - Setting next_dagrun for tutorial_taskflow_templates to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:31:15.605+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/tutorial_taskflow_templates.py took 0.129 seconds

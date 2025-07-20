@@ -12,3 +12,31 @@
 [2025-07-20T16:23:18.156+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:18.156+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:23:18.168+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:18.168+0530] {dag.py:4180} INFO - Setting next_dagrun for example_skip_dag to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
 [2025-07-20T16:23:18.181+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py took 0.101 seconds
+[2025-07-20T16:25:36.935+0530] {processor.py:186} INFO - Started process (PID=36822) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:25:36.937+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2025-07-20T16:25:36.937+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:36.937+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:25:36.943+0530] {processor.py:925} INFO - DAG(s) 'example_skip_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:25:37.011+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:37.011+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:25:37.025+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:37.025+0530] {dag.py:4180} INFO - Setting next_dagrun for example_skip_dag to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:25:37.038+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py took 0.105 seconds
+[2025-07-20T16:27:43.639+0530] {processor.py:186} INFO - Started process (PID=37663) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:27:43.640+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2025-07-20T16:27:43.641+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:43.641+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:27:43.646+0530] {processor.py:925} INFO - DAG(s) 'example_skip_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:27:43.710+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:43.710+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:43.723+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:43.723+0530] {dag.py:4180} INFO - Setting next_dagrun for example_skip_dag to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:27:43.735+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py took 0.098 seconds
+[2025-07-20T16:29:51.140+0530] {processor.py:186} INFO - Started process (PID=38566) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:29:51.141+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2025-07-20T16:29:51.142+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:51.142+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:29:51.147+0530] {processor.py:925} INFO - DAG(s) 'example_skip_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:29:51.213+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:51.213+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:51.225+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:51.225+0530] {dag.py:4180} INFO - Setting next_dagrun for example_skip_dag to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:29:51.236+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py took 0.099 seconds
+[2025-07-20T16:31:59.291+0530] {processor.py:186} INFO - Started process (PID=39525) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:31:59.292+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2025-07-20T16:31:59.293+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:59.293+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:31:59.299+0530] {processor.py:925} INFO - DAG(s) 'example_skip_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py
+[2025-07-20T16:31:59.363+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:59.362+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:31:59.374+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:59.374+0530] {dag.py:4180} INFO - Setting next_dagrun for example_skip_dag to 2025-07-19 00:00:00+00:00, run_after=2025-07-20 00:00:00+00:00
+[2025-07-20T16:31:59.385+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_skip_dag.py took 0.097 seconds

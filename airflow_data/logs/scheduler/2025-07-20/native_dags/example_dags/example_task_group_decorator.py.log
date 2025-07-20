@@ -12,3 +12,31 @@
 [2025-07-20T16:23:02.932+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:02.932+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:23:02.943+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:23:02.943+0530] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
 [2025-07-20T16:23:02.964+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.212 seconds
+[2025-07-20T16:25:25.327+0530] {processor.py:186} INFO - Started process (PID=36740) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:25:25.328+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2025-07-20T16:25:25.329+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:25.329+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:25:25.383+0530] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:25:25.473+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:25.472+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:25:25.481+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:25:25.481+0530] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2025-07-20T16:25:25.498+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.174 seconds
+[2025-07-20T16:27:32.368+0530] {processor.py:186} INFO - Started process (PID=37586) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:27:32.369+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2025-07-20T16:27:32.370+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:32.370+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:27:32.402+0530] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:27:32.468+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:32.468+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:27:32.475+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:27:32.475+0530] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2025-07-20T16:27:32.486+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.121 seconds
+[2025-07-20T16:29:41.059+0530] {processor.py:186} INFO - Started process (PID=38502) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:29:41.060+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2025-07-20T16:29:41.060+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:41.060+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:29:41.092+0530] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:29:41.156+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:41.156+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:29:41.162+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:29:41.162+0530] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2025-07-20T16:29:41.173+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.117 seconds
+[2025-07-20T16:31:48.450+0530] {processor.py:186} INFO - Started process (PID=39447) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:31:48.451+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2025-07-20T16:31:48.452+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:48.452+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:31:48.484+0530] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2025-07-20T16:31:48.549+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:48.549+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:31:48.556+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:31:48.556+0530] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2025-07-20T16:31:48.569+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.121 seconds
