@@ -1,0 +1,14 @@
+[2025-07-20T16:20:12.370+0530] {processor.py:186} INFO - Started process (PID=34580) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:20:12.371+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-07-20T16:20:12.372+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:12.371+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:20:12.398+0530] {processor.py:925} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:20:12.459+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:12.459+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:20:12.466+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:12.466+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-07-20T16:20:12.478+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.110 seconds
+[2025-07-20T16:22:49.883+0530] {processor.py:186} INFO - Started process (PID=35645) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:22:49.884+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2025-07-20T16:22:49.885+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:49.885+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:22:49.916+0530] {processor.py:925} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2025-07-20T16:22:49.988+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:49.988+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:22:49.996+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:49.996+0530] {dag.py:4180} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2025-07-20T16:22:50.012+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.132 seconds

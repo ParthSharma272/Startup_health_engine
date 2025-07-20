@@ -1,0 +1,70 @@
+[2025-07-19T15:41:10.062+0530] {processor.py:186} INFO - Started process (PID=2027) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:41:10.063+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:41:10.063+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:10.063+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:41:10.067+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:41:10.109+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:10.109+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:41:10.118+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:10.118+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:41:10.125+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.065 seconds
+[2025-07-19T15:43:10.744+0530] {processor.py:186} INFO - Started process (PID=2875) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:43:10.745+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:43:10.746+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:43:10.745+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:43:10.749+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:43:10.789+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:43:10.789+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:43:10.797+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:43:10.796+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:43:10.804+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.062 seconds
+[2025-07-19T15:46:36.994+0530] {processor.py:186} INFO - Started process (PID=4244) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:46:36.995+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:46:36.995+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:46:36.995+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:46:36.999+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:46:37.048+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:46:37.048+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:46:37.057+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:46:37.057+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:46:37.065+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.073 seconds
+[2025-07-19T15:49:32.844+0530] {processor.py:186} INFO - Started process (PID=5404) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:49:32.845+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:49:32.846+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:49:32.846+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:49:32.850+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:49:32.899+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:49:32.899+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:49:32.908+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:49:32.908+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:49:32.917+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.075 seconds
+[2025-07-19T15:52:49.154+0530] {processor.py:186} INFO - Started process (PID=6743) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:52:49.154+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:52:49.155+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:52:49.155+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:52:49.159+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:52:49.213+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:52:49.213+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:52:49.224+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:52:49.224+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:52:49.233+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.082 seconds
+[2025-07-19T15:57:32.783+0530] {processor.py:186} INFO - Started process (PID=8868) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:57:32.784+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:57:32.785+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:32.785+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:57:32.789+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:57:32.842+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:32.842+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:57:32.852+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:32.852+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:57:32.861+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.080 seconds
+[2025-07-19T15:59:43.815+0530] {processor.py:186} INFO - Started process (PID=9729) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:59:43.816+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T15:59:43.817+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:59:43.817+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:59:43.821+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T15:59:43.875+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:59:43.875+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:59:43.886+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:59:43.885+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T15:59:43.895+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.082 seconds
+[2025-07-19T16:03:23.194+0530] {processor.py:186} INFO - Started process (PID=11196) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:03:23.195+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T16:03:23.196+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:03:23.196+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:03:23.200+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:03:23.262+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:03:23.262+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:03:23.274+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:03:23.274+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T16:03:23.285+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.094 seconds
+[2025-07-19T16:07:06.444+0530] {processor.py:186} INFO - Started process (PID=12748) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:07:06.445+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T16:07:06.446+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:06.446+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:07:06.450+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:07:06.505+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:06.505+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:07:06.516+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:06.515+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T16:07:06.525+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.083 seconds
+[2025-07-19T16:09:16.871+0530] {processor.py:186} INFO - Started process (PID=13607) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:09:16.872+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2025-07-19T16:09:16.873+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:09:16.873+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:09:16.877+0530] {processor.py:925} INFO - DAG(s) 'latest_only' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py
+[2025-07-19T16:09:16.931+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:09:16.931+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:09:16.941+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:09:16.941+0530] {dag.py:4180} INFO - Setting next_dagrun for latest_only to 2025-07-19 04:00:00+00:00, run_after=2025-07-19 08:00:00+00:00
+[2025-07-19T16:09:16.951+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_latest_only.py took 0.082 seconds

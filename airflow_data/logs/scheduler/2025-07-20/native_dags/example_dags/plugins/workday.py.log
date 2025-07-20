@@ -1,0 +1,10 @@
+[2025-07-20T16:19:35.745+0530] {processor.py:186} INFO - Started process (PID=34332) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-07-20T16:19:35.745+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-07-20T16:19:35.746+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:19:35.746+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-07-20T16:19:36.438+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-07-20T16:19:36.496+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py took 0.753 seconds
+[2025-07-20T16:22:13.941+0530] {processor.py:186} INFO - Started process (PID=35382) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-07-20T16:22:13.942+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2025-07-20T16:22:13.942+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:22:13.942+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-07-20T16:22:14.490+0530] {processor.py:927} WARNING - No viable dags retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py
+[2025-07-20T16:22:14.548+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/plugins/workday.py took 0.610 seconds

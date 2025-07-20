@@ -1,0 +1,109 @@
+[2025-07-19T15:45:19.912+0530] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-19T15:45:19.929+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.check_for_documents manual__2025-07-19T10:10:09.304481+00:00 [queued]>
+[2025-07-19T15:45:19.936+0530] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.check_for_documents manual__2025-07-19T10:10:09.304481+00:00 [queued]>
+[2025-07-19T15:45:19.936+0530] {taskinstance.py:2884} INFO - Starting attempt 2 of 2
+[2025-07-19T15:45:19.943+0530] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): check_for_documents> on 2025-07-19 10:10:09.304481+00:00
+[2025-07-19T15:45:19.952+0530] {standard_task_runner.py:72} INFO - Started process 3743 to run task
+[2025-07-19T15:45:19.969+0530] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'startup_health_score_full_pipeline', 'check_for_documents', 'manual__2025-07-19T10:10:09.304481+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/var/folders/gm/brh165c568qf0d9ggn2qd6zr0000gn/T/tmpm2nw_fvb']
+[2025-07-19T15:45:19.972+0530] {standard_task_runner.py:105} INFO - Job 12: Subtask check_for_documents
+[2025-07-19T15:45:20.028+0530] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.check_for_documents manual__2025-07-19T10:10:09.304481+00:00 [running]> on host parths-macbook-air.local
+[2025-07-19T15:45:20.103+0530] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='check_for_documents' AIRFLOW_CTX_EXECUTION_DATE='2025-07-19T10:10:09.304481+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-19T10:10:09.304481+00:00'
+[2025-07-19T15:45:20.104+0530] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-07-19T15:45:20.105+0530] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-07-19T15:45:20.105+0530] {logging_mixin.py:190} INFO - Current task name:check_for_documents state:running start_date:2025-07-19 10:15:19.929779+00:00
+[2025-07-19T15:45:20.106+0530] {logging_mixin.py:190} INFO - Dag name:startup_health_score_full_pipeline and current dag run status:running
+[2025-07-19T15:45:20.106+0530] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-19T15:45:20.109+0530] {startup_health_score_dag.py:60} ERROR - No document found at /Users/parth/Desktop/Engine/uploads/Lecture_Notes-4.pdf. Task will fail.
+[2025-07-19T15:45:20.114+0530] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py", line 61, in _check_for_documents
+    raise AirflowException(f"Document {SAMPLE_DOCUMENT_NAME} not found. Please ensure it's in the 'uploads/' directory.")
+airflow.exceptions.AirflowException: Document Lecture_Notes-4.pdf not found. Please ensure it's in the 'uploads/' directory.
+[2025-07-19T15:45:20.122+0530] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-07-19T15:45:20.125+0530] {logging_mixin.py:190} INFO - Task start:2025-07-19 10:15:19.929779+00:00 end:2025-07-19 10:15:20.121383+00:00 duration:0.191604
+[2025-07-19T15:45:20.127+0530] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): check_for_documents> dag:<DAG: startup_health_score_full_pipeline> dagrun:<DagRun startup_health_score_full_pipeline @ 2025-07-19 10:10:09.304481+00:00: manual__2025-07-19T10:10:09.304481+00:00, state:running, queued_at: 2025-07-19 10:10:09.311151+00:00. externally triggered: True>
+[2025-07-19T15:45:20.128+0530] {logging_mixin.py:190} INFO - Failure caused by Document Lecture_Notes-4.pdf not found. Please ensure it's in the 'uploads/' directory.
+[2025-07-19T15:45:20.130+0530] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=startup_health_score_full_pipeline, task_id=check_for_documents, run_id=manual__2025-07-19T10:10:09.304481+00:00, execution_date=20250719T101009, start_date=20250719T101519, end_date=20250719T101520
+[2025-07-19T15:45:20.139+0530] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-19T15:45:20.140+0530] {standard_task_runner.py:124} ERROR - Failed to execute job 12 for task check_for_documents (Document Lecture_Notes-4.pdf not found. Please ensure it's in the 'uploads/' directory.; 3743)
+Traceback (most recent call last):
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parth/Desktop/Engine/airflow_data/dags/startup_health_score_dag.py", line 61, in _check_for_documents
+    raise AirflowException(f"Document {SAMPLE_DOCUMENT_NAME} not found. Please ensure it's in the 'uploads/' directory.")
+airflow.exceptions.AirflowException: Document Lecture_Notes-4.pdf not found. Please ensure it's in the 'uploads/' directory.
+[2025-07-19T15:45:20.179+0530] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-07-19T15:45:20.193+0530] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-19T15:45:20.195+0530] {local_task_job_runner.py:245} INFO - ::endgroup::

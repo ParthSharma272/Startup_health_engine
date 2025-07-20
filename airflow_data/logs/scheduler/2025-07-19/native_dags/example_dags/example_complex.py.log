@@ -1,0 +1,63 @@
+[2025-07-19T15:41:33.336+0530] {processor.py:186} INFO - Started process (PID=2194) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:41:33.336+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T15:41:33.337+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:33.337+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:41:33.343+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:41:33.394+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:33.394+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:41:33.400+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:33.400+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T15:41:33.407+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.073 seconds
+[2025-07-19T15:44:46.866+0530] {processor.py:186} INFO - Started process (PID=3521) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:44:46.867+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T15:44:46.868+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:44:46.868+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:44:46.875+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:44:46.929+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:44:46.929+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:44:46.935+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:44:46.934+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T15:44:46.943+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.080 seconds
+[2025-07-19T15:47:59.203+0530] {processor.py:186} INFO - Started process (PID=4778) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:47:59.204+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T15:47:59.204+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:47:59.204+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:47:59.211+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:47:59.260+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:47:59.260+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:47:59.265+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:47:59.265+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T15:47:59.273+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.072 seconds
+[2025-07-19T15:51:02.767+0530] {processor.py:186} INFO - Started process (PID=6001) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:51:02.768+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T15:51:02.768+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:51:02.768+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:51:02.776+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:51:02.837+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:51:02.837+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:51:02.843+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:51:02.843+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T15:51:02.852+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.087 seconds
+[2025-07-19T15:54:39.389+0530] {processor.py:186} INFO - Started process (PID=7504) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:54:39.390+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T15:54:39.390+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:54:39.390+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:54:39.398+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:54:39.462+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:54:39.462+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:54:39.470+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:54:39.470+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T15:54:39.481+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.094 seconds
+[2025-07-19T15:57:56.801+0530] {processor.py:186} INFO - Started process (PID=9021) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:57:56.802+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T15:57:56.803+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:56.802+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:57:56.810+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T15:57:56.871+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:56.871+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:57:56.878+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:56.878+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T15:57:56.888+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.089 seconds
+[2025-07-19T16:01:29.044+0530] {processor.py:186} INFO - Started process (PID=10420) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:01:29.046+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T16:01:29.046+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:01:29.046+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:01:29.059+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:01:29.180+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:01:29.180+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:01:29.188+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:01:29.188+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T16:01:29.201+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.161 seconds
+[2025-07-19T16:07:31.762+0530] {processor.py:186} INFO - Started process (PID=12910) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:07:31.764+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T16:07:31.765+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:31.765+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:07:31.774+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:07:31.843+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:31.843+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:07:31.851+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:31.851+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T16:07:31.862+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.103 seconds
+[2025-07-19T16:11:10.996+0530] {processor.py:186} INFO - Started process (PID=14378) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:11:10.997+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2025-07-19T16:11:10.998+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:11:10.998+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:11:11.010+0530] {processor.py:925} INFO - DAG(s) 'example_complex' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py
+[2025-07-19T16:11:11.092+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:11:11.092+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:11:11.102+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:11:11.101+0530] {dag.py:4180} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2025-07-19T16:11:11.114+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_complex.py took 0.121 seconds

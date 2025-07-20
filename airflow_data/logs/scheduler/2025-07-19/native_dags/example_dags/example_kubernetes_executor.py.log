@@ -1,0 +1,70 @@
+[2025-07-19T15:41:12.448+0530] {processor.py:186} INFO - Started process (PID=2044) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:41:12.448+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:41:12.449+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:12.449+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:41:12.473+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:41:12.518+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:12.518+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:41:12.523+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:12.523+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:41:12.531+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.087 seconds
+[2025-07-19T15:43:12.934+0530] {processor.py:186} INFO - Started process (PID=2889) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:43:12.935+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:43:12.935+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:43:12.935+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:43:12.957+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:43:13.002+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:43:13.002+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:43:13.008+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:43:13.008+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:43:13.016+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.084 seconds
+[2025-07-19T15:46:38.985+0530] {processor.py:186} INFO - Started process (PID=4259) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:46:38.986+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:46:38.987+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:46:38.987+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:46:39.009+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:46:39.056+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:46:39.056+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:46:39.061+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:46:39.061+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:46:39.069+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.085 seconds
+[2025-07-19T15:49:34.909+0530] {processor.py:186} INFO - Started process (PID=5419) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:49:34.910+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:49:34.911+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:49:34.911+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:49:34.933+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:49:34.983+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:49:34.983+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:49:34.988+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:49:34.988+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:49:34.997+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.090 seconds
+[2025-07-19T15:52:51.305+0530] {processor.py:186} INFO - Started process (PID=6756) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:52:51.306+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:52:51.307+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:52:51.306+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:52:51.332+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:52:51.383+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:52:51.383+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:52:51.389+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:52:51.388+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:52:51.399+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.096 seconds
+[2025-07-19T15:57:34.317+0530] {processor.py:186} INFO - Started process (PID=8883) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:57:34.318+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:57:34.318+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:34.318+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:57:34.343+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:57:34.397+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:34.397+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:57:34.403+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:57:34.403+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:57:34.412+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.097 seconds
+[2025-07-19T15:59:45.331+0530] {processor.py:186} INFO - Started process (PID=9742) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:59:45.332+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T15:59:45.333+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:59:45.333+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:59:45.357+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T15:59:45.409+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:59:45.409+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:59:45.415+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:59:45.415+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T15:59:45.425+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.095 seconds
+[2025-07-19T16:03:25.754+0530] {processor.py:186} INFO - Started process (PID=11211) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:03:25.755+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T16:03:25.756+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:03:25.756+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:03:25.795+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:03:25.870+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:03:25.870+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:03:25.877+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:03:25.877+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T16:03:25.895+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.144 seconds
+[2025-07-19T16:07:08.293+0530] {processor.py:186} INFO - Started process (PID=12751) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:07:08.293+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T16:07:08.294+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:08.294+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:07:08.325+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:07:08.392+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:08.392+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:07:08.400+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:08.399+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T16:07:08.412+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.122 seconds
+[2025-07-19T16:09:19.177+0530] {processor.py:186} INFO - Started process (PID=13620) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:09:19.179+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py for tasks to queue
+[2025-07-19T16:09:19.179+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:09:19.179+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:09:19.209+0530] {processor.py:925} INFO - DAG(s) 'example_kubernetes_executor' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py
+[2025-07-19T16:09:19.272+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:09:19.271+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:09:19.278+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:09:19.278+0530] {dag.py:4180} INFO - Setting next_dagrun for example_kubernetes_executor to None, run_after=None
+[2025-07-19T16:09:19.289+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_kubernetes_executor.py took 0.114 seconds

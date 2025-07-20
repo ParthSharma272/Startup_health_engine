@@ -1,0 +1,63 @@
+[2025-07-19T15:41:49.745+0530] {processor.py:186} INFO - Started process (PID=2321) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:41:49.746+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T15:41:49.747+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:49.747+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:41:49.778+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:41:49.877+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:49.876+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:41:49.921+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:41:49.921+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T15:41:49.928+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.185 seconds
+[2025-07-19T15:45:03.392+0530] {processor.py:186} INFO - Started process (PID=3634) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:45:03.393+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T15:45:03.394+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:45:03.393+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:45:03.422+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:45:03.526+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:45:03.526+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:45:03.587+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:45:03.587+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T15:45:03.596+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.206 seconds
+[2025-07-19T15:48:14.233+0530] {processor.py:186} INFO - Started process (PID=4888) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:48:14.233+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T15:48:14.234+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:48:14.234+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:48:14.256+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:48:14.346+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:48:14.346+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:48:14.389+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:48:14.389+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T15:48:14.397+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.166 seconds
+[2025-07-19T15:51:18.868+0530] {processor.py:186} INFO - Started process (PID=6122) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:51:18.868+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T15:51:18.869+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:51:18.869+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:51:18.897+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:51:19.004+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:51:19.004+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:51:19.051+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:51:19.051+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T15:51:19.059+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.194 seconds
+[2025-07-19T15:55:00.971+0530] {processor.py:186} INFO - Started process (PID=7655) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:55:00.972+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T15:55:00.973+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:55:00.973+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:55:01.004+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:55:01.112+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:55:01.112+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:55:01.161+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:55:01.161+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T15:55:01.170+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.201 seconds
+[2025-07-19T15:58:13.551+0530] {processor.py:186} INFO - Started process (PID=9133) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:58:13.553+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T15:58:13.553+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:58:13.553+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:58:13.581+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T15:58:13.695+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:58:13.694+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T15:58:13.742+0530] {logging_mixin.py:190} INFO - [2025-07-19T15:58:13.742+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T15:58:13.751+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.202 seconds
+[2025-07-19T16:01:45.604+0530] {processor.py:186} INFO - Started process (PID=10536) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:01:45.605+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T16:01:45.605+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:01:45.605+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:01:45.637+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:01:45.754+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:01:45.754+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:01:45.805+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:01:45.804+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T16:01:45.815+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.213 seconds
+[2025-07-19T16:07:49.536+0530] {processor.py:186} INFO - Started process (PID=13038) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:07:49.537+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T16:07:49.537+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:49.537+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:07:49.566+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:07:49.681+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:49.681+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:07:49.730+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:07:49.730+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T16:07:49.739+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.205 seconds
+[2025-07-19T16:11:28.662+0530] {processor.py:186} INFO - Started process (PID=14499) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:11:28.663+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py for tasks to queue
+[2025-07-19T16:11:28.664+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:11:28.664+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:11:28.690+0530] {processor.py:925} INFO - DAG(s) 'example_bash_decorator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py
+[2025-07-19T16:11:28.792+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:11:28.792+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-19T16:11:28.841+0530] {logging_mixin.py:190} INFO - [2025-07-19T16:11:28.840+0530] {dag.py:4180} INFO - Setting next_dagrun for example_bash_decorator to None, run_after=None
+[2025-07-19T16:11:28.850+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_bash_decorator.py took 0.190 seconds

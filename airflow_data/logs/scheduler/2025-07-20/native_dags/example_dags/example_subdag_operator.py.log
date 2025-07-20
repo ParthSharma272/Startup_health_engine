@@ -1,0 +1,12 @@
+[2025-07-20T16:20:24.025+0530] {processor.py:186} INFO - Started process (PID=34660) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_subdag_operator.py
+[2025-07-20T16:20:24.026+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_subdag_operator.py for tasks to queue
+[2025-07-20T16:20:24.026+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.026+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_subdag_operator.py
+[2025-07-20T16:20:24.097+0530] {processor.py:925} INFO - DAG(s) 'example_subdag_operator.section-1', 'example_subdag_operator.section-2', 'example_subdag_operator' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_subdag_operator.py
+[2025-07-20T16:20:24.570+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.569+0530] {dag.py:3239} INFO - Sync 3 DAGs
+[2025-07-20T16:20:24.581+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.581+0530] {dag.py:4180} INFO - Setting next_dagrun for example_subdag_operator to 2022-01-01 00:00:00+00:00, run_after=2022-01-01 00:00:00+00:00
+[2025-07-20T16:20:24.584+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.583+0530] {dag.py:4180} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2025-07-20T16:20:24.584+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.584+0530] {dag.py:4180} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2025-07-20T16:20:24.588+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.588+0530] {dag.py:3239} INFO - Sync 2 DAGs
+[2025-07-20T16:20:24.590+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.590+0530] {dag.py:4180} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2025-07-20T16:20:24.590+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:24.590+0530] {dag.py:4180} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2025-07-20T16:20:24.597+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_subdag_operator.py took 0.575 seconds

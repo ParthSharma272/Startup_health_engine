@@ -1,0 +1,7 @@
+[2025-07-20T16:20:16.926+0530] {processor.py:186} INFO - Started process (PID=34606) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+[2025-07-20T16:20:16.927+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_time_delta_sensor_async.py for tasks to queue
+[2025-07-20T16:20:16.927+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:16.927+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+[2025-07-20T16:20:16.933+0530] {processor.py:925} INFO - DAG(s) 'example_time_delta_sensor_async' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+[2025-07-20T16:20:17.488+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:17.488+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:20:17.495+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:20:17.495+0530] {dag.py:4180} INFO - Setting next_dagrun for example_time_delta_sensor_async to None, run_after=None
+[2025-07-20T16:20:17.507+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_time_delta_sensor_async.py took 0.584 seconds

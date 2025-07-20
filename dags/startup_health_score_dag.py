@@ -6,8 +6,6 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago
 from airflow.exceptions import AirflowException
-
-
 import sys
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
@@ -37,7 +35,7 @@ BASE_DIR = project_root # This is your 'startup_health_score/Engine' directory
 CONFIG_DIR = os.path.join(BASE_DIR, 'config')
 UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 PROCESSED_DATA_DIR = os.path.join(BASE_DIR, 'processed_data')
-SAMPLE_DOCUMENT_NAME = 'Lecture_Notes-4.pdf' # Example: Use your PDF here for testing the full flow
+SAMPLE_DOCUMENT_NAME = 'sample_document.txt' # Example: Use your PDF here for testing the full flow
 EXTRACTED_TEXT_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_document_content.txt')
 EXTRACTED_KPI_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_kpis.json')
 SCORE_OUTPUT_FILE = os.path.join(PROCESSED_DATA_DIR, 'startup_score_output.json')
@@ -51,10 +49,6 @@ setup_logging() # Ensure logging is set up for DAG tasks
 # --- Python Callable Functions for Tasks ---
 
 def _check_for_documents(**kwargs):
-    """
-    Checks for the existence of the sample document in the uploads directory.
-    Pushes the document path to XCom for downstream tasks.
-    """
     document_path = os.path.join(UPLOADS_DIR, SAMPLE_DOCUMENT_NAME)
     if not os.path.exists(document_path):
         logger.error(f"No document found at {document_path}. Task will fail.")
@@ -64,10 +58,6 @@ def _check_for_documents(**kwargs):
 
 
 def _extract_raw_text(**kwargs):
-    """
-    Extracts raw text from the document using KPIExtractor and saves it to a text file.
-    Pushes the extracted raw text to XCom for the next task.
-    """
     document_path = kwargs['ti'].xcom_pull(key='document_to_process_path')
     if not document_path:
         logger.error("No document path received from upstream task. Task will fail.")
@@ -91,10 +81,6 @@ def _extract_raw_text(**kwargs):
 
 
 def _extract_kpis_rag(**kwargs): # Now synchronous
-    """
-    Extracts structured KPIs from raw text using KPIRAGExtractor (LLM).
-    Pulls raw text from XCom, pushes extracted KPI dict to XCom.
-    """
     raw_text = kwargs['ti'].xcom_pull(key='raw_extracted_text')
     if not raw_text:
         logger.error("No raw text received from upstream task. Task will fail.")
@@ -121,10 +107,6 @@ def _extract_kpis_rag(**kwargs): # Now synchronous
 
 
 def _calculate_scores(**kwargs):
-    """
-    Calculates startup health scores using the ScoringEngine.
-    Pulls KPI dict from XCom (or file as fallback) and saves the final output.
-    """
     # Prefer pulling kpi_dict from XCom if available, fallback to file
     kpi_input_data = kwargs['ti'].xcom_pull(key='extracted_kpi_dict')
     if not kpi_input_data:
