@@ -40,3 +40,206 @@
 [2025-07-20T16:32:13.240+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:13.240+0530] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-20T16:32:13.247+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:32:13.247+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
 [2025-07-20T16:32:13.259+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.651 seconds
+[2025-07-20T16:34:31.361+0530] {processor.py:186} INFO - Started process (PID=40658) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:34:31.362+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:34:31.363+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:34:31.362+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:34:31.373+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:34:32.249+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:34:32.248+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:34:32.258+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:34:32.258+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:34:32.276+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.918 seconds
+[2025-07-20T16:36:43.694+0530] {processor.py:186} INFO - Started process (PID=41494) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:36:43.695+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:36:43.696+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:36:43.696+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:36:43.707+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:36:44.384+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:36:44.384+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:36:44.391+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:36:44.391+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:36:44.403+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.711 seconds
+[2025-07-20T16:39:05.217+0530] {processor.py:186} INFO - Started process (PID=42448) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:39:05.218+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:39:05.219+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:39:05.218+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:39:05.230+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:39:05.812+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:39:05.812+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:39:05.818+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:39:05.818+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:39:05.831+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.616 seconds
+[2025-07-20T16:41:14.578+0530] {processor.py:186} INFO - Started process (PID=43268) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:41:14.580+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:41:14.580+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:41:14.580+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:41:14.591+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:41:15.157+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:41:15.157+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:41:15.163+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:41:15.163+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:41:15.176+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.600 seconds
+[2025-07-20T16:43:23.226+0530] {processor.py:186} INFO - Started process (PID=44076) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:43:23.228+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:43:23.229+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:43:23.229+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:43:23.239+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:43:23.979+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:43:23.979+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:43:23.986+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:43:23.986+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:43:23.998+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.775 seconds
+[2025-07-20T16:45:29.406+0530] {processor.py:186} INFO - Started process (PID=44911) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:45:29.406+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:45:29.407+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:45:29.407+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:45:29.418+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:45:30.029+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:45:30.029+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:45:30.035+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:45:30.035+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:45:30.048+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.645 seconds
+[2025-07-20T16:47:31.536+0530] {processor.py:186} INFO - Started process (PID=45690) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:47:31.537+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:47:31.538+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:47:31.538+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:47:31.548+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:47:32.144+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:47:32.143+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:47:32.150+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:47:32.150+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:47:32.162+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.628 seconds
+[2025-07-20T16:49:29.211+0530] {processor.py:186} INFO - Started process (PID=46463) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:49:29.212+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:49:29.213+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:49:29.213+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:49:29.224+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:49:30.036+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:49:30.035+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:49:30.043+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:49:30.043+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:49:30.056+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.848 seconds
+[2025-07-20T16:51:19.039+0530] {processor.py:186} INFO - Started process (PID=47204) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:51:19.041+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T16:51:19.041+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:51:19.041+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:51:19.051+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T16:51:19.557+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:51:19.557+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T16:51:19.564+0530] {logging_mixin.py:190} INFO - [2025-07-20T16:51:19.564+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T16:51:19.575+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.539 seconds
+[2025-07-20T17:50:53.253+0530] {processor.py:186} INFO - Started process (PID=48044) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:50:53.254+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T17:50:53.255+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:50:53.255+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:50:53.266+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:50:53.977+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:50:53.977+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T17:50:53.985+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:50:53.984+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T17:50:53.998+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.747 seconds
+[2025-07-20T17:52:44.384+0530] {processor.py:186} INFO - Started process (PID=48767) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:52:44.385+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T17:52:44.386+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:52:44.386+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:52:44.396+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:52:44.915+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:52:44.915+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T17:52:44.922+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:52:44.922+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T17:52:44.935+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.553 seconds
+[2025-07-20T17:54:45.914+0530] {processor.py:186} INFO - Started process (PID=49555) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:54:45.915+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T17:54:45.916+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:54:45.916+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:54:45.925+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:54:46.437+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:54:46.437+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T17:54:46.443+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:54:46.443+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T17:54:46.455+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.544 seconds
+[2025-07-20T17:56:39.948+0530] {processor.py:186} INFO - Started process (PID=50289) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:56:39.950+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T17:56:39.950+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:56:39.950+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:56:39.961+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:56:40.467+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:56:40.467+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T17:56:40.474+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:56:40.473+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T17:56:40.485+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.539 seconds
+[2025-07-20T17:58:32.142+0530] {processor.py:186} INFO - Started process (PID=51003) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:58:32.144+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T17:58:32.144+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:58:32.144+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:58:32.154+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T17:58:32.693+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:58:32.693+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T17:58:32.700+0530] {logging_mixin.py:190} INFO - [2025-07-20T17:58:32.700+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T17:58:32.713+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.573 seconds
+[2025-07-20T18:00:23.540+0530] {processor.py:186} INFO - Started process (PID=51721) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:00:23.542+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:00:23.542+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:00:23.542+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:00:23.553+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:00:24.069+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:00:24.068+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:00:24.075+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:00:24.075+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:00:24.088+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.550 seconds
+[2025-07-20T18:02:21.683+0530] {processor.py:186} INFO - Started process (PID=52473) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:02:21.685+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:02:21.686+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:02:21.685+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:02:21.697+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:02:22.215+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:02:22.215+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:02:22.221+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:02:22.221+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:02:22.234+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.553 seconds
+[2025-07-20T18:04:18.173+0530] {processor.py:186} INFO - Started process (PID=53220) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:04:18.175+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:04:18.175+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:04:18.175+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:04:18.186+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:04:18.723+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:04:18.722+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:04:18.729+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:04:18.729+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:04:18.741+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.570 seconds
+[2025-07-20T18:06:14.479+0530] {processor.py:186} INFO - Started process (PID=53969) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:06:14.481+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:06:14.482+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:06:14.482+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:06:14.492+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:06:15.033+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:06:15.032+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:06:15.039+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:06:15.039+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:06:15.051+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.574 seconds
+[2025-07-20T18:08:11.037+0530] {processor.py:186} INFO - Started process (PID=54714) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:08:11.039+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:08:11.039+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:08:11.039+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:08:11.050+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:08:11.565+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:08:11.565+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:08:11.571+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:08:11.571+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:08:11.583+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.548 seconds
+[2025-07-20T18:23:22.216+0530] {processor.py:186} INFO - Started process (PID=55440) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:23:22.217+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:23:22.218+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:23:22.218+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:23:22.228+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:23:22.777+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:23:22.776+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:23:22.783+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:23:22.783+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:23:22.796+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.582 seconds
+[2025-07-20T18:25:30.618+0530] {processor.py:186} INFO - Started process (PID=56278) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:25:30.619+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:25:30.620+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:25:30.620+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:25:30.630+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:25:31.135+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:25:31.135+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:25:31.142+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:25:31.142+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:25:31.154+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.538 seconds
+[2025-07-20T18:27:17.649+0530] {processor.py:186} INFO - Started process (PID=56963) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:27:17.651+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:27:17.651+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:27:17.651+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:27:17.661+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:27:18.176+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:27:18.176+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:27:18.183+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:27:18.183+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:27:18.195+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.548 seconds
+[2025-07-20T18:29:07.793+0530] {processor.py:186} INFO - Started process (PID=57672) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:29:07.794+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:29:07.795+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:29:07.794+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:29:07.805+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:29:08.341+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:29:08.341+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:29:08.348+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:29:08.348+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:29:08.361+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.571 seconds
+[2025-07-20T18:30:57.427+0530] {processor.py:186} INFO - Started process (PID=58369) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:30:57.429+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:30:57.429+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:30:57.429+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:30:57.440+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:30:57.947+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:30:57.946+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:30:57.953+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:30:57.953+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:30:57.965+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.540 seconds
+[2025-07-20T18:39:30.759+0530] {processor.py:186} INFO - Started process (PID=59079) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:39:30.760+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:39:30.761+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:39:30.760+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:39:30.771+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:39:31.337+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:39:31.337+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:39:31.343+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:39:31.343+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:39:31.355+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.598 seconds
+[2025-07-20T18:47:14.870+0530] {processor.py:186} INFO - Started process (PID=59750) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:47:14.934+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:47:14.944+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:47:14.943+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:47:14.963+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:47:15.517+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:47:15.517+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:47:15.523+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:47:15.523+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:47:15.536+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.669 seconds
+[2025-07-20T18:53:17.783+0530] {processor.py:186} INFO - Started process (PID=60427) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:53:17.784+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T18:53:17.785+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:53:17.785+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:53:17.796+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T18:53:18.338+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:53:18.338+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T18:53:18.345+0530] {logging_mixin.py:190} INFO - [2025-07-20T18:53:18.345+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T18:53:18.357+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.576 seconds
+[2025-07-20T19:08:33.884+0530] {processor.py:186} INFO - Started process (PID=61112) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T19:08:33.885+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T19:08:33.886+0530] {logging_mixin.py:190} INFO - [2025-07-20T19:08:33.885+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T19:08:33.896+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T19:08:34.407+0530] {logging_mixin.py:190} INFO - [2025-07-20T19:08:34.407+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T19:08:34.413+0530] {logging_mixin.py:190} INFO - [2025-07-20T19:08:34.413+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T19:08:34.426+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.544 seconds
+[2025-07-20T19:11:36.779+0530] {processor.py:186} INFO - Started process (PID=61799) to work on /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T19:11:36.780+0530] {processor.py:914} INFO - Processing file /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py for tasks to queue
+[2025-07-20T19:11:36.781+0530] {logging_mixin.py:190} INFO - [2025-07-20T19:11:36.781+0530] {dagbag.py:588} INFO - Filling up the DagBag from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T19:11:36.791+0530] {processor.py:925} INFO - DAG(s) 'example_sensors' retrieved from /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py
+[2025-07-20T19:11:37.301+0530] {logging_mixin.py:190} INFO - [2025-07-20T19:11:37.301+0530] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-20T19:11:37.307+0530] {logging_mixin.py:190} INFO - [2025-07-20T19:11:37.307+0530] {dag.py:4180} INFO - Setting next_dagrun for example_sensors to None, run_after=None
+[2025-07-20T19:11:37.319+0530] {processor.py:208} INFO - Processing /Users/parth/Desktop/Engine/venv/lib/python3.11/site-packages/airflow/example_dags/example_sensors.py took 0.542 seconds
