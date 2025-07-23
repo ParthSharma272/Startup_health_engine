@@ -1,0 +1,96 @@
+# docker-compose.yaml
+version: '3.8'
+
+x-airflow-common:
+  &airflow-common
+  image: custom-airflow:2.11.0 # Use the name of your custom image
+  environment:
+    AIRFLOW__CORE__FERNET_KEY: '_aGq_b8Y-gN-L_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z' # Replace with a strong key in production
+    AIRFLOW__CORE__EXECUTOR: CeleryExecutor # Or LocalExecutor for simpler setup
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+    AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
+    AIRFLOW__WEBSERVER__AUTHENTICATE: 'False' # For local testing, set to True for production
+    AIRFLOW__WEBSERVER__RBAC: 'False' # For local testing, set to True for production
+    AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'True' # Required for passing complex objects via XCom
+  volumes:
+    - ./dags:/opt/airflow/dags # Mount your DAGs folder
+    - ./logs:/opt/airflow/logs # Mount logs folder
+    - ./plugins:/opt/airflow/plugins # Mount plugins folder (if any)
+    - ./config:/opt/airflow/config # Mount your config directory
+    - ./src:/opt/airflow/src # Mount your source code directory
+    - ./uploads:/opt/airflow/uploads # Mount your uploads directory
+    - ./processed_data:/opt/airflow/processed_data # Mount your processed_data directory
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+  # Removed common healthcheck from here as it was webserver-specific
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:latest
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  airflow-init:
+    <<: *airflow-common
+    command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: airflow webserver
+    ports: # Explicitly define ports only for the webserver
+      - "8080:8080"
+    healthcheck: # Specific healthcheck for the webserver
+      test: ["CMD-SHELL", "curl --fail http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: airflow scheduler
+    depends_on:
+      airflow-webserver:
+        condition: service_started # Changed condition to service_started
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  airflow-worker:
+    <<: *airflow-common
+    command: airflow celery worker
+    depends_on:
+      airflow-scheduler:
+        condition: service_started # Changed condition to service_started
