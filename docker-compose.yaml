@@ -3,7 +3,9 @@ version: '3.8'
 
 x-airflow-common:
   &airflow-common
-  image: custom-airflow:2.11.0 # Use the name of your custom image
+  build:
+    context: . # Build from the current directory (where Dockerfile is)
+    dockerfile: Dockerfile # Use the Dockerfile in the current directory
   environment:
     AIRFLOW__CORE__FERNET_KEY: '_aGq_b8Y-gN-L_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z' # Replace with a strong key in production
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor # Or LocalExecutor for simpler setup
@@ -14,23 +16,24 @@ x-airflow-common:
     AIRFLOW__WEBSERVER__RBAC: 'False' # For local testing, set to True for production
     AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'True' # Required for passing complex objects via XCom
     PYTHONPATH: /opt/airflow # This ensures Python can find your 'src' modules
-    # OPENAI_API_KEY: "YOUR_OPENAI_API_KEY_HERE" # Removed hardcoded key
-  env_file: # <-- ADDED THIS LINE to reference the .env file
-    - .env # <-- ADDED THIS LINE
+    AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth' # This forces basic auth for API
+    AIRFLOW__API__ENABLE_EXPERIMENTAL_API: 'True' # Keep this as it helps with API triggers
+    # OPENAI_API_KEY is loaded from .env file
+  env_file: # To load OPENAI_API_KEY from .env
+    - .env
   volumes:
     - ./dags:/opt/airflow/dags # Mount your DAGs folder
     - ./logs:/opt/airflow/logs # Mount logs folder
     - ./plugins:/opt/airflow/plugins # Mount plugins folder (if any)
     - ./config:/opt/airflow/config # Mount your config directory
     - ./src:/opt/airflow/src # Mount your source code directory
-    - ./uploads:/opt/airflow/uploads # Mount your uploads directory
-    - ./processed_data:/opt/airflow/processed_data # Mount your processed_data directory
+    - ./uploads:/opt/airflow/uploads # Mount your uploads directory (shared)
+    - ./processed_data:/opt/airflow/processed_data # Mount your processed_data directory (shared)
   depends_on:
     postgres:
       condition: service_healthy
     redis:
       condition: service_healthy
-  # Removed common healthcheck from here as it was webserver-specific
 
 services:
   postgres:
@@ -84,9 +87,10 @@ services:
   airflow-scheduler:
     <<: *airflow-common
     command: airflow scheduler
+    # Removed explicit Celery environment variables here
     depends_on:
       airflow-webserver:
-        condition: service_started # Changed condition to service_started
+        condition: service_started
       postgres:
         condition: service_healthy
       redis:
@@ -97,4 +101,23 @@ services:
     command: airflow celery worker
     depends_on:
       airflow-scheduler:
-        condition: service_started # Changed condition to service_started
+        condition: service_started
+
+  streamlit:
+    build:
+      context: . # Build context is now the root directory
+      dockerfile: ./streamlit/Dockerfile # Specify path to Streamlit's Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./processed_data:/app/processed_data
+      - ./config:/app/config
+      - ./src:/app/src
+      - ./streamlit/app.py:/app/app.py # Explicitly mount app.py
+    environment:
+      AIRFLOW_API_BASE_URL: "http://airflow-webserver:8080/api/v1"
+      AIRFLOW_UI_BASE_URL: "http://localhost:8080"
+    depends_on:
+      airflow-webserver:
+        condition: service_healthy

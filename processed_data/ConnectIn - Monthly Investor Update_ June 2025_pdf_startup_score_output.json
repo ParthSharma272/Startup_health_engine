@@ -31,7 +31,7 @@
     "Net Promoter Score (NPS)": 85.29,
     "Customer Satisfaction Score (CSAT)": 85.0,
     "Support Ticket Volume": 33.65,
-    "Average Time to Resolution (Support)": 100.0,
+    "Average Time to Resolution (Support)": 0.0,
     "Onboarding Completion Rate": 75.0
   },
   "category_scores": {
@@ -39,9 +39,9 @@
     "Growth & Traction": 40.48,
     "Unit Economics & Efficiency": 55.03,
     "Retention & Stickiness": 21.92,
-    "Customer Success & Relationship Health": 80.22,
+    "Customer Success & Relationship Health": 65.22,
     "Execution & Team Quality": 85.24
   },
-  "total_score": 53.57,
+  "total_score": 52.07,
   "missing_non_mandatory_kpis": []
 }

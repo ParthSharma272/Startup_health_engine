@@ -1,7 +1,7 @@
 import json
 import re
 from typing import Dict, Any, Tuple, Optional, List
-import openai # New import
+import openai
 from src.utils.logger_config import logger
 
 class KPIRAGExtractor:
@@ -11,7 +11,7 @@ class KPIRAGExtractor:
     This module is responsible for 'Step 2: KPI Extraction' from the pipeline.
     """
 
-    def __init__(self, kpi_benchmarks: List[Dict[str, Any]], openai_api_key: str):
+    def __init__(self, kpi_benchmarks: List[Dict[str, Any]], openai_api_key: str, kpi_benchmark_map: Dict[str, Any]):
         """
         Initializes the KPIRAGExtractor by loading the LLM and tokenizer.
 
@@ -19,13 +19,14 @@ class KPIRAGExtractor:
             kpi_benchmarks (List[Dict[str, Any]]): List of KPI benchmark dictionaries, used to
                                                    inform the LLM about expected KPIs.
             openai_api_key (str): Your OpenAI API key.
+            kpi_benchmark_map (Dict[str, Any]): A map of KPI names to their benchmark configurations,
+                                                 used to determine expected data types (e.g., 'predefined').
         """
-        self.client = openai.OpenAI(api_key=openai_api_key) # Initialize OpenAI client
+        self.client = openai.OpenAI(api_key=openai_api_key)
         self.model_name = "gpt-3.5-turbo" # You can change this to "gpt-4o" for potentially better results
         self.kpi_list = [kpi['kpi'] for kpi in kpi_benchmarks]
+        self.kpi_benchmark_map = kpi_benchmark_map # Store the map for type checking
         logger.info(f"KPIRAGExtractor initialized with OpenAI model: {self.model_name}.")
-
-    # The _load_llm method is removed as it's not needed for OpenAI API.
 
     def _construct_prompt(self, text_content: str) -> str:
         """
@@ -41,7 +42,7 @@ class KPIRAGExtractor:
 
         # Adding a few-shot example to guide the LLM more effectively
         example_document = "Our MRR is $100,000. Burn Rate is $50,000. Founder commitment is Full-Time."
-        example_json_output = '{"Monthly Recurring Revenue (MRR)": 100000, "Burn Rate": 50000, "Founder Commitment": "Full-Time"}'
+        example_json_output = '{"Monthly Recurring Revenue (MRR)": 100000, "Burn Rate": 50000, "Founder Commitment (Full-Time)": "Full-Time"}' # Corrected example KPI name
 
         prompt = f"""
         Analyze the following business document and extract the specified Key Performance Indicators (KPIs) and their numerical or string values.
@@ -107,7 +108,7 @@ class KPIRAGExtractor:
                 llm_response_string = chat_completion.choices[0].message.content
             else:
                 logger.warning(f"OpenAI API returned unexpected output: {chat_completion}")
-                llm_response_string = "OpenAI API returned no content or unexpected format."
+                llm_response_string = "OpenAI API returned no generated text or unexpected format."
 
             logger.debug(f"Raw LLM response received:\n{llm_response_string}")
 
@@ -125,10 +126,32 @@ class KPIRAGExtractor:
                 logger.warning("No JSON object found in LLM response. Attempting fallback parsing (comma-separated).")
                 parsed_kpis = self._parse_comma_separated_kpis(llm_response_string)
 
+            # --- NEW DEBUG LOG HERE ---
+            logger.debug(f"Parsed KPIs before cleaning (from LLM/fallback): {parsed_kpis}")
+            # --- END NEW DEBUG LOG ---
+
             # Final cleaning and type conversion for parsed KPIs
             cleaned_kpis = {}
             for kpi_name, value in parsed_kpis.items():
-                if isinstance(value, str):
+                # Get KPI info from the map to determine expected type
+                kpi_info = self.kpi_benchmark_map.get(kpi_name)
+                
+                if kpi_info and kpi_info.get('normalization') == 'predefined':
+                    # For predefined KPIs, keep the value as a string, strip whitespace
+                    # Also, ensure the string matches one of the predefined params keys if possible
+                    cleaned_string_value = str(value).strip() if value is not None else None
+                    if cleaned_string_value and kpi_info.get('params'):
+                        # Try to find a case-insensitive match among predefined options
+                        matched_predefined_value = next(
+                            (k for k in kpi_info['params'] if k.lower() == cleaned_string_value.lower()),
+                            cleaned_string_value # Fallback to original if no exact predefined match
+                        )
+                        cleaned_kpis[kpi_name] = matched_predefined_value
+                    else:
+                        cleaned_kpis[kpi_name] = cleaned_string_value
+                    logger.debug(f"Predefined KPI '{kpi_name}' kept as string: '{cleaned_kpis[kpi_name]}'")
+                elif isinstance(value, str):
+                    # For other KPIs, attempt numeric conversion
                     # Remove currency symbols (₹, $) AND COMMAS, then convert to float
                     cleaned_value = re.sub(r'[₹$]', '', value).replace(',', '').strip()
                     try:
@@ -136,11 +159,15 @@ class KPIRAGExtractor:
                             cleaned_kpis[kpi_name] = float(cleaned_value.replace('%', ''))
                         else:
                             cleaned_kpis[kpi_name] = float(cleaned_value)
+                        logger.debug(f"Numeric KPI '{kpi_name}' converted to float: {cleaned_kpis[kpi_name]}")
                     except ValueError:
                         # If it's a string that can't be converted to float, keep as string
                         cleaned_kpis[kpi_name] = value
+                        logger.warning(f"Could not convert '{value}' to float for KPI '{kpi_name}'. Keeping as string.")
                 else:
+                    # Keep non-string, non-predefined values as they are (e.g., already numbers from JSON)
                     cleaned_kpis[kpi_name] = value
+                    logger.debug(f"KPI '{kpi_name}' kept as original type: {cleaned_kpis[kpi_name]}")
 
             return cleaned_kpis, llm_response_string
 
@@ -161,6 +188,7 @@ class KPIRAGExtractor:
         # Normalize the input string: remove leading/trailing spaces, and ensure consistent ": " delimiter
         text = text.strip()
         text = re.sub(r'\s*:\s*', ': ', text) # Replace any amount of whitespace around colon with ': '
+        # Split by comma followed by a space, but only if the space is followed by an uppercase letter (start of a new KPI)
         kpi_entries = re.split(r',\s*(?=[A-Z])', text)
 
         logger.debug(f"Raw text for parsing in _parse_comma_separated_kpis: {text}")
@@ -190,26 +218,8 @@ class KPIRAGExtractor:
                             break
 
                 if matched_kpi_name:
-                    converted_value: Any = value_extracted # Default to string
-
-                    # Further clean value_extracted to remove units like "months" before numeric conversion
-                    if isinstance(value_extracted, str):
-                        # Remove common unit suffixes (e.g., "months", "%") at the end of the string
-                        value_without_units = re.sub(r'\s*(?:months|month|%)\s*$', '', value_extracted, flags=re.IGNORECASE).strip()
-
-                        # Now, remove currency symbols and ALL commas for numeric conversion
-                        cleaned_numeric_value_str = re.sub(r'[₹$]', '', value_without_units).replace(',', '').strip()
-
-                        logger.debug(f"Cleaned numeric value string for '{matched_kpi_name}': '{cleaned_numeric_value_str}' (from original '{value_extracted}')")
-
-                        try:
-                            converted_value = float(cleaned_numeric_value_str)
-                            logger.debug(f"Converted '{matched_kpi_name}' to float: {converted_value}")
-                        except ValueError:
-                            logger.warning(f"Could not convert '{value_extracted}' to float for KPI '{matched_kpi_name}'. Keeping as string.")
-                            converted_value = value_extracted # Keep original if conversion fails
-
-                    parsed_data[matched_kpi_name] = converted_value
+                    # No numeric conversion here; let the main extract_kpis loop handle type conversion
+                    parsed_data[matched_kpi_name] = value_extracted
                 else:
                     logger.warning(f"Extracted KPI '{kpi_name_extracted}' could not be mapped to an official KPI. Skipping.")
             else:

@@ -19,9 +19,9 @@
   "Customer (Logo) Churn Rate": "2.0% (Monthly)",
   "Revenue Churn Rate": "1.6% (Monthly)",
   "Net Revenue Retention (NRR)": "100.4% (Monthly)",
-  "Daily Active Users / Monthly Active Users (DAU/MAU)": 30,
-  "Day-30 Retention Rate": 35,
-  "Day-90 Retention Rate": 25,
+  "Daily Active Users / Monthly Active Users (DAU/MAU)": 30.0,
+  "Day-30 Retention Rate": 35.0,
+  "Day-90 Retention Rate": 25.0,
   "Founder Commitment (Full-Time)": "Full-Time",
   "Team Size": 25,
   "KPI Update Frequency": "Weekly",
@@ -30,6 +30,6 @@
   "Net Promoter Score (NPS)": 45.0,
   "Customer Satisfaction Score (CSAT)": 85.0,
   "Support Ticket Volume": 450,
-  "Average Time to Resolution (Support)": 18,
+  "Average Time to Resolution (Support)": "18 Hours",
   "Onboarding Completion Rate": 75.0
 }

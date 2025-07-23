@@ -1,0 +1,147 @@
+[2025-07-23T07:50:02.736+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T07:50:02.757+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.calculate_startup_health_scores manual__2025-07-23T07:49:45.669808+00:00 [queued]>
+[2025-07-23T07:50:02.764+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.calculate_startup_health_scores manual__2025-07-23T07:49:45.669808+00:00 [queued]>
+[2025-07-23T07:50:02.764+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T07:50:02.774+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): calculate_startup_health_scores> on 2025-07-23 07:49:45.669808+00:00
+[2025-07-23T07:50:02.789+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=65) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T07:50:02.795+0000] {standard_task_runner.py:72} INFO - Started process 67 to run task
+[2025-07-23T07:50:02.794+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'calculate_startup_health_scores', 'manual__2025-07-23T07:49:45.669808+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmprafxplgf']
+[2025-07-23T07:50:02.801+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask calculate_startup_health_scores
+[2025-07-23T07:50:02.868+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.calculate_startup_health_scores manual__2025-07-23T07:49:45.669808+00:00 [running]> on host 1b482cb9bf23
+[2025-07-23T07:50:02.938+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='calculate_startup_health_scores' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T07:49:45.669808+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-23T07:49:45.669808+00:00'
+[2025-07-23T07:50:02.939+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T07:50:02.953+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,953 - startup_health_score - INFO - Calculating startup health scores...
+[2025-07-23T07:50:02.953+0000] {startup_health_score_dag.py:137} INFO - Calculating startup health scores...
+[2025-07-23T07:50:02.966+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,966 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T07:50:02.966+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T07:50:02.967+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,967 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_weights.json
+[2025-07-23T07:50:02.967+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_weights.json
+[2025-07-23T07:50:02.968+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,968 - startup_health_score - INFO - KPINormalizer initialized with KPI formula aliases.
+[2025-07-23T07:50:02.968+0000] {kpi_normalizer.py:21} INFO - KPINormalizer initialized with KPI formula aliases.
+[2025-07-23T07:50:02.968+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,968 - startup_health_score - INFO - Identified mandatory KPIs: ['Monthly Recurring Revenue (MRR)', 'Burn Rate', 'Runway (in Months)', 'Gross Margin (%)', 'MRR Growth Rate', 'Customer Acquisition Cost (CAC)', 'Net Revenue Retention (NRR)', 'Customer (Logo) Churn Rate', 'Founder Commitment (Full-Time)', 'Onboarding Completion Rate']
+[2025-07-23T07:50:02.968+0000] {scoring_engine.py:56} INFO - Identified mandatory KPIs: ['Monthly Recurring Revenue (MRR)', 'Burn Rate', 'Runway (in Months)', 'Gross Margin (%)', 'MRR Growth Rate', 'Customer Acquisition Cost (CAC)', 'Net Revenue Retention (NRR)', 'Customer (Logo) Churn Rate', 'Founder Commitment (Full-Time)', 'Onboarding Completion Rate']
+[2025-07-23T07:50:02.969+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,969 - startup_health_score - INFO - Collected all expected KPI names: ['Monthly Recurring Revenue (MRR)', 'Annual Recurring Revenue (ARR)', 'Burn Rate', 'Runway (in Months)', 'Gross Margin (%)', 'Operating Margin (or EBITDA)', 'MRR Growth Rate', 'User Growth Rate', 'Lead-to-Customer Conversion Rate', 'Trial-to-Paid Conversion Rate', 'Signup-to-MRR Ratio', 'Expansion Revenue', 'Customer Acquisition Cost (CAC)', 'Customer Lifetime Value (CLV or LTV)', 'CAC-to-CLV Ratio', 'CAC Payback Period', 'Contribution Margin', 'Net Revenue Retention (NRR)', 'Customer (Logo) Churn Rate', 'Revenue Churn Rate', 'Daily Active Users / Monthly Active Users (DAU/MAU)', 'Day-30 Retention Rate', 'Day-90 Retention Rate', 'Founder Commitment (Full-Time)', 'Arr per Fte', 'Team Size', 'KPI Update Frequency', 'Time Since Last Fundraise', 'Net Promoter Score (NPS)', 'Customer Satisfaction Score (CSAT)', 'Onboarding Completion Rate', 'Average Time to Resolution (Support)', 'Support Ticket Volume']
+[2025-07-23T07:50:02.969+0000] {scoring_engine.py:64} INFO - Collected all expected KPI names: ['Monthly Recurring Revenue (MRR)', 'Annual Recurring Revenue (ARR)', 'Burn Rate', 'Runway (in Months)', 'Gross Margin (%)', 'Operating Margin (or EBITDA)', 'MRR Growth Rate', 'User Growth Rate', 'Lead-to-Customer Conversion Rate', 'Trial-to-Paid Conversion Rate', 'Signup-to-MRR Ratio', 'Expansion Revenue', 'Customer Acquisition Cost (CAC)', 'Customer Lifetime Value (CLV or LTV)', 'CAC-to-CLV Ratio', 'CAC Payback Period', 'Contribution Margin', 'Net Revenue Retention (NRR)', 'Customer (Logo) Churn Rate', 'Revenue Churn Rate', 'Daily Active Users / Monthly Active Users (DAU/MAU)', 'Day-30 Retention Rate', 'Day-90 Retention Rate', 'Founder Commitment (Full-Time)', 'Arr per Fte', 'Team Size', 'KPI Update Frequency', 'Time Since Last Fundraise', 'Net Promoter Score (NPS)', 'Customer Satisfaction Score (CSAT)', 'Onboarding Completion Rate', 'Average Time to Resolution (Support)', 'Support Ticket Volume']
+[2025-07-23T07:50:02.969+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,969 - startup_health_score - INFO - ScoringEngine initialized successfully.
+[2025-07-23T07:50:02.969+0000] {scoring_engine.py:31} INFO - ScoringEngine initialized successfully.
+[2025-07-23T07:50:02.970+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,970 - startup_health_score - ERROR - Missing mandatory KPIs: Founder Commitment (Full-Time)
+[2025-07-23T07:50:02.970+0000] {scoring_engine.py:86} ERROR - Missing mandatory KPIs: Founder Commitment (Full-Time)
+[2025-07-23T07:50:02.970+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,970 - startup_health_score - INFO - Scoring results saved to /opt/***/processed_data/score_output.json
+[2025-07-23T07:50:02.970+0000] {startup_health_score_dag.py:160} INFO - Scoring results saved to /opt/***/processed_data/score_output.json
+[2025-07-23T07:50:02.971+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,971 - startup_health_score - ERROR - Scoring completed with errors: Missing mandatory KPIs
+[2025-07-23T07:50:02.971+0000] {startup_health_score_dag.py:163} ERROR - Scoring completed with errors: Missing mandatory KPIs
+[2025-07-23T07:50:02.972+0000] {log.py:232} WARNING - 2025-07-23 07:50:02,971 - startup_health_score - ERROR - An error occurred during score calculation: Scoring failed: Missing mandatory KPIs
+Traceback (most recent call last):
+  File "/opt/***/dags/startup_health_score_dag.py", line 164, in _calculate_scores
+    raise AirflowException(f"Scoring failed: {results['error']}")
+***.exceptions.AirflowException: Scoring failed: Missing mandatory KPIs
+[2025-07-23T07:50:02.971+0000] {startup_health_score_dag.py:168} ERROR - An error occurred during score calculation: Scoring failed: Missing mandatory KPIs
+Traceback (most recent call last):
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 164, in _calculate_scores
+    raise AirflowException(f"Scoring failed: {results['error']}")
+airflow.exceptions.AirflowException: Scoring failed: Missing mandatory KPIs
+[2025-07-23T07:50:02.979+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 164, in _calculate_scores
+    raise AirflowException(f"Scoring failed: {results['error']}")
+airflow.exceptions.AirflowException: Scoring failed: Missing mandatory KPIs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 169, in _calculate_scores
+    raise AirflowException(f"Score calculation failed: {e}")
+airflow.exceptions.AirflowException: Score calculation failed: Scoring failed: Missing mandatory KPIs
+[2025-07-23T07:50:02.996+0000] {taskinstance.py:1242} INFO - Marking task as UP_FOR_RETRY. dag_id=startup_health_score_full_pipeline, task_id=calculate_startup_health_scores, run_id=manual__2025-07-23T07:49:45.669808+00:00, execution_date=20250723T074945, start_date=20250723T075002, end_date=20250723T075002
+[2025-07-23T07:50:03.020+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T07:50:03.021+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 5 for task calculate_startup_health_scores (Score calculation failed: Scoring failed: Missing mandatory KPIs; 67)
+Traceback (most recent call last):
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 164, in _calculate_scores
+    raise AirflowException(f"Scoring failed: {results['error']}")
+airflow.exceptions.AirflowException: Scoring failed: Missing mandatory KPIs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 169, in _calculate_scores
+    raise AirflowException(f"Score calculation failed: {e}")
+airflow.exceptions.AirflowException: Score calculation failed: Scoring failed: Missing mandatory KPIs
+[2025-07-23T07:50:03.068+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-07-23T07:50:03.086+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T07:50:03.088+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
