@@ -48,14 +48,23 @@ setup_logging() # Ensure logging is set up for DAG tasks
 # --- Python Callable Functions for Tasks ---
 
 def _check_for_documents(**kwargs):
-    # List files in the uploads directory
-    uploaded_files = [f for f in os.listdir(UPLOADS_DIR) if os.path.isfile(os.path.join(UPLOADS_DIR, f))]
+    # Define a list of allowed document extensions
+    # Add more extensions if your KPIExtractor supports them (e.g., .docx, .xlsx, .csv)
+    ALLOWED_EXTENSIONS = ('.txt', '.pdf')
+
+    # List files in the uploads directory, filtering out system files and non-allowed extensions
+    uploaded_files = [
+        f for f in os.listdir(UPLOADS_DIR)
+        if os.path.isfile(os.path.join(UPLOADS_DIR, f)) and \
+           not f.startswith('.') and \
+           f.lower().endswith(ALLOWED_EXTENSIONS)
+    ]
 
     if not uploaded_files:
-        logger.error(f"No documents found in the uploads directory: {UPLOADS_DIR}. Task will fail.")
-        raise AirflowException(f"No documents found in the 'uploads/' directory. Please upload a document.")
+        logger.error(f"No supported documents found in the uploads directory: {UPLOADS_DIR}. Task will fail.")
+        raise AirflowException(f"No supported documents found in the 'uploads/' directory. Please upload a .txt or .pdf document.")
 
-    # Select the first found document to process
+    # Select the first found supported document to process
     selected_document_name = uploaded_files[0]
     document_path = os.path.join(UPLOADS_DIR, selected_document_name)
 

@@ -865,3 +865,260 @@ Traceback (most recent call last):
 NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
 [2025-07-23T05:02:40.972+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
 [2025-07-23T05:02:41.021+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 3.161 seconds
+[2025-07-23T05:03:11.451+0000] {processor.py:186} INFO - Started process (PID=35) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:03:11.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:03:11.456+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:03:11.455+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:03:12.294+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:03:12.291+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:03:12.295+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:03:12.313+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.882 seconds
+[2025-07-23T05:03:42.750+0000] {processor.py:186} INFO - Started process (PID=37) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:03:42.756+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:03:42.757+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:03:42.757+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:03:43.381+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:03:43.379+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:03:43.381+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:03:43.391+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.652 seconds
+[2025-07-23T05:04:13.861+0000] {processor.py:186} INFO - Started process (PID=39) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:04:13.864+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:04:13.865+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:04:13.865+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:04:14.442+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:04:14.440+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:04:14.442+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:04:14.454+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.605 seconds
+[2025-07-23T05:04:44.519+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:04:44.521+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:04:44.522+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:04:44.522+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:04:45.493+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:04:45.490+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:04:45.493+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:04:45.520+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 1.012 seconds
+[2025-07-23T05:05:16.129+0000] {processor.py:186} INFO - Started process (PID=43) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:05:16.131+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:05:16.133+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:05:16.133+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:05:16.932+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:05:16.929+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:05:16.933+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:05:16.967+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.855 seconds
+[2025-07-23T05:05:47.470+0000] {processor.py:186} INFO - Started process (PID=45) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:05:47.472+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:05:47.479+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:05:47.475+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:05:48.383+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:05:48.380+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:05:48.383+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:05:48.405+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.963 seconds
+[2025-07-23T05:06:18.793+0000] {processor.py:186} INFO - Started process (PID=47) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:06:18.797+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:06:18.800+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:06:18.799+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:06:19.392+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:06:19.390+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:06:19.392+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:06:19.406+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.632 seconds
+[2025-07-23T05:06:49.855+0000] {processor.py:186} INFO - Started process (PID=49) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:06:49.858+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:06:49.860+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:06:49.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:06:50.701+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:06:50.699+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:06:50.702+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:06:50.733+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.890 seconds
+[2025-07-23T05:07:21.289+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:07:21.291+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:07:21.292+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:07:21.292+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:07:21.816+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:07:21.814+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:07:21.817+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:07:21.830+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.552 seconds
+[2025-07-23T05:08:32.660+0000] {processor.py:186} INFO - Started process (PID=32) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:08:32.661+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:08:32.663+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:32.662+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:08:35.363+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:08:35.759+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.758+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.768+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.768+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.773+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.773+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.777+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.777+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.780+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.780+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.786+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.786+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.790+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.790+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:08:35.790+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.790+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:08:35.808+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.808+0000] {dag.py:3262} INFO - Creating ORM DAG for startup_health_score_full_pipeline
+[2025-07-23T05:08:35.809+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:08:35.809+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:08:35.835+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 3.181 seconds
+[2025-07-23T05:09:06.150+0000] {processor.py:186} INFO - Started process (PID=34) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:09:06.151+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:09:06.154+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:09:06.154+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:09:07.411+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:09:07.429+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:09:07.428+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:09:07.437+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:09:07.436+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:09:07.445+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 1.313 seconds
+[2025-07-23T05:09:37.596+0000] {processor.py:186} INFO - Started process (PID=36) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:09:37.599+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:09:37.600+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:09:37.600+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:09:38.335+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:09:38.393+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:09:38.392+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:09:38.407+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:09:38.407+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:09:38.428+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.849 seconds
+[2025-07-23T05:10:08.894+0000] {processor.py:186} INFO - Started process (PID=38) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:10:08.896+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:10:08.898+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:10:08.897+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:10:09.575+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:10:09.593+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:10:09.593+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:10:09.600+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:10:09.599+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:10:09.608+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.730 seconds
+[2025-07-23T05:10:40.034+0000] {processor.py:186} INFO - Started process (PID=40) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:10:40.036+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:10:40.037+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:10:40.037+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:10:40.667+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:10:40.686+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:10:40.686+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:10:40.693+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:10:40.693+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:10:40.700+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.676 seconds
+[2025-07-23T05:11:10.991+0000] {processor.py:186} INFO - Started process (PID=42) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:11:10.992+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:11:10.994+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:11:10.993+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:11:11.577+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:11:11.597+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:11:11.597+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:11:11.603+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:11:11.603+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:11:11.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.631 seconds
+[2025-07-23T05:11:42.109+0000] {processor.py:186} INFO - Started process (PID=44) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:11:42.111+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:11:42.113+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:11:42.112+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:11:42.797+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:11:42.816+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:11:42.816+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:11:42.823+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:11:42.823+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:11:42.833+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.737 seconds
+[2025-07-23T05:12:13.263+0000] {processor.py:186} INFO - Started process (PID=46) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:12:13.265+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:12:13.266+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:12:13.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:12:13.888+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:12:13.902+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:12:13.902+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:12:13.908+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:12:13.908+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:12:13.917+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.662 seconds
+[2025-07-23T05:12:23.074+0000] {processor.py:186} INFO - Started process (PID=48) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:12:23.077+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:12:23.080+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:12:23.079+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:12:24.449+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:12:24.499+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:12:24.498+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:12:24.513+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:12:24.513+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:12:24.531+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 1.466 seconds
+[2025-07-23T05:13:17.517+0000] {processor.py:186} INFO - Started process (PID=33) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:13:17.521+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:13:17.526+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:17.526+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:13:22.322+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:13:22.790+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.789+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.800+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.800+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.815+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.815+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.824+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.824+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.829+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.828+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.837+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.836+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.843+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.842+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T05:13:22.843+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.843+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:13:22.869+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.868+0000] {dag.py:3262} INFO - Creating ORM DAG for startup_health_score_full_pipeline
+[2025-07-23T05:13:22.871+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.870+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:13:22.906+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 5.404 seconds

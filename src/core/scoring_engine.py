@@ -1,4 +1,4 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple
 from src.core.kpi_normalizer import KPINormalizer
 from src.core.config_loader import ConfigLoader
 from src.utils.logger_config import logger
