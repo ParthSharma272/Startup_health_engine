@@ -6,9 +6,11 @@ import requests
 from requests.auth import HTTPBasicAuth
 from datetime import datetime
 import logging
-import re # New import for regular expressions
+import re
+import pandas as pd # Added for better data handling for charts
 
 # Configure Streamlit page
+# Removed 'icon' argument again due to persistent TypeError.
 st.set_page_config(layout="wide", page_title="Startup Health Score Dashboard 🚀")
 
 # Define paths relative to the Streamlit app's container WORKDIR (/app)
@@ -70,21 +72,33 @@ def trigger_airflow_dag(dag_id: str, file_name: str) -> dict:
         return {}
 
 def check_for_output_files():
-    """Checks if output files exist in the processed_data directory."""
-    # Note: This check needs to be more sophisticated if using dynamic file names
-    # For now, it checks if ANY output files exist.
-    return len(os.listdir(PROCESSED_DATA_DIR)) > 0
+    """
+    Checks if both required output files (_extracted_kpis.json and _startup_score_output.json)
+    exist in the processed_data directory.
+    """
+    files_in_processed_data = os.listdir(PROCESSED_DATA_DIR)
+    app_logger.info(f"Checking for output files in {PROCESSED_DATA_DIR}. Current files: {files_in_processed_data}")
+    
+    kpi_file_found = any(f.endswith("_extracted_kpis.json") for f in files_in_processed_data)
+    score_file_found = any(f.endswith("_startup_score_output.json") for f in files_in_processed_data)
+    
+    return kpi_file_found and score_file_found
+
 
 def load_output_data():
     """Loads KPI and score data from processed_data directory."""
     kpis = {}
     scores = {}
     
+    app_logger.info(f"Attempting to load output data from {PROCESSED_DATA_DIR}")
+    files_in_processed_data = os.listdir(PROCESSED_DATA_DIR)
+    app_logger.info(f"Files found in {PROCESSED_DATA_DIR}: {files_in_processed_data}")
+
     # Find the most recent output files
     latest_kpi_file = None
     latest_score_file = None
     
-    for f_name in os.listdir(PROCESSED_DATA_DIR):
+    for f_name in files_in_processed_data:
         f_path = os.path.join(PROCESSED_DATA_DIR, f_name)
         if f_name.endswith("_extracted_kpis.json"):
             if not latest_kpi_file or os.path.getmtime(f_path) > os.path.getmtime(latest_kpi_file):
@@ -92,6 +106,9 @@ def load_output_data():
         elif f_name.endswith("_startup_score_output.json"):
             if not latest_score_file or os.path.getmtime(f_path) > os.path.getmtime(latest_score_file):
                 latest_score_file = f_path
+
+    app_logger.info(f"Latest KPI file found: {latest_kpi_file}")
+    app_logger.info(f"Latest Score file found: {latest_score_file}")
 
     if not latest_kpi_file or not latest_score_file:
         app_logger.error("Output files not found. Airflow DAG might not have completed or failed.")
@@ -134,7 +151,15 @@ with st.sidebar:
         [Go to Airflow UI]({AIRFLOW_UI_BASE_URL})
     """)
     st.markdown("---")
-    if st.button("🔄 Reset Application State"):
+    if st.button("🔄 Reset Application State", help="Clear all uploaded files and analysis results."):
+        # Clear all files in uploads and processed_data
+        for directory in [UPLOADS_DIR, PROCESSED_DATA_DIR]:
+            for item in os.listdir(directory):
+                item_path = os.path.join(directory, item)
+                if os.path.isfile(item_path):
+                    os.remove(item_path)
+                    app_logger.info(f"Deleted: {item_path}")
+        
         st.session_state.clear()
         # Ensure default values are set after clearing for a clean restart
         st.session_state['processing_stage'] = 'initial'
@@ -142,11 +167,13 @@ with st.sidebar:
         st.session_state['dag_run_id'] = None
         st.session_state['extracted_kpis_display'] = None
         st.session_state['final_scores_display'] = None
+        st.success("App state and uploaded files reset!")
+        time.sleep(1) # Give user time to see message
         st.rerun()
 
 # --- Main Content Area ---
 st.markdown("---")
-st.header("1. Upload Your Document")
+st.header("1. Upload Your Document 📄")
 
 # Initialize session state variables if they don't exist
 if 'processing_stage' not in st.session_state:
@@ -181,6 +208,13 @@ if uploaded_file is not None:
 
         file_path_in_uploads = os.path.join(UPLOADS_DIR, uploaded_file.name)
         try:
+            # Clear previous files in uploads to ensure only one is processed
+            for item in os.listdir(UPLOADS_DIR):
+                item_path = os.path.join(UPLOADS_DIR, item)
+                if os.path.isfile(item_path):
+                    os.remove(item_path)
+                    app_logger.info(f"Deleted old uploaded file: {item_path}")
+
             with open(file_path_in_uploads, "wb") as f:
                 f.write(uploaded_file.getbuffer())
             app_logger.info(f"File '{uploaded_file.name}' saved to {UPLOADS_DIR}")
@@ -198,12 +232,19 @@ if uploaded_file is not None:
 
         # --- Trigger Airflow Processing Button ---
         st.markdown("---")
-        st.header("2. Start Analysis")
+        st.header("2. Start Analysis 🚀")
         st.write("Click the button below to send your document for processing by the Airflow pipeline.")
         
         # Only show the button if not already triggered/processing
         if st.session_state['processing_stage'] in ['uploaded', 'error', 'completed']:
-            if st.button("🚀 Start Analysis via Airflow"):
+            if st.button("🚀 Start Analysis via Airflow", help="Initiate the data pipeline in Airflow."):
+                # Clear previous processed data before starting a new run
+                for item in os.listdir(PROCESSED_DATA_DIR):
+                    item_path = os.path.join(PROCESSED_DATA_DIR, item)
+                    if os.path.isfile(item_path):
+                        os.remove(item_path)
+                        app_logger.info(f"Deleted old processed file: {item_path}")
+
                 with st.spinner("Initiating Airflow DAG..."):
                     dag_trigger_response = trigger_airflow_dag(AIRFLOW_DAG_ID, st.session_state['uploaded_file_name'])
                     if dag_trigger_response and 'dag_run_id' in dag_trigger_response:
@@ -223,7 +264,7 @@ if uploaded_file is not None:
     # --- Monitor and Display Results ---
     if st.session_state['processing_stage'] in ['triggered', 'processing']:
         st.markdown("---")
-        st.header("3. Processing Status")
+        st.header("3. Processing Status ⏳")
         status_placeholder = st.empty()
         progress_bar = st.progress(0)
 
@@ -231,7 +272,7 @@ if uploaded_file is not None:
         if dag_run_id:
             status_message = status_placeholder.info(f"⏳ Airflow DAG run `{dag_run_id}` is in progress. Checking for results...")
             
-            max_retries = 60 # Check for 10 minutes (60 * 10 seconds)
+            max_retries = 180 # Increased to 30 minutes (180 * 10 seconds)
             retries = 0
             
             while not check_for_output_files() and retries < max_retries:
@@ -246,6 +287,7 @@ if uploaded_file is not None:
                 status_placeholder.empty()
                 progress_bar.empty()
                 st.success("🎉 Airflow processing complete! Results are ready.")
+                st.balloons() # Add a celebratory animation
                 st.rerun()
             else:
                 st.session_state['processing_stage'] = 'error'
@@ -256,7 +298,7 @@ if uploaded_file is not None:
 
     if st.session_state['processing_stage'] == 'completed':
         st.markdown("---")
-        st.header("4. Analysis Results")
+        st.header("4. Analysis Results ✨")
         
         # Load and display results
         extracted_kpis, final_scores = load_output_data()
@@ -265,29 +307,81 @@ if uploaded_file is not None:
             st.session_state['extracted_kpis_display'] = extracted_kpis
             st.session_state['final_scores_display'] = final_scores
 
-            st.markdown(f"<h2 style='text-align: center; color: #4CAF50;'>Total Health Score: {st.session_state['final_scores_display']['total_score']:.2f} / 100</h2>", unsafe_allow_html=True)
+            # Layout for overall score and download button
+            col1, col2 = st.columns([2, 1])
+            with col1:
+                total_score = st.session_state['final_scores_display'].get('total_score', 0.0)
+                st.markdown(f"""
+                    <div style="
+                        background-color: #262730; 
+                        padding: 20px; 
+                        border-radius: 15px; 
+                        text-align: center; 
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        margin-bottom: 20px;
+                    ">
+                        <h3 style="color: #ADD8E6; margin-bottom: 10px;">Overall Startup Health Score</h3>
+                        <p style="
+                            font-size: 3.5em; 
+                            font-weight: bold; 
+                            color: #4CAF50; 
+                            line-height: 1;
+                        ">{total_score:.2f} <span style="font-size: 0.5em;">/ 100</span></p>
+                    </div>
+                """, unsafe_allow_html=True)
+            with col2:
+                st.markdown("<br><br>", unsafe_allow_html=True) # Add some vertical space
+                results_json = json.dumps(st.session_state['final_scores_display'], indent=2)
+                st.download_button(
+                    label="📥 Download Full Analysis Results (JSON)",
+                    data=results_json,
+                    file_name=f"startup_health_score_results_{datetime.now().strftime('%Y%m%d%H%M%S')}.json",
+                    mime="application/json",
+                    help="Download the complete KPI and score data as a JSON file."
+                )
             st.markdown("---")
 
-            st.subheader("Category Scores")
+
+            # Display Category Scores in a visually appealing chart and table
+            st.subheader("📊 Category Scores")
             category_scores_data = []
             for category, score in st.session_state['final_scores_display']['category_scores'].items():
-                category_scores_data.append({"Category": category.replace('_', ' ').title(), "Score": f"{score:.2f}"})
-            st.dataframe(category_scores_data, use_container_width=True, hide_index=True)
-
-            st.markdown("---")
-            st.subheader("Extracted KPIs")
-            kpi_data_for_df = [{"KPI": k, "Value": v} for k, v in st.session_state['extracted_kpis_display'].items()]
-            st.dataframe(kpi_data_for_df, use_container_width=True, hide_index=True)
-
-            st.markdown("---")
-            st.subheader("Normalized KPI Scores")
-            normalized_kpi_data_for_df = [{"KPI": k, "Normalized Score": f"{v:.2f}"} for k, v in st.session_state['final_scores_display']['normalized_kpis'].items()]
-            st.dataframe(normalized_kpi_data_for_df, use_container_width=True, hide_index=True)
+                category_scores_data.append({"Category": category.replace('_', ' ').title(), "Score": score}) # Keep score as float for chart
             
+            if category_scores_data:
+                df_category_scores = pd.DataFrame(category_scores_data)
+                # Sort for consistent chart display
+                df_category_scores = df_category_scores.sort_values(by="Score", ascending=False) 
+
+                st.bar_chart(df_category_scores.set_index("Category"), use_container_width=True, height=300)
+                
+                with st.expander("View Raw Category Scores Table"):
+                    # Format for display in table
+                    df_category_scores['Score'] = df_category_scores['Score'].apply(lambda x: f"{x:.2f}")
+                    st.dataframe(df_category_scores, use_container_width=True, hide_index=True)
+            else:
+                st.info("No category scores available to display.")
+
+
+            st.markdown("---")
+
+            # Display Extracted KPIs in an expander
+            with st.expander("📋 View Extracted KPIs", expanded=False):
+                kpi_data_for_df = [{"KPI": k, "Value": v} for k, v in st.session_state['extracted_kpis_display'].items()]
+                st.dataframe(kpi_data_for_df, use_container_width=True, hide_index=True)
+
+            st.markdown("---")
+
+            # Display Normalized KPI Scores in an expander
+            with st.expander("📈 View Normalized KPI Scores", expanded=False):
+                normalized_kpi_data_for_df = [{"KPI": k, "Normalized Score": f"{v:.2f}"} for k, v in st.session_state['final_scores_display']['normalized_kpis'].items()]
+                st.dataframe(normalized_kpi_data_for_df, use_container_width=True, hide_index=True)
+            
+            # Display missing KPIs
             if st.session_state['final_scores_display'].get('missing_mandatory_kpis'):
-                st.warning(f"⚠️ Missing Mandatory KPIs: {', '.join(st.session_state['final_scores_display']['missing_mandatory_kpis'])}")
+                st.warning(f"⚠️ Missing Mandatory KPIs: {', '.join(st.session_state['final_scores_display']['missing_mandatory_kpis'])}. Score might be impacted.")
             if st.session_state['final_scores_display'].get('missing_non_mandatory_kpis'):
-                st.info(f"ℹ️ Missing Non-Mandatory KPIs: {', '.join(st.session_state['final_scores_display']['missing_non_mandatory_kpis'])}")
+                st.info(f"ℹ️ Missing Non-Mandatory KPIs: {', '.join(st.session_state['final_scores_display']['missing_non_mandatory_kpis'])}. Consider including these for a more comprehensive score.")
 
         else:
             st.error("❌ Could not load processed data. Please check the 'processed_data' directory and Airflow logs.")

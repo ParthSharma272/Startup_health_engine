@@ -1,0 +1,24 @@
+[2025-07-23T09:46:39.617+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T09:46:39.644+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.check_for_documents streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723094510 [queued]>
+[2025-07-23T09:46:39.651+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.check_for_documents streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723094510 [queued]>
+[2025-07-23T09:46:39.651+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T09:46:39.662+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): check_for_documents> on 2025-07-23 09:45:11.448573+00:00
+[2025-07-23T09:46:39.684+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=51) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T09:46:39.689+0000] {standard_task_runner.py:72} INFO - Started process 53 to run task
+[2025-07-23T09:46:39.688+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'check_for_documents', 'streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723094510', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmp80lo19bw']
+[2025-07-23T09:46:39.693+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask check_for_documents
+[2025-07-23T09:46:39.770+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.check_for_documents streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723094510 [running]> on host 2c1ee8bbb8c2
+[2025-07-23T09:46:39.886+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='check_for_documents' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T09:45:11.448573+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723094510'
+[2025-07-23T09:46:39.888+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T09:46:39.937+0000] {log.py:232} WARNING - 2025-07-23 09:46:39,937 - startup_health_score - INFO - Received file_name from DAG run config: ConnectIn - Monthly Investor Update_ June 2025.pdf
+[2025-07-23T09:46:39.937+0000] {startup_health_score_dag.py:55} INFO - Received file_name from DAG run config: ConnectIn - Monthly Investor Update_ June 2025.pdf
+[2025-07-23T09:46:39.938+0000] {log.py:232} WARNING - 2025-07-23 09:46:39,938 - startup_health_score - INFO - Selected document from DAG conf: ConnectIn - Monthly Investor Update_ June 2025.pdf at /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf. Pushing to XCom.
+[2025-07-23T09:46:39.938+0000] {startup_health_score_dag.py:62} INFO - Selected document from DAG conf: ConnectIn - Monthly Investor Update_ June 2025.pdf at /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf. Pushing to XCom.
+[2025-07-23T09:46:39.949+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T09:46:39.957+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T09:46:39.958+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=check_for_documents, run_id=streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723094510, execution_date=20250723T094511, start_date=20250723T094639, end_date=20250723T094639
+[2025-07-23T09:46:40.007+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T09:46:40.080+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T09:46:40.081+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

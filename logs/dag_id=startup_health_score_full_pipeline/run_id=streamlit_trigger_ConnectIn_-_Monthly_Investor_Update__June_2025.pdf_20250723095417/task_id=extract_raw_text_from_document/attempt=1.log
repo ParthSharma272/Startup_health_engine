@@ -1,0 +1,34 @@
+[2025-07-23T09:54:21.252+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T09:54:21.270+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_raw_text_from_document streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095417 [queued]>
+[2025-07-23T09:54:21.277+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_raw_text_from_document streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095417 [queued]>
+[2025-07-23T09:54:21.277+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T09:54:21.285+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): extract_raw_text_from_document> on 2025-07-23 09:54:17.511613+00:00
+[2025-07-23T09:54:21.296+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=90) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T09:54:21.299+0000] {standard_task_runner.py:72} INFO - Started process 92 to run task
+[2025-07-23T09:54:21.299+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'extract_raw_text_from_document', 'streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095417', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmp9_ditwdj']
+[2025-07-23T09:54:21.303+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask extract_raw_text_from_document
+[2025-07-23T09:54:21.349+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.extract_raw_text_from_document streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095417 [running]> on host 8f39f37bbf45
+[2025-07-23T09:54:21.437+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='extract_raw_text_from_document' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T09:54:17.511613+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095417'
+[2025-07-23T09:54:21.439+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T09:54:21.463+0000] {log.py:232} WARNING - 2025-07-23 09:54:21,462 - startup_health_score - INFO - Extracting raw text from /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf...
+[2025-07-23T09:54:21.462+0000] {startup_health_score_dag.py:93} INFO - Extracting raw text from /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf...
+[2025-07-23T09:54:21.484+0000] {log.py:232} WARNING - 2025-07-23 09:54:21,484 - startup_health_score - INFO - Tesseract OCR engine found (version: 5.3.0).
+[2025-07-23T09:54:21.484+0000] {kpi_extractor.py:49} INFO - Tesseract OCR engine found (version: 5.3.0).
+[2025-07-23T09:54:21.485+0000] {log.py:232} WARNING - 2025-07-23 09:54:21,485 - startup_health_score - INFO - KPIExtractor initialized.
+[2025-07-23T09:54:21.485+0000] {kpi_extractor.py:53} INFO - KPIExtractor initialized.
+[2025-07-23T09:54:21.485+0000] {log.py:232} WARNING - 2025-07-23 09:54:21,485 - startup_health_score - INFO - Attempting to extract raw text from: /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf (Type: .pdf)
+[2025-07-23T09:54:21.485+0000] {kpi_extractor.py:130} INFO - Attempting to extract raw text from: /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf (Type: .pdf)
+[2025-07-23T09:54:22.050+0000] {log.py:232} WARNING - 2025-07-23 09:54:22,050 - startup_health_score - INFO - Successfully extracted text directly from PDF: /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf
+[2025-07-23T09:54:22.050+0000] {kpi_extractor.py:104} INFO - Successfully extracted text directly from PDF: /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf
+[2025-07-23T09:54:22.051+0000] {log.py:232} WARNING - 2025-07-23 09:54:22,051 - startup_health_score - INFO - Successfully extracted raw text from /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf.
+[2025-07-23T09:54:22.051+0000] {kpi_extractor.py:155} INFO - Successfully extracted raw text from /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf.
+[2025-07-23T09:54:22.052+0000] {log.py:232} WARNING - 2025-07-23 09:54:22,052 - startup_health_score - INFO - Extracted raw text saved to /opt/***/processed_data/ConnectIn - Monthly Investor Update_ June 2025_pdf_extracted_text.txt
+[2025-07-23T09:54:22.052+0000] {startup_health_score_dag.py:104} INFO - Extracted raw text saved to /opt/***/processed_data/ConnectIn - Monthly Investor Update_ June 2025_pdf_extracted_text.txt
+[2025-07-23T09:54:22.068+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T09:54:22.080+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T09:54:22.081+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=extract_raw_text_from_document, run_id=streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095417, execution_date=20250723T095417, start_date=20250723T095421, end_date=20250723T095422
+[2025-07-23T09:54:22.142+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T09:54:22.163+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T09:54:22.164+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

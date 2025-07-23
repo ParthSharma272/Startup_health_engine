@@ -1,0 +1,45 @@
+[2025-07-23T09:53:24.472+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T09:53:24.529+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095315 [queued]>
+[2025-07-23T09:53:24.537+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095315 [queued]>
+[2025-07-23T09:53:24.537+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T09:53:24.547+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): extract_kpis_using_rag> on 2025-07-23 09:53:16.328501+00:00
+[2025-07-23T09:53:24.559+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=78) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T09:53:24.561+0000] {standard_task_runner.py:72} INFO - Started process 80 to run task
+[2025-07-23T09:53:24.562+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'extract_kpis_using_rag', 'streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095315', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmpflr58w1p']
+[2025-07-23T09:53:24.565+0000] {standard_task_runner.py:105} INFO - Job 8: Subtask extract_kpis_using_rag
+[2025-07-23T09:53:24.625+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095315 [running]> on host 8f39f37bbf45
+[2025-07-23T09:53:24.692+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='extract_kpis_using_rag' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T09:53:16.328501+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095315'
+[2025-07-23T09:53:24.694+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T09:53:24.715+0000] {log.py:232} WARNING - 2025-07-23 09:53:24,714 - startup_health_score - INFO - Loading KPI benchmarks and initializing RAG extractor...
+[2025-07-23T09:53:24.714+0000] {startup_health_score_dag.py:125} INFO - Loading KPI benchmarks and initializing RAG extractor...
+[2025-07-23T09:53:24.716+0000] {log.py:232} WARNING - 2025-07-23 09:53:24,716 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T09:53:24.716+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T09:53:24.757+0000] {log.py:232} WARNING - 2025-07-23 09:53:24,757 - startup_health_score - INFO - KPIRAGExtractor initialized with OpenAI model: gpt-3.5-turbo.
+[2025-07-23T09:53:24.757+0000] {kpi_rag_extractor.py:29} INFO - KPIRAGExtractor initialized with OpenAI model: gpt-3.5-turbo.
+[2025-07-23T09:53:24.758+0000] {log.py:232} WARNING - 2025-07-23 09:53:24,758 - startup_health_score - INFO - Extracting KPIs using RAG (LLM)...
+[2025-07-23T09:53:24.758+0000] {startup_health_score_dag.py:132} INFO - Extracting KPIs using RAG (LLM)...
+[2025-07-23T09:53:29.664+0000] {_client.py:1038} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-23T09:53:29.681+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,681 - startup_health_score - INFO - Successfully parsed KPIs from LLM response as JSON.
+[2025-07-23T09:53:29.681+0000] {kpi_rag_extractor.py:121} INFO - Successfully parsed KPIs from LLM response as JSON.
+[2025-07-23T09:53:29.682+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,682 - startup_health_score - WARNING - Could not convert '1:9.1' to float for KPI 'CAC-to-CLV Ratio'. Keeping as string.
+[2025-07-23T09:53:29.682+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '1:9.1' to float for KPI 'CAC-to-CLV Ratio'. Keeping as string.
+[2025-07-23T09:53:29.683+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,683 - startup_health_score - WARNING - Could not convert '2.0% (Monthly)' to float for KPI 'Customer (Logo) Churn Rate'. Keeping as string.
+[2025-07-23T09:53:29.683+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '2.0% (Monthly)' to float for KPI 'Customer (Logo) Churn Rate'. Keeping as string.
+[2025-07-23T09:53:29.683+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,683 - startup_health_score - WARNING - Could not convert '1.6% (Monthly)' to float for KPI 'Revenue Churn Rate'. Keeping as string.
+[2025-07-23T09:53:29.683+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '1.6% (Monthly)' to float for KPI 'Revenue Churn Rate'. Keeping as string.
+[2025-07-23T09:53:29.684+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,684 - startup_health_score - WARNING - Could not convert '100.4% (Monthly)' to float for KPI 'Net Revenue Retention (NRR)'. Keeping as string.
+[2025-07-23T09:53:29.684+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '100.4% (Monthly)' to float for KPI 'Net Revenue Retention (NRR)'. Keeping as string.
+[2025-07-23T09:53:29.684+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,684 - startup_health_score - WARNING - Could not convert '9 Months' to float for KPI 'Time Since Last Fundraise'. Keeping as string.
+[2025-07-23T09:53:29.684+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '9 Months' to float for KPI 'Time Since Last Fundraise'. Keeping as string.
+[2025-07-23T09:53:29.685+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,685 - startup_health_score - WARNING - Could not convert '18 Hours' to float for KPI 'Average Time to Resolution (Support)'. Keeping as string.
+[2025-07-23T09:53:29.685+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '18 Hours' to float for KPI 'Average Time to Resolution (Support)'. Keeping as string.
+[2025-07-23T09:53:29.699+0000] {log.py:232} WARNING - 2025-07-23 09:53:29,699 - startup_health_score - INFO - Extracted KPIs via RAG saved to /opt/***/processed_data/ConnectIn - Monthly Investor Update_ June 2025_pdf_extracted_kpis.json
+[2025-07-23T09:53:29.699+0000] {startup_health_score_dag.py:144} INFO - Extracted KPIs via RAG saved to /opt/***/processed_data/ConnectIn - Monthly Investor Update_ June 2025_pdf_extracted_kpis.json
+[2025-07-23T09:53:29.716+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T09:53:29.729+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T09:53:29.730+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=extract_kpis_using_rag, run_id=streamlit_trigger_ConnectIn_-_Monthly_Investor_Update__June_2025.pdf_20250723095315, execution_date=20250723T095316, start_date=20250723T095324, end_date=20250723T095329
+[2025-07-23T09:53:29.786+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T09:53:29.814+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T09:53:29.815+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
