@@ -68,3 +68,425 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named 'src'
 [2025-07-23T03:39:14.090+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
 [2025-07-23T03:39:14.112+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.040 seconds
+[2025-07-23T03:40:21.880+0000] {processor.py:186} INFO - Started process (PID=33) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:40:21.882+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:40:21.883+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:40:21.882+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:40:21.892+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:40:21.890+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:40:21.892+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:40:21.915+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.039 seconds
+[2025-07-23T03:40:52.588+0000] {processor.py:186} INFO - Started process (PID=34) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:40:52.591+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:40:52.593+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:40:52.592+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:40:52.605+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:40:52.603+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:40:52.605+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:40:52.631+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.065 seconds
+[2025-07-23T03:41:23.236+0000] {processor.py:186} INFO - Started process (PID=35) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:41:23.237+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:41:23.238+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:41:23.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:41:23.245+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:41:23.244+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:41:23.246+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:41:23.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.041 seconds
+[2025-07-23T03:41:53.686+0000] {processor.py:186} INFO - Started process (PID=36) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:41:53.687+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:41:53.689+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:41:53.688+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:41:53.697+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:41:53.696+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:41:53.698+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:41:53.739+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.064 seconds
+[2025-07-23T03:42:24.055+0000] {processor.py:186} INFO - Started process (PID=37) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:42:24.056+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:42:24.058+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:42:24.057+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:42:24.064+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:42:24.063+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:42:24.065+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:42:24.096+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.049 seconds
+[2025-07-23T03:42:54.520+0000] {processor.py:186} INFO - Started process (PID=38) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:42:54.522+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:42:54.525+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:42:54.525+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:42:54.539+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:42:54.535+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:42:54.541+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:42:54.576+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.082 seconds
+[2025-07-23T03:43:24.965+0000] {processor.py:186} INFO - Started process (PID=39) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:43:24.967+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:43:24.968+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:43:24.968+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:43:24.976+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:43:24.975+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 16, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:43:24.977+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:43:25.001+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.055 seconds
+[2025-07-23T03:43:40.252+0000] {processor.py:186} INFO - Started process (PID=40) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:43:40.255+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:43:40.256+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:43:40.256+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:43:40.269+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:43:40.268+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 38, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:43:40.269+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:43:40.300+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.067 seconds
+[2025-07-23T03:44:10.738+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:44:10.740+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:44:10.742+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:44:10.742+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:44:10.755+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:44:10.753+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 38, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:44:10.756+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:44:10.775+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.047 seconds
+[2025-07-23T03:44:41.241+0000] {processor.py:186} INFO - Started process (PID=42) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:44:41.242+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:44:41.246+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:44:41.243+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:44:41.253+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:44:41.252+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 38, in <module>
+    from src.core.config_loader import ConfigLoader
+ModuleNotFoundError: No module named 'src'
+[2025-07-23T03:44:41.254+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:44:41.280+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.048 seconds
+[2025-07-23T03:46:04.706+0000] {processor.py:186} INFO - Started process (PID=33) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:46:04.708+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:46:04.710+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:04.709+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:46:16.216+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:46:16.439+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.437+0000] {override.py:1930} INFO - Created Permission View: can edit on DAG:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.444+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.444+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.447+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.447+0000] {override.py:1930} INFO - Created Permission View: can read on DAG:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.449+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.449+0000] {override.py:1930} INFO - Created Permission View: menu access on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.452+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.452+0000] {override.py:1930} INFO - Created Permission View: can delete on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.454+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.454+0000] {override.py:1930} INFO - Created Permission View: can create on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.457+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.457+0000] {override.py:1930} INFO - Created Permission View: can read on DAG Run:startup_health_score_full_pipeline
+[2025-07-23T03:46:16.457+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.457+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:46:16.466+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.465+0000] {dag.py:3262} INFO - Creating ORM DAG for startup_health_score_full_pipeline
+[2025-07-23T03:46:16.466+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:16.466+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:46:16.478+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 11.790 seconds
+[2025-07-23T03:46:46.874+0000] {processor.py:186} INFO - Started process (PID=42) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:46:46.879+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:46:46.881+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:46.880+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:46:52.157+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:46:52.191+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:52.191+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:46:52.200+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:46:52.200+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:46:52.215+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 5.360 seconds
+[2025-07-23T03:47:22.351+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:47:22.354+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:47:22.356+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:47:22.355+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:47:25.253+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:47:25.286+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:47:25.286+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:47:25.296+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:47:25.295+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:47:25.310+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 2.973 seconds
+[2025-07-23T03:47:55.722+0000] {processor.py:186} INFO - Started process (PID=60) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:47:55.724+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:47:55.728+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:47:55.726+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:47:58.944+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:47:58.985+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:47:58.985+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:47:58.995+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:47:58.995+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:47:59.059+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 3.346 seconds
+[2025-07-23T03:48:29.328+0000] {processor.py:186} INFO - Started process (PID=69) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:48:29.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:48:29.335+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:48:29.334+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:48:34.113+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:48:34.149+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:48:34.148+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:48:34.166+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:48:34.166+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:48:34.181+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 4.874 seconds
+[2025-07-23T03:49:04.593+0000] {processor.py:186} INFO - Started process (PID=78) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:49:04.596+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:49:04.602+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:49:04.599+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:49:11.847+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:49:11.919+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:49:11.919+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:49:11.934+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:49:11.934+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:49:11.952+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 7.379 seconds
+[2025-07-23T03:49:42.432+0000] {processor.py:186} INFO - Started process (PID=87) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:49:42.435+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:49:42.437+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:49:42.436+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:49:47.065+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:49:47.146+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:49:47.145+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:49:47.165+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:49:47.164+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:49:47.182+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 4.767 seconds
+[2025-07-23T03:50:18.064+0000] {processor.py:186} INFO - Started process (PID=96) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:50:18.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:50:18.071+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:50:18.070+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:50:24.901+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:50:24.985+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:50:24.980+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:50:25.026+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:50:25.025+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:50:25.057+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 7.012 seconds
+[2025-07-23T03:50:55.742+0000] {processor.py:186} INFO - Started process (PID=105) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:50:55.746+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:50:55.751+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:50:55.749+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:50:59.778+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:50:59.871+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:50:59.870+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:50:59.910+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:50:59.909+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:50:59.935+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 4.216 seconds
+[2025-07-23T03:51:30.287+0000] {processor.py:186} INFO - Started process (PID=114) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:51:30.295+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T03:51:30.298+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:51:30.297+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:51:35.068+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T03:51:35.149+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:51:35.148+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T03:51:35.167+0000] {logging_mixin.py:190} INFO - [2025-07-23T03:51:35.166+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T03:51:35.180+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 4.906 seconds
+[2025-07-23T04:01:53.239+0000] {processor.py:186} INFO - Started process (PID=33) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:01:53.243+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:01:53.245+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:01:53.244+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:01:56.187+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:01:56.172+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:01:56.190+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:01:56.340+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 3.109 seconds
+[2025-07-23T04:02:05.621+0000] {processor.py:186} INFO - Started process (PID=35) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:02:05.628+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:02:05.638+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:02:05.634+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:02:06.639+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:02:06.636+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:02:06.640+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:02:06.663+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 1.073 seconds
+[2025-07-23T04:02:37.127+0000] {processor.py:186} INFO - Started process (PID=37) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:02:37.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:02:37.132+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:02:37.132+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:02:37.997+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:02:37.995+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:02:37.997+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:02:38.010+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.900 seconds
+[2025-07-23T04:03:08.399+0000] {processor.py:186} INFO - Started process (PID=39) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:03:08.402+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:03:08.404+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:03:08.403+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:03:08.983+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:03:08.980+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:03:08.984+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:03:09.009+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.617 seconds
+[2025-07-23T04:03:39.374+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:03:39.377+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:03:39.379+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:03:39.378+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:03:39.841+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:03:39.840+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:03:39.841+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:03:39.854+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.496 seconds
+[2025-07-23T04:04:10.137+0000] {processor.py:186} INFO - Started process (PID=43) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:04:10.139+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:04:10.141+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:04:10.140+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:04:10.602+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:04:10.600+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:04:10.602+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:04:10.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.488 seconds
+[2025-07-23T04:04:40.966+0000] {processor.py:186} INFO - Started process (PID=45) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:04:40.967+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:04:40.969+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:04:40.968+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:04:41.382+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:04:41.381+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:04:41.382+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:04:41.398+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.446 seconds
+[2025-07-23T04:05:11.803+0000] {processor.py:186} INFO - Started process (PID=47) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:05:11.805+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:05:11.807+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:05:11.806+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:05:12.220+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:05:12.219+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:05:12.221+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:05:12.233+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.442 seconds
+[2025-07-23T04:05:42.565+0000] {processor.py:186} INFO - Started process (PID=49) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:05:42.567+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:05:42.569+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:05:42.568+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:05:42.997+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:05:42.996+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:05:42.998+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:05:43.012+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.464 seconds
+[2025-07-23T04:06:13.434+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:06:13.437+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:06:13.439+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:06:13.438+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:06:13.906+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:06:13.904+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:06:13.906+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:06:13.918+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.502 seconds
+[2025-07-23T04:06:44.386+0000] {processor.py:186} INFO - Started process (PID=53) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:06:44.392+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:06:44.395+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:06:44.394+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:06:44.837+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:06:44.835+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:06:44.837+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:06:44.852+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.495 seconds
+[2025-07-23T04:08:00.600+0000] {processor.py:186} INFO - Started process (PID=33) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:08:00.601+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T04:08:00.602+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:08:00.602+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:08:03.149+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:08:03.144+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 40, in <module>
+    from src.core.kpi_rag_extractor import KPIRAGExtractor
+  File "/opt/airflow/src/core/kpi_rag_extractor.py", line 4, in <module>
+    import openai # New import
+    ^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'openai'
+[2025-07-23T04:08:03.151+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T04:08:03.197+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 2.602 seconds

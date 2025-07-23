@@ -13,6 +13,10 @@ x-airflow-common:
     AIRFLOW__WEBSERVER__AUTHENTICATE: 'False' # For local testing, set to True for production
     AIRFLOW__WEBSERVER__RBAC: 'False' # For local testing, set to True for production
     AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'True' # Required for passing complex objects via XCom
+    PYTHONPATH: /opt/airflow # This ensures Python can find your 'src' modules
+    # OPENAI_API_KEY: "YOUR_OPENAI_API_KEY_HERE" # Removed hardcoded key
+  env_file: # <-- ADDED THIS LINE to reference the .env file
+    - .env # <-- ADDED THIS LINE
   volumes:
     - ./dags:/opt/airflow/dags # Mount your DAGs folder
     - ./logs:/opt/airflow/logs # Mount logs folder

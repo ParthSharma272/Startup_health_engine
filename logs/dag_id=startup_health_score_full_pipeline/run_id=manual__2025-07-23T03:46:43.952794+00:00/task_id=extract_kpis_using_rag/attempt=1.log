@@ -1,0 +1,25 @@
+[2025-07-23T03:47:01.257+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T03:47:01.270+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-23T03:46:43.952794+00:00 [queued]>
+[2025-07-23T03:47:01.275+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-23T03:46:43.952794+00:00 [queued]>
+[2025-07-23T03:47:01.275+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T03:47:01.281+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): extract_kpis_using_rag> on 2025-07-23 03:46:43.952794+00:00
+[2025-07-23T03:47:01.301+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=74) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T03:47:01.302+0000] {standard_task_runner.py:72} INFO - Started process 83 to run task
+[2025-07-23T03:47:01.306+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'extract_kpis_using_rag', 'manual__2025-07-23T03:46:43.952794+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmp0cp46bfj']
+[2025-07-23T03:47:01.310+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask extract_kpis_using_rag
+[2025-07-23T03:47:01.356+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag manual__2025-07-23T03:46:43.952794+00:00 [running]> on host 895bb816f22b
+[2025-07-23T03:47:01.394+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='extract_kpis_using_rag' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T03:46:43.952794+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-23T03:46:43.952794+00:00'
+[2025-07-23T03:47:01.395+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T03:47:01.409+0000] {log.py:232} WARNING - 2025-07-23 03:47:01,409 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T03:47:01.409+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T03:47:01.410+0000] {log.py:232} WARNING - 2025-07-23 03:47:01,410 - startup_health_score - INFO - Loading Hugging Face model: google/flan-t5-large to CPU.
+[2025-07-23T03:47:01.410+0000] {kpi_rag_extractor.py:36} INFO - Loading Hugging Face model: google/flan-t5-large to CPU.
+[2025-07-23T03:51:31.784+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-07-23T03:51:31.842+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-23T03:51:31.869+0000] {process_utils.py:132} INFO - Sending 15 to group 83. PIDs of all processes in the group: [83]
+[2025-07-23T03:51:31.875+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 83
+[2025-07-23T03:51:45.689+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-07-23T03:51:45.793+0000] {process_utils.py:132} INFO - Sending 15 to group 83. PIDs of all processes in the group: [83]
+[2025-07-23T03:51:45.796+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 83

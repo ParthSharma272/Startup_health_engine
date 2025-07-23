@@ -13,13 +13,11 @@ RUN apt-get update && \
     python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
-# Switch to the 'airflow' user before installing Python packages
+# Upgrade pip to ensure it's the latest version
 USER airflow
-
-# Upgrade pip to ensure it's the latest version (as airflow user)
 RUN pip install --no-cache-dir --upgrade pip
 
-# Install Python packages (as airflow user)
+# Install Python packages
 RUN pip install --no-cache-dir \
     requests \
     Pillow==10.3.0 \
@@ -33,6 +31,5 @@ RUN pip install --no-cache-dir \
     pdfminer.six \
     asyncio \
     aiohttp \
-    aiofiles
-
-# No need for another USER airflow at the end as we're already set to airflow
+    aiofiles \
+    openai # <--- THIS IS THE KEY PACKAGE THAT WAS MISSING

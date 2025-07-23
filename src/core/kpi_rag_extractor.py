@@ -1,48 +1,31 @@
 import json
 import re
 from typing import Dict, Any, Tuple, Optional, List
-from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
+import openai # New import
 from src.utils.logger_config import logger
 
 class KPIRAGExtractor:
     """
     Extracts structured KPI data from raw text using a Retrieval-Augmented Generation (RAG) approach
-    with a local Large Language Model (LLM).
+    with the OpenAI Large Language Model (LLM).
     This module is responsible for 'Step 2: KPI Extraction' from the pipeline.
     """
 
-    def __init__(self, kpi_benchmarks: List[Dict[str, Any]]):
+    def __init__(self, kpi_benchmarks: List[Dict[str, Any]], openai_api_key: str):
         """
         Initializes the KPIRAGExtractor by loading the LLM and tokenizer.
 
         Args:
             kpi_benchmarks (List[Dict[str, Any]]): List of KPI benchmark dictionaries, used to
                                                    inform the LLM about expected KPIs.
+            openai_api_key (str): Your OpenAI API key.
         """
-        self.model_name = "google/flan-t5-large" # Using large model
-        self.tokenizer = None
-        self.model = None
-        self._load_llm()
+        self.client = openai.OpenAI(api_key=openai_api_key) # Initialize OpenAI client
+        self.model_name = "gpt-3.5-turbo" # You can change this to "gpt-4o" for potentially better results
         self.kpi_list = [kpi['kpi'] for kpi in kpi_benchmarks]
-        logger.info("KPIRAGExtractor initialized.")
+        logger.info(f"KPIRAGExtractor initialized with OpenAI model: {self.model_name}.")
 
-    def _load_llm(self):
-        """
-        Loads the pre-trained Hugging Face LLM and tokenizer.
-        Ensures the model is loaded to CPU for broader compatibility.
-        """
-        try:
-            if self.tokenizer is None or self.model is None:
-                logger.info(f"Loading Hugging Face model: {self.model_name} to CPU.")
-                self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-                self.model = AutoModelForSeq2SeqLM.from_pretrained(self.model_name)
-                self.device = "cpu"
-                logger.info(f"Hugging Face model loaded successfully on device: {self.device}.")
-        except Exception as e:
-            logger.critical(f"Failed to load Hugging Face model {self.model_name}: {e}", exc_info=True)
-            self.tokenizer = None
-            self.model = None
-            raise
+    # The _load_llm method is removed as it's not needed for OpenAI API.
 
     def _construct_prompt(self, text_content: str) -> str:
         """
@@ -55,7 +38,7 @@ class KPIRAGExtractor:
             str: The formatted prompt for the LLM.
         """
         kpi_names_str = ", ".join(self.kpi_list)
-        
+
         # Adding a few-shot example to guide the LLM more effectively
         example_document = "Our MRR is $100,000. Burn Rate is $50,000. Founder commitment is Full-Time."
         example_json_output = '{"Monthly Recurring Revenue (MRR)": 100000, "Burn Rate": 50000, "Founder Commitment": "Full-Time"}'
@@ -87,7 +70,7 @@ class KPIRAGExtractor:
 
     def extract_kpis(self, text_content: str) -> Tuple[Dict[str, Any], str]:
         """
-        Extracts KPIs from the given text content using the loaded LLM.
+        Extracts KPIs from the given text content using the OpenAI LLM.
 
         Args:
             text_content (str): The raw text content from which to extract KPIs.
@@ -98,36 +81,36 @@ class KPIRAGExtractor:
                                  Returns an empty dict if no KPIs are extracted or parsing fails.
                 - str: The raw text response received directly from the LLM.
         """
-        if not self.model or not self.tokenizer:
-            logger.error("LLM model or tokenizer not loaded. Cannot extract KPIs.")
-            return {}, "LLM model or tokenizer failed to load during initialization."
+        if not self.client:
+            logger.error("OpenAI client not initialized. Cannot extract KPIs.")
+            return {}, "OpenAI client failed to initialize."
 
         prompt = self._construct_prompt(text_content)
-        logger.debug(f"Sending prompt to LLM:\n{prompt}")
+        logger.debug(f"Sending prompt to OpenAI LLM:\n{prompt}")
 
         llm_response_string = "" # Initialize to empty string
         parsed_kpis = {} # Initialize to empty dict
 
         try:
-            text_generator = pipeline(
-                "text2text-generation",
-                model=self.model,
-                tokenizer=self.tokenizer,
-                device=-1, # Explicitly use CPU
-                max_new_tokens=1024, # Increased max_new_tokens to allow for longer JSON output
-                min_length=10,
-                do_sample=False, # For extraction, we generally want deterministic output
+            chat_completion = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant that extracts structured KPI data from business documents. Your output must be a valid JSON object."},
+                    {"role": "user", "content": prompt}
+                ],
+                response_format={"type": "json_object"}, # Instruct OpenAI to return JSON
+                max_tokens=1024,
+                temperature=0.0 # For extraction, we want deterministic output
             )
-            
-            llm_output = text_generator(prompt)
-            if llm_output and isinstance(llm_output, list) and len(llm_output) > 0 and 'generated_text' in llm_output[0]:
-                llm_response_string = llm_output[0]['generated_text']
+
+            if chat_completion.choices and chat_completion.choices[0].message and chat_completion.choices[0].message.content:
+                llm_response_string = chat_completion.choices[0].message.content
             else:
-                logger.warning(f"LLM text_generator returned unexpected output: {llm_output}")
-                llm_response_string = "LLM returned no generated text or unexpected format."
+                logger.warning(f"OpenAI API returned unexpected output: {chat_completion}")
+                llm_response_string = "OpenAI API returned no content or unexpected format."
 
             logger.debug(f"Raw LLM response received:\n{llm_response_string}")
-            
+
             # --- Robust JSON/KPI Parsing Logic ---
             json_match = re.search(r"\{.*\}", llm_response_string, re.DOTALL)
             if json_match:
@@ -158,11 +141,14 @@ class KPIRAGExtractor:
                         cleaned_kpis[kpi_name] = value
                 else:
                     cleaned_kpis[kpi_name] = value
-            
+
             return cleaned_kpis, llm_response_string
 
+        except openai.APIError as e:
+            logger.error(f"OpenAI API error during KPI extraction: {e}", exc_info=True)
+            return {}, f"OpenAI API error: {e}"
         except Exception as e:
-            logger.error(f"Error during LLM KPI extraction: {e}", exc_info=True)
+            logger.error(f"General error during OpenAI KPI extraction: {e}", exc_info=True)
             return {}, llm_response_string if llm_response_string else f"Error during LLM inference: {e}"
 
     def _parse_comma_separated_kpis(self, text: str) -> Dict[str, Any]:
@@ -171,21 +157,21 @@ class KPIRAGExtractor:
         This is a fallback if the LLM doesn't produce valid JSON.
         """
         parsed_data = {}
-        
+
         # Normalize the input string: remove leading/trailing spaces, and ensure consistent ": " delimiter
         text = text.strip()
         text = re.sub(r'\s*:\s*', ': ', text) # Replace any amount of whitespace around colon with ': '
         kpi_entries = re.split(r',\s*(?=[A-Z])', text)
-        
+
         logger.debug(f"Raw text for parsing in _parse_comma_separated_kpis: {text}")
         logger.debug(f"Split KPI entries: {kpi_entries}")
 
         for entry in kpi_entries:
-            parts = entry.split(': ', 1) 
+            parts = entry.split(': ', 1)
             if len(parts) == 2:
                 kpi_name_extracted = parts[0].strip()
                 value_extracted = parts[1].strip()
-                
+
                 logger.debug(f"Extracted in _parse_comma_separated_kpis: KPI Name='{kpi_name_extracted}', Value='{value_extracted}'")
 
                 # Normalize the extracted KPI name for matching against self.kpi_list
@@ -202,27 +188,27 @@ class KPIRAGExtractor:
                            official_kpi_name.lower() in kpi_name_normalized.lower():
                             matched_kpi_name = official_kpi_name
                             break
-                
+
                 if matched_kpi_name:
                     converted_value: Any = value_extracted # Default to string
-                    
+
                     # Further clean value_extracted to remove units like "months" before numeric conversion
                     if isinstance(value_extracted, str):
                         # Remove common unit suffixes (e.g., "months", "%") at the end of the string
                         value_without_units = re.sub(r'\s*(?:months|month|%)\s*$', '', value_extracted, flags=re.IGNORECASE).strip()
-                        
+
                         # Now, remove currency symbols and ALL commas for numeric conversion
                         cleaned_numeric_value_str = re.sub(r'[₹$]', '', value_without_units).replace(',', '').strip()
-                        
+
                         logger.debug(f"Cleaned numeric value string for '{matched_kpi_name}': '{cleaned_numeric_value_str}' (from original '{value_extracted}')")
-                        
+
                         try:
                             converted_value = float(cleaned_numeric_value_str)
                             logger.debug(f"Converted '{matched_kpi_name}' to float: {converted_value}")
                         except ValueError:
                             logger.warning(f"Could not convert '{value_extracted}' to float for KPI '{matched_kpi_name}'. Keeping as string.")
                             converted_value = value_extracted # Keep original if conversion fails
-                
+
                     parsed_data[matched_kpi_name] = converted_value
                 else:
                     logger.warning(f"Extracted KPI '{kpi_name_extracted}' could not be mapped to an official KPI. Skipping.")

@@ -6,18 +6,7 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago
 from airflow.exceptions import AirflowException
-import sys
-
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-
-# Now import your modules
-from src.core.config_loader import ConfigLoader
-from src.core.kpi_extractor import KPIExtractor
-from src.core.kpi_rag_extractor import KPIRAGExtractor # Import the RAG extractor
-from src.core.scoring_engine import ScoringEngine
-from src.utils.logger_config import logger, setup_logging
+# import sys # Removed sys.path manipulation
 
 # --- Configuration for DAG ---
 DAG_ID = 'startup_health_score_full_pipeline'
@@ -30,8 +19,9 @@ DEFAULT_ARGS = {
     'retry_delay': timedelta(minutes=5),
 }
 
-# Define paths relative to the project root (where 'src', 'config', 'uploads' are)
-BASE_DIR = project_root # This is your 'startup_health_score/Engine' directory
+# Define paths relative to the container's /opt/airflow directory
+# Airflow will now find modules in /opt/airflow/src because PYTHONPATH is set
+BASE_DIR = '/opt/airflow' # This is where your project root is mounted inside the container
 CONFIG_DIR = os.path.join(BASE_DIR, 'config')
 UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 PROCESSED_DATA_DIR = os.path.join(BASE_DIR, 'processed_data')
@@ -40,9 +30,17 @@ EXTRACTED_TEXT_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_document_conte
 EXTRACTED_KPI_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_kpis.json')
 SCORE_OUTPUT_FILE = os.path.join(PROCESSED_DATA_DIR, 'startup_score_output.json')
 
-
-# Ensure processed_data directory exists
+# Ensure processed_data directory exists (this will run inside the container)
 os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
+
+# Now import your modules directly from src
+# Make sure your __init__.py files are correctly set up in src/core and src/utils
+from src.core.config_loader import ConfigLoader
+from src.core.kpi_extractor import KPIExtractor
+from src.core.kpi_rag_extractor import KPIRAGExtractor
+from src.core.scoring_engine import ScoringEngine
+from src.utils.logger_config import logger, setup_logging
+
 setup_logging() # Ensure logging is set up for DAG tasks
 
 
@@ -80,7 +78,7 @@ def _extract_raw_text(**kwargs):
         raise AirflowException("Raw text extraction returned no data.")
 
 
-def _extract_kpis_rag(**kwargs): # Now synchronous
+def _extract_kpis_rag(**kwargs):
     raw_text = kwargs['ti'].xcom_pull(key='raw_extracted_text')
     if not raw_text:
         logger.error("No raw text received from upstream task. Task will fail.")
@@ -88,9 +86,9 @@ def _extract_kpis_rag(**kwargs): # Now synchronous
 
     config_loader = ConfigLoader(config_dir=CONFIG_DIR)
     kpi_benchmarks = config_loader.load_config(config_loader.kpi_benchmarks_path)
-    
+
     rag_extractor = KPIRAGExtractor(kpi_benchmarks)
-    kpi_dict = rag_extractor.extract_kpis(raw_text) # No await needed
+    kpi_dict = rag_extractor.extract_kpis(raw_text)
 
     if kpi_dict:
         try:
@@ -125,7 +123,7 @@ def _calculate_scores(**kwargs):
     try:
         config_loader = ConfigLoader(config_dir=CONFIG_DIR)
         scoring_engine = ScoringEngine(config_loader=config_loader)
-        
+
         results = scoring_engine.calculate_scores(kpi_input_data)
 
         with open(SCORE_OUTPUT_FILE, 'w', encoding='utf-8') as f:
@@ -182,4 +180,3 @@ with DAG(
 
     # Define task dependencies
     check_documents_task >> extract_raw_text_task >> extract_kpis_rag_task >> calculate_scores_task
-

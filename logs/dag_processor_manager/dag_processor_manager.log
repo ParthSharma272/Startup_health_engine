@@ -50,3 +50,302 @@ File Path                                        PID  Runtime      # DAGs    # E
 /opt/airflow/dags/startup_health_score_dag.py     34  0.03s             0           1  0.05s           2025-07-23T03:38:43                       3
 ================================================================================
 [2025-07-23T03:39:28.793+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-07-23T03:40:21.803+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-07-23T03:40:21.803+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-07-23T03:40:21.805+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-07-23T03:40:21.805+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T03:40:21.811+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T03:40:21.889+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     33  0.02s             0           0                                                   0
+================================================================================
+[2025-07-23T03:40:52.554+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     34  0.03s             0           1  0.06s           2025-07-23T03:40:21                       3
+================================================================================
+[2025-07-23T03:41:23.218+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     35  0.02s             0           1  0.11s           2025-07-23T03:40:52                       5
+================================================================================
+[2025-07-23T03:41:53.663+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     36  0.01s             0           1  0.08s           2025-07-23T03:41:23                       5
+================================================================================
+[2025-07-23T03:42:24.038+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     37  0.02s             0           1  0.10s           2025-07-23T03:41:53                       5
+================================================================================
+[2025-07-23T03:42:54.491+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     38  0.03s             0           1  0.08s           2025-07-23T03:42:24                       5
+================================================================================
+[2025-07-23T03:43:24.938+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     39  0.02s             0           1  0.12s           2025-07-23T03:42:54                       5
+================================================================================
+[2025-07-23T03:43:55.467+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.11s           2025-07-23T03:43:40                       5
+================================================================================
+[2025-07-23T03:44:25.982+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.09s           2025-07-23T03:44:10                       5
+================================================================================
+[2025-07-23T03:44:56.471+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.08s           2025-07-23T03:44:41                       5
+================================================================================
+[2025-07-23T03:45:11.568+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-07-23T03:46:04.628+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-07-23T03:46:04.629+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-07-23T03:46:04.629+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-07-23T03:46:04.630+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T03:46:04.633+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T03:46:04.712+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     33  0.02s             0           0                                                   0
+================================================================================
+[2025-07-23T03:46:35.284+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  11.83s          2025-07-23T03:46:16                      43
+================================================================================
+[2025-07-23T03:47:05.365+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  5.41s           2025-07-23T03:46:52                      10
+================================================================================
+[2025-07-23T03:47:35.457+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  3.02s           2025-07-23T03:47:25                      10
+================================================================================
+[2025-07-23T03:48:05.900+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  3.39s           2025-07-23T03:47:59                      10
+================================================================================
+[2025-07-23T03:48:36.227+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  4.92s           2025-07-23T03:48:34                      10
+================================================================================
+[2025-07-23T03:49:06.629+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     78  2.09s             1           0  4.92s           2025-07-23T03:48:34                      10
+================================================================================
+[2025-07-23T03:49:37.278+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  7.44s           2025-07-23T03:49:11                      10
+================================================================================
+[2025-07-23T03:50:07.628+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  4.84s           2025-07-23T03:49:47                      10
+================================================================================
+[2025-07-23T03:50:38.319+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  7.12s           2025-07-23T03:50:25                      10
+================================================================================
+[2025-07-23T03:51:04.938+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T03:51:04.945+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T03:51:09.006+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  4.28s           2025-07-23T03:50:59                      10
+================================================================================
+[2025-07-23T03:51:39.242+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  4.95s           2025-07-23T03:51:35                      10
+================================================================================
+[2025-07-23T03:51:50.991+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-07-23T04:01:53.171+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-07-23T04:01:53.172+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-07-23T04:01:53.172+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-07-23T04:01:53.173+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T04:01:53.179+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T04:01:53.243+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     33  0.01s             0           0                                                   0
+================================================================================
+[2025-07-23T04:02:23.854+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  1.12s           2025-07-23T04:02:06                       5
+================================================================================
+[2025-07-23T04:02:54.195+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.95s           2025-07-23T04:02:38                       5
+================================================================================
+[2025-07-23T04:03:24.560+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.64s           2025-07-23T04:03:09                       5
+================================================================================
+[2025-07-23T04:03:54.937+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.52s           2025-07-23T04:03:39                       5
+================================================================================
+[2025-07-23T04:04:25.319+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.51s           2025-07-23T04:04:10                       5
+================================================================================
+[2025-07-23T04:04:55.565+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.47s           2025-07-23T04:04:41                       5
+================================================================================
+[2025-07-23T04:05:25.952+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.47s           2025-07-23T04:05:12                       5
+================================================================================
+[2025-07-23T04:05:56.170+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.49s           2025-07-23T04:05:43                       5
+================================================================================
+[2025-07-23T04:06:27.015+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.53s           2025-07-23T04:06:13                       5
+================================================================================
+[2025-07-23T04:06:53.487+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T04:06:53.502+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T04:06:57.033+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           0           1  0.62s           2025-07-23T04:06:44                       5
+================================================================================
+[2025-07-23T04:07:07.806+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-07-23T04:08:00.540+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-07-23T04:08:00.540+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-07-23T04:08:00.541+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-07-23T04:08:00.541+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T04:08:00.548+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T04:08:00.609+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     33  0.02s             0           0                                                   0
+================================================================================
