@@ -13,12 +13,17 @@ RUN apt-get update && \
     python3-dev && \
     rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip to ensure it's the latest version
+# Switch to the 'airflow' user before installing Python packages
 USER airflow
-RUN pip install --no-cache-dir --upgrade pip
+
+# Set working directory
+WORKDIR /opt/airflow
+
+# Upgrade pip to ensure it's the latest version
+RUN python3 -m pip install --no-cache-dir --upgrade pip
 
 # Install Python packages
-RUN pip install --no-cache-dir \
+RUN python3 -m pip install --no-cache-dir \
     requests \
     Pillow==10.3.0 \
     pytesseract==0.3.10 \
@@ -32,4 +37,7 @@ RUN pip install --no-cache-dir \
     asyncio \
     aiohttp \
     aiofiles \
-    openai # <--- THIS IS THE KEY PACKAGE THAT WAS MISSING
+    openai
+
+# Verify package installations
+RUN python3 -m pip check
