@@ -27,17 +27,9 @@ except ImportError as e:
 
 
 class KPIExtractor: # Renaming to DocumentTextExtractor might be more accurate for this phase
-    """
-    Handles the extraction of raw text content from various document types using OCR and text parsing.
-    Supports text files, common image formats (JPG, PNG), and PDF documents.
-    This module is responsible for 'Step 1: Extract Text' from the pipeline.
-    """
 
     def __init__(self):
-        """
-        Initializes the KPIExtractor.
-        Checks for Tesseract OCR engine availability.
-        """
+
         if pytesseract is None:
             logger.critical("pytesseract library not found. OCR functionality will be disabled.")
             self.tesseract_available = False
@@ -53,15 +45,7 @@ class KPIExtractor: # Renaming to DocumentTextExtractor might be more accurate f
         logger.info("KPIExtractor initialized.")
 
     def _extract_text_from_image(self, image_path: str) -> Optional[str]:
-        """
-        Extracts text from an image file using Tesseract OCR.
 
-        Args:
-            image_path (str): Path to the image file.
-
-        Returns:
-            Optional[str]: Extracted text, or None if OCR fails.
-        """
         if not self.tesseract_available:
             logger.error("Tesseract not available. Cannot perform OCR on image.")
             return None
@@ -83,16 +67,7 @@ class KPIExtractor: # Renaming to DocumentTextExtractor might be more accurate f
             return None
 
     def _extract_text_from_pdf(self, pdf_path: str) -> Optional[str]:
-        """
-        Extracts text from a PDF file using pdfminer.six.
-        Prioritizes direct text extraction.
 
-        Args:
-            pdf_path (str): Path to the PDF file.
-
-        Returns:
-            Optional[str]: Extracted text, or None if extraction fails.
-        """
         if pdfminer_extract_text is None:
             logger.error("pdfminer.six library not found. Cannot extract text from PDF.")
             return None
@@ -114,16 +89,7 @@ class KPIExtractor: # Renaming to DocumentTextExtractor might be more accurate f
             return None
 
     def extract_text_from_document(self, file_path: str) -> Optional[str]:
-        """
-        Extracts raw text content from a given document file.
-        Determines file type and applies appropriate extraction method (text read, OCR, PDF text extraction).
 
-        Args:
-            file_path (str): The path to the document file.
-
-        Returns:
-            Optional[str]: The raw extracted text content, or None if extraction fails.
-        """
         extracted_content: Optional[str] = None
         file_extension = os.path.splitext(file_path)[1].lower()
 

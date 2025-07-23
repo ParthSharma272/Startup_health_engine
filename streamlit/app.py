@@ -7,10 +7,9 @@ from requests.auth import HTTPBasicAuth
 from datetime import datetime
 import logging
 import re
-import pandas as pd # Added for better data handling for charts
+import pandas as pd 
 
-# Configure Streamlit page
-# Removed 'icon' argument again due to persistent TypeError.
+
 st.set_page_config(layout="wide", page_title="Startup Health Score Dashboard 🚀")
 
 # Define paths relative to the Streamlit app's container WORKDIR (/app)
@@ -38,8 +37,7 @@ app_logger = logging.getLogger(__name__)
 def trigger_airflow_dag(dag_id: str, file_name: str) -> dict:
     """Triggers an Airflow DAG run via the REST API."""
     
-    # Sanitize file_name for dag_run_id: replace non-alphanumeric, non-underscore, non-dot, non-tilde, non-colon, non-plus, non-hyphen with underscore
-    # This matches Airflow's allowed pattern: '^[A-Za-z0-9_.~:+-]+$'
+
     sanitized_file_name = re.sub(r'[^A-Za-z0-9_.~:+-]', '_', file_name)
     
     dag_run_id = f"streamlit_trigger_{sanitized_file_name}_{datetime.now().strftime('%Y%m%d%H%M%S')}"

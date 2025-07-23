@@ -5,23 +5,10 @@ import openai
 from src.utils.logger_config import logger
 
 class KPIRAGExtractor:
-    """
-    Extracts structured KPI data from raw text using a Retrieval-Augmented Generation (RAG) approach
-    with the OpenAI Large Language Model (LLM).
-    This module is responsible for 'Step 2: KPI Extraction' from the pipeline.
-    """
+
 
     def __init__(self, kpi_benchmarks: List[Dict[str, Any]], openai_api_key: str, kpi_benchmark_map: Dict[str, Any]):
-        """
-        Initializes the KPIRAGExtractor by loading the LLM and tokenizer.
 
-        Args:
-            kpi_benchmarks (List[Dict[str, Any]]): List of KPI benchmark dictionaries, used to
-                                                   inform the LLM about expected KPIs.
-            openai_api_key (str): Your OpenAI API key.
-            kpi_benchmark_map (Dict[str, Any]): A map of KPI names to their benchmark configurations,
-                                                 used to determine expected data types (e.g., 'predefined').
-        """
         self.client = openai.OpenAI(api_key=openai_api_key)
         self.model_name = "gpt-3.5-turbo" # You can change this to "gpt-4o" for potentially better results
         self.kpi_list = [kpi['kpi'] for kpi in kpi_benchmarks]
@@ -29,15 +16,7 @@ class KPIRAGExtractor:
         logger.info(f"KPIRAGExtractor initialized with OpenAI model: {self.model_name}.")
 
     def _construct_prompt(self, text_content: str) -> str:
-        """
-        Constructs the prompt for the LLM to extract KPIs.
 
-        Args:
-            text_content (str): The raw text extracted from the document.
-
-        Returns:
-            str: The formatted prompt for the LLM.
-        """
         kpi_names_str = ", ".join(self.kpi_list)
 
         # Adding a few-shot example to guide the LLM more effectively
@@ -70,18 +49,7 @@ class KPIRAGExtractor:
         return prompt.strip()
 
     def extract_kpis(self, text_content: str) -> Tuple[Dict[str, Any], str]:
-        """
-        Extracts KPIs from the given text content using the OpenAI LLM.
 
-        Args:
-            text_content (str): The raw text content from which to extract KPIs.
-
-        Returns:
-            Tuple[Dict[str, Any], str]: A tuple containing:
-                - Dict[str, Any]: A dictionary of extracted KPI names and their values.
-                                 Returns an empty dict if no KPIs are extracted or parsing fails.
-                - str: The raw text response received directly from the LLM.
-        """
         if not self.client:
             logger.error("OpenAI client not initialized. Cannot extract KPIs.")
             return {}, "OpenAI client failed to initialize."
@@ -179,10 +147,7 @@ class KPIRAGExtractor:
             return {}, llm_response_string if llm_response_string else f"Error during LLM inference: {e}"
 
     def _parse_comma_separated_kpis(self, text: str) -> Dict[str, Any]:
-        """
-        Parses a string of comma-separated 'Key: Value' pairs into a dictionary using a more robust splitting strategy.
-        This is a fallback if the LLM doesn't produce valid JSON.
-        """
+
         parsed_data = {}
 
         # Normalize the input string: remove leading/trailing spaces, and ensure consistent ": " delimiter

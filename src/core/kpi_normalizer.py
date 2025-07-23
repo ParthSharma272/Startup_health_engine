@@ -4,27 +4,15 @@ from typing import Dict, Any, Union, List
 from src.utils.logger_config import logger
 
 class KPINormalizer:
-    """
-    Handles the normalization of individual KPI values based on predefined formulas
-    and benchmarks.
-    """
 
     def __init__(self, kpi_benchmark_map: Dict[str, Dict[str, Any]]):
-        """
-        Initializes the KPINormalizer with a map of KPI benchmarks.
 
-        Args:
-            kpi_benchmark_map (Dict[str, Dict[str, Any]]): A map from KPI name to its benchmark details.
-        """
         self.kpi_benchmark_map = kpi_benchmark_map
         self.kpi_formula_aliases = self._create_kpi_aliases()
         logger.info("KPINormalizer initialized with KPI formula aliases.")
 
     def _create_kpi_aliases(self) -> Dict[str, str]:
-        """
-        Creates a mapping from full KPI names to their common formula aliases
-        based on patterns (e.g., content in parentheses, or cleaned names).
-        """
+
         alias_map = {}
         for full_name in self.kpi_benchmark_map.keys():
             # Try to extract alias from parentheses (e.g., MRR from Monthly Recurring Revenue (MRR))
@@ -47,22 +35,7 @@ class KPINormalizer:
         return alias_map
 
     def _evaluate_formula(self, formula_str: str, current_kpi_numeric_value: Union[float, int], params: Dict[str, Any], kpi_name_for_logging: str) -> float:
-        """
-        Safely evaluates a KPI normalization formula string using a controlled environment.
 
-        Args:
-            formula_str (str): The formula string (e.g., "log(value+1) / log(10000000+1) * 100").
-            current_kpi_numeric_value (Union[float, int]): The numeric value of the KPI currently being normalized.
-            params (Dict[str, Any]): A dictionary of additional parameters for the formula (e.g., max_MRR).
-            kpi_name_for_logging (str): The original KPI name, used for better logging.
-
-        Returns:
-            float: The result of the formula evaluation.
-
-        Raises:
-            ValueError: If the formula contains unsupported operations or is malformed.
-            ZeroDivisionError: If a division by zero occurs.
-        """
         # Define a safe execution environment for eval.
         eval_context = {
             'math': math,
@@ -96,19 +69,7 @@ class KPINormalizer:
             raise
 
     def normalize_kpi(self, kpi_name: str, kpi_value: Any, all_raw_kpis: Dict[str, Any]) -> float:
-        """
-        Normalizes a single KPI value to a 0-100 scale.
-        `all_raw_kpis` is kept for future use if cross-KPI formulas are reintroduced.
 
-        Args:
-            kpi_name (str): The name of the KPI to normalize.
-            kpi_value (Any): The raw value of the KPI (can be float, int, or str for predefined).
-            all_raw_kpis (Dict[str, Any]): A dictionary of all raw KPI values extracted from the document.
-                                           (Currently not directly used in _evaluate_formula, but kept for signature consistency)
-
-        Returns:
-            float: The normalized KPI score (0-100). Returns 0.0 if normalization fails or KPI is not found.
-        """
         # Handle None values at the very beginning
         if kpi_value is None:
             logger.warning(f"KPI '{kpi_name}' has a None value. Returning 0.0.")

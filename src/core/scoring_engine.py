@@ -4,20 +4,9 @@ from src.core.config_loader import ConfigLoader
 from src.utils.logger_config import logger
 
 class ScoringEngine:
-    """
-    The main scoring engine for startup health.
-
-    Orchestrates KPI normalization, input validation, category score calculation,
-    and total health score aggregation.
-    """
 
     def __init__(self, config_loader: ConfigLoader):
-        """
-        Initializes the ScoringEngine.
 
-        Args:
-            config_loader (ConfigLoader): An instance of ConfigLoader to load configurations.
-        """
         self.config_loader = config_loader
         self.kpi_configs: Dict[str, Any] = {}
         self.kpi_normalizer: KPINormalizer
@@ -64,17 +53,7 @@ class ScoringEngine:
         logger.info(f"Collected all expected KPI names: {self.all_kpi_names}")
 
     def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
-        """
-        Validates if all mandatory KPIs are present and identifies missing non-mandatory KPIs.
 
-        Args:
-            kpi_dict (Dict[str, Any]): The input dictionary of raw KPI values.
-
-        Returns:
-            Tuple[List[str], List[str]]: A tuple containing:
-                - List[str]: A list of missing mandatory KPIs.
-                - List[str]: A list of missing non-mandatory KPIs.
-        """
         missing_mandatory_kpis = [kpi for kpi in self.mandatory_kpis if kpi not in kpi_dict or kpi_dict[kpi] is None]
 
         missing_non_mandatory_kpis = []
@@ -90,16 +69,7 @@ class ScoringEngine:
         return missing_mandatory_kpis, missing_non_mandatory_kpis
 
     def calculate_scores(self, kpi_dict: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Calculates the health score for a startup based on its KPIs.
 
-        Args:
-            kpi_dict (Dict[str, Any]): A dictionary of raw KPI values.
-
-        Returns:
-            Dict[str, Any]: A dictionary containing normalized KPI scores, category scores, and total score.
-                            Returns an error structure if mandatory KPIs are missing.
-        """
         missing_mandatory_kpis, missing_non_mandatory_kpis = self._validate_input_kpis(kpi_dict)
         if missing_mandatory_kpis:
             return {

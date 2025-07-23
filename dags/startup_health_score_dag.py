@@ -24,9 +24,6 @@ CONFIG_DIR = os.path.join(BASE_DIR, 'config')
 UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 PROCESSED_DATA_DIR = os.path.join(BASE_DIR, 'processed_data')
 
-# --- IMPORTANT FIX: Add BASE_DIR to sys.path ---
-# This ensures Python can find 'src' and 'config' modules when imported
-# from within the DAG file, as they are relative to /opt/airflow.
 if BASE_DIR not in sys.path:
     sys.path.append(BASE_DIR)
 # --- END FIX ---

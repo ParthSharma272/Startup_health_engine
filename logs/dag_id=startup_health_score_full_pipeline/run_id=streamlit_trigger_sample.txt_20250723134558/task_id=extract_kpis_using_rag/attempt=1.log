@@ -1,0 +1,38 @@
+[2025-07-23T13:46:06.788+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T13:46:06.810+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag streamlit_trigger_sample.txt_20250723134558 [queued]>
+[2025-07-23T13:46:06.819+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag streamlit_trigger_sample.txt_20250723134558 [queued]>
+[2025-07-23T13:46:06.819+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T13:46:06.837+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): extract_kpis_using_rag> on 2025-07-23 13:45:58.837655+00:00
+[2025-07-23T13:46:06.860+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=112) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T13:46:06.863+0000] {standard_task_runner.py:72} INFO - Started process 114 to run task
+[2025-07-23T13:46:06.865+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'extract_kpis_using_rag', 'streamlit_trigger_sample.txt_20250723134558', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmph2co_0li']
+[2025-07-23T13:46:06.869+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask extract_kpis_using_rag
+[2025-07-23T13:46:06.931+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.extract_kpis_using_rag streamlit_trigger_sample.txt_20250723134558 [running]> on host f228824c2da2
+[2025-07-23T13:46:07.057+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='extract_kpis_using_rag' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T13:45:58.837655+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='streamlit_trigger_sample.txt_20250723134558'
+[2025-07-23T13:46:07.060+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T13:46:07.103+0000] {log.py:232} WARNING - 2025-07-23 13:46:07,102 - startup_health_score - INFO - Loading KPI benchmarks and initializing RAG extractor...
+[2025-07-23T13:46:07.102+0000] {startup_health_score_dag.py:125} INFO - Loading KPI benchmarks and initializing RAG extractor...
+[2025-07-23T13:46:07.106+0000] {log.py:232} WARNING - 2025-07-23 13:46:07,106 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T13:46:07.106+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T13:46:07.203+0000] {log.py:232} WARNING - 2025-07-23 13:46:07,203 - startup_health_score - INFO - KPIRAGExtractor initialized with OpenAI model: gpt-3.5-turbo.
+[2025-07-23T13:46:07.203+0000] {kpi_rag_extractor.py:29} INFO - KPIRAGExtractor initialized with OpenAI model: gpt-3.5-turbo.
+[2025-07-23T13:46:07.205+0000] {log.py:232} WARNING - 2025-07-23 13:46:07,205 - startup_health_score - INFO - Extracting KPIs using RAG (LLM)...
+[2025-07-23T13:46:07.205+0000] {startup_health_score_dag.py:132} INFO - Extracting KPIs using RAG (LLM)...
+[2025-07-23T13:46:11.705+0000] {_client.py:1038} INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-23T13:46:11.729+0000] {log.py:232} WARNING - 2025-07-23 13:46:11,728 - startup_health_score - INFO - Successfully parsed KPIs from LLM response as JSON.
+[2025-07-23T13:46:11.728+0000] {kpi_rag_extractor.py:121} INFO - Successfully parsed KPIs from LLM response as JSON.
+[2025-07-23T13:46:11.730+0000] {log.py:232} WARNING - 2025-07-23 13:46:11,730 - startup_health_score - WARNING - Could not convert 'Infinite' to float for KPI 'Runway (in Months)'. Keeping as string.
+[2025-07-23T13:46:11.730+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert 'Infinite' to float for KPI 'Runway (in Months)'. Keeping as string.
+[2025-07-23T13:46:11.731+0000] {log.py:232} WARNING - 2025-07-23 13:46:11,731 - startup_health_score - WARNING - Could not convert '1:40' to float for KPI 'CAC-to-CLV Ratio'. Keeping as string.
+[2025-07-23T13:46:11.731+0000] {kpi_rag_extractor.py:166} WARNING - Could not convert '1:40' to float for KPI 'CAC-to-CLV Ratio'. Keeping as string.
+[2025-07-23T13:46:11.756+0000] {log.py:232} WARNING - 2025-07-23 13:46:11,756 - startup_health_score - INFO - Extracted KPIs via RAG saved to /opt/***/processed_data/sample_txt_extracted_kpis.json
+[2025-07-23T13:46:11.756+0000] {startup_health_score_dag.py:144} INFO - Extracted KPIs via RAG saved to /opt/***/processed_data/sample_txt_extracted_kpis.json
+[2025-07-23T13:46:11.783+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T13:46:11.796+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T13:46:11.797+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=extract_kpis_using_rag, run_id=streamlit_trigger_sample.txt_20250723134558, execution_date=20250723T134558, start_date=20250723T134606, end_date=20250723T134611
+[2025-07-23T13:46:11.855+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T13:46:11.866+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-07-23T13:46:11.924+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T13:46:11.926+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

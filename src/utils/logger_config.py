@@ -2,12 +2,7 @@ import logging
 import os
 
 def setup_logging(log_level=logging.INFO):
-    """
-    Sets up a standardized logging configuration for the application.
 
-    Args:
-        log_level (int): The minimum level of messages to log (e.g., logging.INFO, logging.DEBUG).
-    """
     # Create a logger
     logger = logging.getLogger('startup_health_score')
     logger.setLevel(log_level)
