@@ -31,7 +31,6 @@ class ScoringEngine:
     def _load_configurations(self):
         """Loads KPI benchmarks and weights from configuration files."""
         try:
-            # This method correctly loads from config_loader
             self.kpi_configs = self.config_loader.load_all_configs()
             self.kpi_benchmark_map = self.config_loader.get_kpi_benchmark_map(
                 self.kpi_configs['kpi_benchmarks']
@@ -43,7 +42,6 @@ class ScoringEngine:
 
     def _initialize_normalizer(self):
         """Initializes the KPI normalizer with loaded benchmarks."""
-        # This correctly initializes with the kpi_benchmark_map
         self.kpi_normalizer = KPINormalizer(self.kpi_benchmark_map)
 
     def _identify_mandatory_kpis(self):
