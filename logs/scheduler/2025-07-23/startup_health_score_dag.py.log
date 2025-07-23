@@ -846,3 +846,22 @@ ModuleNotFoundError: No module named 'openai'
 [2025-07-23T04:36:19.569+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:36:19.567+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-07-23T04:36:19.578+0000] {logging_mixin.py:190} INFO - [2025-07-23T04:36:19.578+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
 [2025-07-23T04:36:19.588+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.822 seconds
+[2025-07-23T05:02:37.867+0000] {processor.py:186} INFO - Started process (PID=33) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:02:37.868+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:02:37.870+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:02:37.870+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:02:40.970+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:02:40.965+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/startup_health_score_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/startup_health_score_dag.py", line 42, in <module>
+    from src.core.scoring_engine import ScoringEngine
+  File "/opt/airflow/src/core/scoring_engine.py", line 6, in <module>
+    class ScoringEngine:
+  File "/opt/airflow/src/core/scoring_engine.py", line 66, in ScoringEngine
+    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
+[2025-07-23T05:02:40.972+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:02:41.021+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 3.161 seconds

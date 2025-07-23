@@ -4,111 +4,263 @@
     "normalization": "log_scale",
     "formula": "log(value+1) / log(10000000+1) * 100",
     "params": {"max_MRR": 10000000},
-    "benchmark": "Only ~14 Indian SaaS have reached $100M ARR (≈INR 8M MRR); log-scale handles wide range.",
-    "source": "BVP Atlas: Rise of SaaS in India"
+    "benchmark": "Only about 14 Indian SaaS companies exceed $100M in ARR (approx. ₹83M MRR), making a log scale necessary to handle the wide distribution of revenue among startups. [3]",
+    "source": "Bain & Company: India SaaS Report 2022"
+  },
+  {
+    "kpi": "Annual Recurring Revenue (ARR)",
+    "normalization": "log_scale",
+    "formula": "log(value+1) / log(830000000+1) * 100",
+    "params": {"max_ARR": 830000000},
+    "benchmark": "The Indian SaaS market is projected to reach $50 billion in ARR by 2030, with top companies now crossing the $100M ARR threshold. [4]",
+    "source": "Bessemer Venture Partners: The Rise of SaaS in India 2023"
   },
   {
     "kpi": "Burn Rate",
     "normalization": "inverse_scaling",
     "formula": "500000 / (value + 500000) * 100",
     "params": {"reference_Burn": 500000},
-    "benchmark": "Indian SaaS often run with high capital efficiency; lean operations typical.",
-    "source": "BVP: Rise of SaaS in India"
+    "benchmark": "Indian SaaS companies are known for their high capital efficiency, with many operating at a burn multiple significantly better than global peers.",
+    "source": "EY-Upekkha: Bellwethers of Indian SaaS Report"
   },
   {
     "kpi": "Runway (in Months)",
     "normalization": "linear_capped",
     "formula": "min(value / 18 * 100, 100)",
     "params": {"target_Runway": 18},
-    "benchmark": "12–18 months runway is standard in India.",
-    "source": "McKinsey: Turning India into a SaaS Power"
+    "benchmark": "A runway of 12–18 months is the standard expectation for venture-backed startups in India to navigate market cycles.",
+    "source": "McKinsey Article: Turning India into a SaaS power"
   },
   {
     "kpi": "Gross Margin (%)",
     "normalization": "direct_scaling",
     "formula": "min(value, 100)",
     "params": {},
-    "benchmark": "Indian SaaS typically see 70–80% margins.",
-    "source": "India SaaS Survey"
+    "benchmark": "SaaS firms in India typically operate with high gross margins, generally in the 70-85% range. [2, 14]",
+    "source": "JM Financial Report: India's SaaS: Taking Wings"
+  },
+  {
+    "kpi": "Operating Margin (or EBITDA)",
+    "normalization": "linear_capped",
+    "formula": "min((value + 20) / (25 + 20) * 100, 100)",
+    "params": {"target_Margin": 25, "min_Margin": -20},
+    "benchmark": "Mature public SaaS companies aim for EBITDA margins around 25%; however, high-growth Indian startups often have negative margins. [23]",
+    "source": "DiVA Portal Study: Unveiling the 'Rule of 40'"
   },
   {
     "kpi": "MRR Growth Rate",
     "normalization": "direct_scaling",
     "formula": "min(value, 100)",
     "params": {},
-    "benchmark": "Indian SaaS target 50–70% YoY growth; global median ~30%.",
-    "source": "Bain & McKinsey: Rule of 40"
+    "benchmark": "For early-stage companies, Indian investors expect a 50-70% year-on-year growth rate as a key indicator of traction. [10]",
+    "source": "McKinsey Article: Turning India into a SaaS power"
   },
   {
     "kpi": "User Growth Rate",
     "normalization": "direct_scaling",
     "formula": "min(value, 100)",
     "params": {},
-    "benchmark": "Sequoia Surge recommends fast user expansion (20–50%).",
-    "source": "Sequoia Surge"
+    "benchmark": "Rapid user base expansion (20–50%) is a key focus for early-stage validation, heavily emphasized by accelerator programs.",
+    "source": "Sequoia India's 'Surge' Program Methodology"
   },
   {
-    "kpi": "Net Revenue Retention (NRR)",
-    "normalization": "linear_capped",
-    "formula": "min(value / 120 * 100, 100)",
-    "params": {"target_NRR": 120},
-    "benchmark": "Top Indian SaaS report NRR in 120–130% range.",
-    "source": "BCG India: Lean Scaling"
+    "kpi": "Lead-to-Customer Conversion Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value / 7 * 100, 100)",
+    "params": {"target_Rate": 7},
+    "benchmark": "Top-performing B2B SaaS companies typically see visitor-to-lead conversion rates between 5-7%.",
+    "source": "7 Eagles Publication: SaaS Conversion Rate Guide"
   },
   {
-    "kpi": "Customer Churn Rate",
-    "normalization": "reverse_scaling",
-    "formula": "100 - value",
+    "kpi": "Trial-to-Paid Conversion Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value / 25 * 100, 100)",
+    "params": {"target_Rate": 25},
+    "benchmark": "A strong benchmark for B2B SaaS is a trial-to-paid conversion rate between 15-25%, varying by lead source.",
+    "source": "ChartMogul & UXCam Industry Benchmarks"
+  },
+  {
+    "kpi": "Signup-to-MRR Ratio",
+    "normalization": "log_scale",
+    "formula": "log(value+1) / log(5000+1) * 100",
+    "params": {"target_Ratio": 5000},
+    "benchmark": "A derived metric to evaluate the efficiency of converting new signups into revenue. A higher ratio is preferred.",
+    "source": "Product-Led Growth (PLG) Industry Best Practices"
+  },
+  {
+    "kpi": "Expansion Revenue",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
     "params": {},
-    "benchmark": "Annual churn <10% (enterprise) or <5% (SMB); 5% monthly = danger zone.",
-    "source": "Stellaris: How Founders Assess Churn"
+    "benchmark": "Expansion ARR from existing customers has grown to over 32% of total new revenue, highlighting the importance of upselling.",
+    "source": "High Alpha: 2024 SaaS Benchmarks Report"
   },
   {
     "kpi": "Customer Acquisition Cost (CAC)",
     "normalization": "inverse_scaling",
     "formula": "50000 / (value + 50000) * 100",
     "params": {"reference_CAC": 50000},
-    "benchmark": "Product-led SaaS aim for CAC < ₹50k.",
-    "source": "Sequoia / Tracxn CRM Analysis"
+    "benchmark": "For product-led growth (PLG) SaaS companies in India, a CAC below ₹50,000 is a common target for efficient scaling.",
+    "source": "Tracxn Research on Indian SaaS GTM"
   },
   {
-    "kpi": "Customer Lifetime Value (CLV)",
+    "kpi": "Customer Lifetime Value (CLV or LTV)",
     "normalization": "log_scale",
     "formula": "log(value+1) / log(10000000+1) * 100",
     "params": {"max_CLV": 10000000},
-    "benchmark": "Median customer lifetime ~24 months.",
-    "source": "India SaaS Survey"
+    "benchmark": "A high LTV is critical for demonstrating a sustainable business model to investors in the Indian market.",
+    "source": "SaaSBOOMi & 1Lattice Report: The $100B Domestic Software Opportunity"
   },
   {
     "kpi": "CAC-to-CLV Ratio",
     "normalization": "linear_capped",
     "formula": "min((value)/3 * 100, 100)",
     "params": {"target_ratio": 3},
-    "benchmark": "Ideal benchmark is 3:1 LTV:CAC.",
-    "source": "BCG India & Bain"
+    "benchmark": "The ideal LTV:CAC ratio is widely accepted to be 3:1 for a healthy SaaS business.",
+    "source": "Bain & Company Article: Hacking Software's Rule of 40"
   },
   {
-    "kpi": "Trial-to-Paid Conversion Rate",
+    "kpi": "CAC Payback Period",
+    "normalization": "inverse_scaling",
+    "formula": "18 / (value + 6) * 100",
+    "params": {"target_Period": 12},
+    "benchmark": "Due to lower operational costs, Indian SaaS companies often achieve a shorter CAC payback period compared to global counterparts.",
+    "source": "Bessemer Venture Partners: The Rise of SaaS in India Report"
+  },
+  {
+    "kpi": "Contribution Margin",
     "normalization": "direct_scaling",
     "formula": "min(value, 100)",
     "params": {},
-    "benchmark": "Average B2B SaaS conversions ~14–25%.",
-    "source": "ChartMogul / Global SaaS Reports"
+    "benchmark": "A strong contribution margin indicates profitability at the unit level, a key focus for investors analyzing financial health.",
+    "source": "Venture Capital Financial Due Diligence Standards"
+  },
+  {
+    "kpi": "Customer (Logo) Churn Rate",
+    "normalization": "reverse_scaling",
+    "formula": "max(0, 100 - (value * 10))",
+    "params": {"max_Churn": 10},
+    "benchmark": "An acceptable annual logo churn rate for B2B SaaS is generally below 5-7%.",
+    "source": "Fullview Article: Average Churn Rate For SaaS"
+  },
+  {
+    "kpi": "Revenue Churn Rate",
+    "normalization": "reverse_scaling",
+    "formula": "max(0, 100 - (value * 20))",
+    "params": {"max_Churn": 5},
+    "benchmark": "The average monthly revenue churn for B2B SaaS companies is approximately 3.5%, including both voluntary and involuntary churn.",
+    "source": "Recurly Research: State of Subscriptions Report"
+  },
+  {
+    "kpi": "Net Revenue Retention (NRR)",
+    "normalization": "linear_capped",
+    "formula": "min(value / 120 * 100, 100)",
+    "params": {"target_NRR": 120},
+    "benchmark": "Top-performing Indian SaaS companies report NRR between 120-130%, with best-in-class achieving over 140%.",
+    "source": "Bessemer Venture Partners: The Rise of SaaS in India 2023"
+  },
+  {
+    "kpi": "Daily Active Users / Monthly Active Users (DAU/MAU)",
+    "normalization": "direct_scaling",
+    "formula": "min(value / 50 * 100, 100)",
+    "params": {"target_Ratio": 50},
+    "benchmark": "A DAU/MAU ratio of 10-20% is considered good for B2B SaaS, where daily engagement is not always necessary for value delivery.",
+    "source": "PayPro Global SaaS Metrics Analysis"
+  },
+  {
+    "kpi": "Day-30 Retention Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value / 40 * 100, 100)",
+    "params": {"target_Rate": 40},
+    "benchmark": "The average software product retains around 39% of new users one month after signup.",
+    "source": "Pendo Report: 2024 SaaS User Retention Benchmarks"
+  },
+  {
+    "kpi": "Day-90 Retention Rate",
+    "normalization": "direct_scaling",
+    "formula": "min(value / 30 * 100, 100)",
+    "params": {"target_Rate": 30},
+    "benchmark": "After three months, the average user retention for software products drops to approximately 30%.",
+    "source": "Pendo Report: 2024 SaaS User Retention Benchmarks"
+  },
+  {
+    "kpi": "Founder Commitment (Full-Time)",
+    "normalization": "predefined",
+    "formula": "Full-Time: 100, Part-Time: 50, Not Involved: 0",
+    "params": {"Full-Time": 100, "Part-Time": 50, "Not Involved": 0},
+    "benchmark": "Full-time commitment from founders is a non-negotiable for most Indian VC firms, seen as essential for success.",
+    "source": "Kalaari Capital & Indian Angel Network Investment Theses"
+  },
+  {
+    "kpi": "Team Size",
+    "normalization": "log_scale",
+    "formula": "log(value+1) / log(500+1) * 100",
+    "params": {"max_Size": 500},
+    "benchmark": "Team size is evaluated in context of efficiency (ARR/FTE), not as a standalone metric. Varies significantly by stage.",
+    "source": "Lightspeed Venture Partners Analysis of Portfolio Companies"
+  },
+  {
+    "kpi": "KPI Update Frequency",
+    "normalization": "predefined",
+    "formula": "Weekly: 100, Monthly: 75, Quarterly: 50, Ad-hoc: 25, Never: 0",
+    "params": {"Weekly": 100, "Monthly": 75, "Quarterly": 50, "Ad-hoc": 25, "Never": 0},
+    "benchmark": "Frequent KPI tracking is considered a sign of a data-driven culture and strong operational discipline.",
+    "source": "Agile Management & Startup Best Practices"
+  },
+  {
+    "kpi": "Time Since Last Fundraise",
+    "normalization": "inverse_scaling",
+    "formula": "36 / (value + 18) * 100",
+    "params": {"reference_Months": 18},
+    "benchmark": "This metric provides context on a startup's capital efficiency and potential urgency for a new funding round.",
+    "source": "PwC India Report: Startup Deals Tracker Q3 CY22"
+  },
+  {
+    "kpi": "Arr per Fte",
+    "normalization": "linear_capped",
+    "formula": "min(value / 150000 * 100, 100)",
+    "params": {"target_ArrPerFte": 150000},
+    "benchmark": "Median ARR per employee for private SaaS is ~$125k, but top quartile companies with $5M-$20M ARR can reach nearly $200k. [8, 19]",
+    "source": "SaaS Capital: 2024 Revenue Per Employee Benchmarks"
+  },
+  {
+    "kpi": "Net Promoter Score (NPS)",
+    "normalization": "linear_capped",
+    "formula": "min((value + 100) / (70 + 100) * 100, 100)",
+    "params": {"target_NPS": 70, "min_NPS": -100},
+    "benchmark": "For B2B SaaS, an NPS score above 30 is good, and scores over 50 are excellent. The industry average is around +40.",
+    "source": "CustomerGauge & Retently: NPS & CX Benchmarks Reports"
+  },
+  {
+    "kpi": "Customer Satisfaction Score (CSAT)",
+    "normalization": "direct_scaling",
+    "formula": "min(value, 100)",
+    "params": {},
+    "benchmark": "A high CSAT score (often measured on a scale of 1-5 or 1-100) is a direct measure of service quality after specific interactions.",
+    "source": "Zendesk & Freshdesk Customer Support Industry Reports"
+  },
+  {
+    "kpi": "Support Ticket Volume",
+    "normalization": "inverse_log_scale",
+    "formula": "100 - (log(value+1) / log(10000+1) * 100)",
+    "params": {"max_Tickets": 10000},
+    "benchmark": "A lower ticket volume relative to the active user base indicates a more intuitive product and better self-service resources.",
+    "source": "Gainsight & Freshworks Customer Success Playbooks"
+  },
+  {
+    "kpi": "Average Time to Resolution (Support)",
+    "normalization": "inverse_scaling",
+    "formula": "48 / (value + 24) * 100",
+    "params": {"reference_Hours": 24},
+    "benchmark": "Efficiently resolving customer issues is critical for satisfaction. Benchmarks vary, but faster resolution times are always preferred.",
+    "source": "Zendesk Customer Experience Trends Report"
   },
   {
     "kpi": "Onboarding Completion Rate",
     "normalization": "direct_scaling",
     "formula": "min(value, 100)",
     "params": {},
-    "benchmark": "Strong onboarding correlates with lower churn.",
-    "source": "BCG India: Lean Scaling"
-  },
-  {
-    "kpi": "Founder Commitment",
-    "normalization": "predefined",
-    "formula": "Full-Time: 100, Part-Time: 50, Not Involved: 0",
-    "params": {"Full-Time": 100, "Part-Time": 50, "Not Involved": 0},
-    "benchmark": "Strong founder involvement leads to better outcomes.",
-    "source": "Sequoia Surge"
+    "benchmark": "A high completion rate during the initial user onboarding process is a strong predictor of long-term customer retention and success.",
+    "source": "BCG Article: Forging India’s Digital Start-Ups in a Cash-Scarce World (Lean Scaling)"
   }
 ]

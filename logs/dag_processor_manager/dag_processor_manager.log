@@ -632,3 +632,16 @@ File Path                                      PID    Runtime      # DAGs    # E
 /opt/airflow/dags/startup_health_score_dag.py                           1           0  1.20s           2025-07-23T04:33:10                      10
 ================================================================================
 [2025-07-23T04:36:35.490+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2025-07-23T05:02:37.777+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2025-07-23T05:02:37.778+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2025-07-23T05:02:37.779+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-07-23T05:02:37.779+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-07-23T05:02:37.787+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-23T05:02:37.877+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py     33  0.02s             0           0                                                   0
+================================================================================
