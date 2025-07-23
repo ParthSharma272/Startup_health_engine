@@ -6,7 +6,6 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago
 from airflow.exceptions import AirflowException
-
 # import sys # Removed sys.path manipulation
 
 # --- Configuration for DAG ---
@@ -30,6 +29,7 @@ SAMPLE_DOCUMENT_NAME = 'sample_document.txt' # Example: Use your PDF here for te
 EXTRACTED_TEXT_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_document_content.txt')
 EXTRACTED_KPI_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_kpis.json')
 SCORE_OUTPUT_FILE = os.path.join(PROCESSED_DATA_DIR, 'startup_score_output.json')
+
 
 # Ensure processed_data directory exists (this will run inside the container)
 os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
@@ -79,17 +79,26 @@ def _extract_raw_text(**kwargs):
         raise AirflowException("Raw text extraction returned no data.")
 
 
-def _extract_kpis_rag(**kwargs):
+def _extract_kpis_rag(**kwargs): # Now synchronous
     raw_text = kwargs['ti'].xcom_pull(key='raw_extracted_text')
     if not raw_text:
         logger.error("No raw text received from upstream task. Task will fail.")
         raise AirflowException("Raw text not available from 'extract_raw_text' task.")
 
+    # Retrieve OpenAI API key from Airflow Connections or Environment Variable
+    # For simplicity, we'll assume it's set as an environment variable in docker-compose.yaml
+    # In production, consider using Airflow Connections for sensitive data.
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
+    if not openai_api_key:
+        logger.error("OPENAI_API_KEY environment variable not set. Cannot extract KPIs.")
+        raise AirflowException("OPENAI_API_KEY is not set. Please configure it in your Docker Compose environment.")
+
     config_loader = ConfigLoader(config_dir=CONFIG_DIR)
     kpi_benchmarks = config_loader.load_config(config_loader.kpi_benchmarks_path)
 
-    rag_extractor = KPIRAGExtractor(kpi_benchmarks)
-    kpi_dict = rag_extractor.extract_kpis(raw_text)
+    # Pass the API key to the KPIRAGExtractor
+    rag_extractor = KPIRAGExtractor(kpi_benchmarks, openai_api_key=openai_api_key) # <-- FIXED LINE
+    kpi_dict, llm_response = rag_extractor.extract_kpis(raw_text) # No await needed
 
     if kpi_dict:
         try:
@@ -101,8 +110,8 @@ def _extract_kpis_rag(**kwargs):
             logger.error(f"Failed to write extracted KPIs to file {EXTRACTED_KPI_FILE}: {e}")
             raise AirflowException(f"Failed to write extracted KPIs: {e}")
     else:
-        logger.error("KPI extraction via RAG failed or returned no data. Task will fail.")
-        raise AirflowException("KPI extraction via RAG returned no data.")
+        logger.error(f"KPI extraction via RAG failed or returned no data. LLM Response: {llm_response}. Task will fail.")
+        raise AirflowException(f"KPI extraction via RAG returned no data. LLM Response: {llm_response}")
 
 
 def _calculate_scores(**kwargs):
