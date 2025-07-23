@@ -1,0 +1,36 @@
+[2025-07-23T04:25:10.653+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T04:25:10.667+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.calculate_startup_health_scores manual__2025-07-23T04:24:59.382863+00:00 [queued]>
+[2025-07-23T04:25:10.671+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.calculate_startup_health_scores manual__2025-07-23T04:24:59.382863+00:00 [queued]>
+[2025-07-23T04:25:10.671+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T04:25:10.676+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): calculate_startup_health_scores> on 2025-07-23 04:24:59.382863+00:00
+[2025-07-23T04:25:10.683+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=65) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T04:25:10.684+0000] {standard_task_runner.py:72} INFO - Started process 67 to run task
+[2025-07-23T04:25:10.684+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'calculate_startup_health_scores', 'manual__2025-07-23T04:24:59.382863+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmp9fzs8a_m']
+[2025-07-23T04:25:10.686+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask calculate_startup_health_scores
+[2025-07-23T04:25:10.720+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.calculate_startup_health_scores manual__2025-07-23T04:24:59.382863+00:00 [running]> on host 41f6609137f7
+[2025-07-23T04:25:10.776+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='calculate_startup_health_scores' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T04:24:59.382863+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-23T04:24:59.382863+00:00'
+[2025-07-23T04:25:10.779+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T04:25:10.796+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,796 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T04:25:10.796+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_benchmarks.json
+[2025-07-23T04:25:10.798+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,798 - startup_health_score - INFO - Successfully loaded configuration from /opt/***/config/kpi_weights.json
+[2025-07-23T04:25:10.798+0000] {config_loader.py:43} INFO - Successfully loaded configuration from /opt/***/config/kpi_weights.json
+[2025-07-23T04:25:10.799+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,799 - startup_health_score - INFO - KPINormalizer initialized with KPI formula aliases.
+[2025-07-23T04:25:10.799+0000] {kpi_normalizer.py:21} INFO - KPINormalizer initialized with KPI formula aliases.
+[2025-07-23T04:25:10.799+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,799 - startup_health_score - INFO - Identified mandatory KPIs: ['Monthly Recurring Revenue (MRR)', 'Burn Rate', 'Runway (in Months)', 'Gross Margin (%)', 'User Growth Rate', 'Customer Acquisition Cost (CAC)', 'Onboarding Completion Rate', 'Founder Commitment']
+[2025-07-23T04:25:10.799+0000] {scoring_engine.py:55} INFO - Identified mandatory KPIs: ['Monthly Recurring Revenue (MRR)', 'Burn Rate', 'Runway (in Months)', 'Gross Margin (%)', 'User Growth Rate', 'Customer Acquisition Cost (CAC)', 'Onboarding Completion Rate', 'Founder Commitment']
+[2025-07-23T04:25:10.799+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,799 - startup_health_score - INFO - ScoringEngine initialized successfully.
+[2025-07-23T04:25:10.799+0000] {scoring_engine.py:29} INFO - ScoringEngine initialized successfully.
+[2025-07-23T04:25:10.800+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,800 - startup_health_score - INFO - Calculated total score: 64.64
+[2025-07-23T04:25:10.800+0000] {scoring_engine.py:146} INFO - Calculated total score: 64.64
+[2025-07-23T04:25:10.802+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,802 - startup_health_score - INFO - Scoring results saved to /opt/***/processed_data/startup_score_output.json
+[2025-07-23T04:25:10.802+0000] {startup_health_score_dag.py:141} INFO - Scoring results saved to /opt/***/processed_data/startup_score_output.json
+[2025-07-23T04:25:10.803+0000] {log.py:232} WARNING - 2025-07-23 04:25:10,803 - startup_health_score - INFO - Total Score: 64.64
+[2025-07-23T04:25:10.803+0000] {startup_health_score_dag.py:147} INFO - Total Score: 64.64
+[2025-07-23T04:25:10.804+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T04:25:10.813+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T04:25:10.814+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=calculate_startup_health_scores, run_id=manual__2025-07-23T04:24:59.382863+00:00, execution_date=20250723T042459, start_date=20250723T042510, end_date=20250723T042510
+[2025-07-23T04:25:10.869+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T04:25:10.880+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T04:25:10.881+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

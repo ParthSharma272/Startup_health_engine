@@ -25,7 +25,7 @@ BASE_DIR = '/opt/airflow' # This is where your project root is mounted inside th
 CONFIG_DIR = os.path.join(BASE_DIR, 'config')
 UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 PROCESSED_DATA_DIR = os.path.join(BASE_DIR, 'processed_data')
-SAMPLE_DOCUMENT_NAME = 'sample_document.txt' # Example: Use your PDF here for testing the full flow
+# SAMPLE_DOCUMENT_NAME is no longer needed as it will be dynamically found
 EXTRACTED_TEXT_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_document_content.txt')
 EXTRACTED_KPI_FILE = os.path.join(PROCESSED_DATA_DIR, 'extracted_kpis.json')
 SCORE_OUTPUT_FILE = os.path.join(PROCESSED_DATA_DIR, 'startup_score_output.json')
@@ -48,11 +48,18 @@ setup_logging() # Ensure logging is set up for DAG tasks
 # --- Python Callable Functions for Tasks ---
 
 def _check_for_documents(**kwargs):
-    document_path = os.path.join(UPLOADS_DIR, SAMPLE_DOCUMENT_NAME)
-    if not os.path.exists(document_path):
-        logger.error(f"No document found at {document_path}. Task will fail.")
-        raise AirflowException(f"Document {SAMPLE_DOCUMENT_NAME} not found. Please ensure it's in the 'uploads/' directory.")
-    logger.info(f"Document {SAMPLE_DOCUMENT_NAME} found. Proceeding.")
+    # List files in the uploads directory
+    uploaded_files = [f for f in os.listdir(UPLOADS_DIR) if os.path.isfile(os.path.join(UPLOADS_DIR, f))]
+
+    if not uploaded_files:
+        logger.error(f"No documents found in the uploads directory: {UPLOADS_DIR}. Task will fail.")
+        raise AirflowException(f"No documents found in the 'uploads/' directory. Please upload a document.")
+
+    # Select the first found document to process
+    selected_document_name = uploaded_files[0]
+    document_path = os.path.join(UPLOADS_DIR, selected_document_name)
+
+    logger.info(f"Found and selected document: {selected_document_name} at {document_path}. Proceeding.")
     kwargs['ti'].xcom_push(key='document_to_process_path', value=document_path)
 
 
@@ -97,7 +104,7 @@ def _extract_kpis_rag(**kwargs): # Now synchronous
     kpi_benchmarks = config_loader.load_config(config_loader.kpi_benchmarks_path)
 
     # Pass the API key to the KPIRAGExtractor
-    rag_extractor = KPIRAGExtractor(kpi_benchmarks, openai_api_key=openai_api_key) # <-- FIXED LINE
+    rag_extractor = KPIRAGExtractor(kpi_benchmarks, openai_api_key=openai_api_key)
     kpi_dict, llm_response = rag_extractor.extract_kpis(raw_text) # No await needed
 
     if kpi_dict:

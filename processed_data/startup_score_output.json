@@ -1,0 +1,25 @@
+{
+  "normalized_kpis": {
+    "Monthly Recurring Revenue (MRR)": 79.2,
+    "Burn Rate": 80.65,
+    "Runway (in Months)": 86.11,
+    "Gross Margin (%)": 72.0,
+    "MRR Growth Rate": 8.0,
+    "User Growth Rate": 10.0,
+    "Trial-to-Paid Conversion Rate": 22.0,
+    "Customer Acquisition Cost (CAC)": 76.92,
+    "Customer Lifetime Value (CLV)": 68.26,
+    "CAC-to-CLV Ratio": 100.0,
+    "Customer Churn Rate": 97.0,
+    "Net Revenue Retention (NRR)": 95.83,
+    "Onboarding Completion Rate": 85.0,
+    "Founder Commitment": 100.0
+  },
+  "category_scores": {
+    "financials": 79.85,
+    "market_signals": 9.0,
+    "customer_success": 81.48,
+    "team_collaboration": 100.0
+  },
+  "total_score": 64.64
+}

@@ -1,0 +1,32 @@
+[2025-07-23T04:25:03.685+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T04:25:03.697+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_raw_text_from_document manual__2025-07-23T04:24:59.382863+00:00 [queued]>
+[2025-07-23T04:25:03.703+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.extract_raw_text_from_document manual__2025-07-23T04:24:59.382863+00:00 [queued]>
+[2025-07-23T04:25:03.703+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T04:25:03.709+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): extract_raw_text_from_document> on 2025-07-23 04:24:59.382863+00:00
+[2025-07-23T04:25:03.716+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=56) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T04:25:03.722+0000] {standard_task_runner.py:72} INFO - Started process 58 to run task
+[2025-07-23T04:25:03.723+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'extract_raw_text_from_document', 'manual__2025-07-23T04:24:59.382863+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmp1j8m3oji']
+[2025-07-23T04:25:03.726+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask extract_raw_text_from_document
+[2025-07-23T04:25:03.767+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.extract_raw_text_from_document manual__2025-07-23T04:24:59.382863+00:00 [running]> on host 41f6609137f7
+[2025-07-23T04:25:03.815+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='extract_raw_text_from_document' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T04:24:59.382863+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-23T04:24:59.382863+00:00'
+[2025-07-23T04:25:03.816+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T04:25:03.931+0000] {log.py:232} WARNING - 2025-07-23 04:25:03,930 - startup_health_score - INFO - Tesseract OCR engine found (version: 5.3.0).
+[2025-07-23T04:25:03.930+0000] {kpi_extractor.py:49} INFO - Tesseract OCR engine found (version: 5.3.0).
+[2025-07-23T04:25:03.931+0000] {log.py:232} WARNING - 2025-07-23 04:25:03,931 - startup_health_score - INFO - KPIExtractor initialized.
+[2025-07-23T04:25:03.931+0000] {kpi_extractor.py:53} INFO - KPIExtractor initialized.
+[2025-07-23T04:25:03.932+0000] {log.py:232} WARNING - 2025-07-23 04:25:03,932 - startup_health_score - INFO - Attempting to extract raw text from: /opt/***/uploads/sample_document.txt (Type: .txt)
+[2025-07-23T04:25:03.932+0000] {kpi_extractor.py:130} INFO - Attempting to extract raw text from: /opt/***/uploads/sample_document.txt (Type: .txt)
+[2025-07-23T04:25:03.932+0000] {log.py:232} WARNING - 2025-07-23 04:25:03,932 - startup_health_score - INFO - Successfully read text from file: /opt/***/uploads/sample_document.txt
+[2025-07-23T04:25:03.932+0000] {kpi_extractor.py:136} INFO - Successfully read text from file: /opt/***/uploads/sample_document.txt
+[2025-07-23T04:25:03.933+0000] {log.py:232} WARNING - 2025-07-23 04:25:03,933 - startup_health_score - INFO - Successfully extracted raw text from /opt/***/uploads/sample_document.txt.
+[2025-07-23T04:25:03.933+0000] {kpi_extractor.py:155} INFO - Successfully extracted raw text from /opt/***/uploads/sample_document.txt.
+[2025-07-23T04:25:03.934+0000] {log.py:232} WARNING - 2025-07-23 04:25:03,934 - startup_health_score - INFO - Extracted raw text saved to /opt/***/processed_data/extracted_document_content.txt
+[2025-07-23T04:25:03.934+0000] {startup_health_score_dag.py:72} INFO - Extracted raw text saved to /opt/***/processed_data/extracted_document_content.txt
+[2025-07-23T04:25:03.942+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T04:25:03.952+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T04:25:03.953+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=extract_raw_text_from_document, run_id=manual__2025-07-23T04:24:59.382863+00:00, execution_date=20250723T042459, start_date=20250723T042503, end_date=20250723T042503
+[2025-07-23T04:25:03.987+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T04:25:04.001+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-23T04:25:04.002+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

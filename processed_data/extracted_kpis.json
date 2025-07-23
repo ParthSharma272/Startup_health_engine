@@ -1,0 +1,16 @@
+{
+  "Monthly Recurring Revenue (MRR)": 350000,
+  "Burn Rate": 120000,
+  "Runway (in Months)": 15.5,
+  "Gross Margin (%)": 72,
+  "MRR Growth Rate": 8,
+  "User Growth Rate": 10,
+  "Trial-to-Paid Conversion Rate": 22,
+  "Customer Acquisition Cost (CAC)": 15000,
+  "Customer Lifetime Value (CLV)": 60000,
+  "CAC-to-CLV Ratio": 4.0,
+  "Customer Churn Rate": 3.0,
+  "Net Revenue Retention (NRR)": 115.0,
+  "Onboarding Completion Rate": 85.0,
+  "Founder Commitment": "Full-Time"
+}
