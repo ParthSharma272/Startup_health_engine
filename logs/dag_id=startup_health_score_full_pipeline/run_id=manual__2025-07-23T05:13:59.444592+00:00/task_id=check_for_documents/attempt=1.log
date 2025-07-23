@@ -1,0 +1,21 @@
+[2025-07-23T05:14:02.320+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-23T05:14:02.342+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.check_for_documents manual__2025-07-23T05:13:59.444592+00:00 [queued]>
+[2025-07-23T05:14:02.349+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: startup_health_score_full_pipeline.check_for_documents manual__2025-07-23T05:13:59.444592+00:00 [queued]>
+[2025-07-23T05:14:02.349+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 2
+[2025-07-23T05:14:02.398+0000] {taskinstance.py:2907} INFO - Executing <Task(PythonOperator): check_for_documents> on 2025-07-23 05:13:59.444592+00:00
+[2025-07-23T05:14:02.433+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=52) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-07-23T05:14:02.443+0000] {standard_task_runner.py:72} INFO - Started process 54 to run task
+[2025-07-23T05:14:02.445+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'startup_health_score_full_pipeline', 'check_for_documents', 'manual__2025-07-23T05:13:59.444592+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/startup_health_score_dag.py', '--cfg-path', '/tmp/tmp0qzbhdgj']
+[2025-07-23T05:14:02.449+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask check_for_documents
+[2025-07-23T05:14:02.552+0000] {task_command.py:467} INFO - Running <TaskInstance: startup_health_score_full_pipeline.check_for_documents manual__2025-07-23T05:13:59.444592+00:00 [running]> on host f3a147beecf2
+[2025-07-23T05:14:02.610+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='startup_health_score_full_pipeline' AIRFLOW_CTX_TASK_ID='check_for_documents' AIRFLOW_CTX_EXECUTION_DATE='2025-07-23T05:13:59.444592+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-23T05:13:59.444592+00:00'
+[2025-07-23T05:14:02.611+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-07-23T05:14:02.647+0000] {log.py:232} WARNING - 2025-07-23 05:14:02,647 - startup_health_score - INFO - Found and selected document: ConnectIn - Monthly Investor Update_ June 2025.pdf at /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf. Proceeding.
+[2025-07-23T05:14:02.647+0000] {startup_health_score_dag.py:71} INFO - Found and selected document: ConnectIn - Monthly Investor Update_ June 2025.pdf at /opt/***/uploads/ConnectIn - Monthly Investor Update_ June 2025.pdf. Proceeding.
+[2025-07-23T05:14:02.663+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-07-23T05:14:02.674+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-07-23T05:14:02.674+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=startup_health_score_full_pipeline, task_id=check_for_documents, run_id=manual__2025-07-23T05:13:59.444592+00:00, execution_date=20250723T051359, start_date=20250723T051402, end_date=20250723T051402
+[2025-07-23T05:14:02.716+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-23T05:14:02.726+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1122,3 +1122,31 @@ NameError: name 'Tuple' is not defined. Did you mean: 'tuple'?
 [2025-07-23T05:13:22.869+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.868+0000] {dag.py:3262} INFO - Creating ORM DAG for startup_health_score_full_pipeline
 [2025-07-23T05:13:22.871+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:22.870+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
 [2025-07-23T05:13:22.906+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 5.404 seconds
+[2025-07-23T05:13:53.233+0000] {processor.py:186} INFO - Started process (PID=35) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:13:53.234+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:13:53.236+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:53.235+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:13:54.052+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:13:54.073+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:54.073+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:13:54.082+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:13:54.082+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:13:54.092+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.867 seconds
+[2025-07-23T05:14:24.641+0000] {processor.py:186} INFO - Started process (PID=37) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:14:24.645+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:14:24.654+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:14:24.650+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:14:25.502+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:14:25.528+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:14:25.528+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:14:25.537+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:14:25.537+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:14:25.552+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.933 seconds
+[2025-07-23T05:14:56.056+0000] {processor.py:186} INFO - Started process (PID=39) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:14:56.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:14:56.059+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:14:56.059+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:14:56.596+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:14:56.609+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:14:56.609+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:14:56.616+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:14:56.616+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:14:56.627+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.580 seconds
+[2025-07-23T05:15:27.052+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:15:27.055+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/startup_health_score_dag.py for tasks to queue
+[2025-07-23T05:15:27.057+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:15:27.056+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:15:27.672+0000] {processor.py:925} INFO - DAG(s) 'startup_health_score_full_pipeline' retrieved from /opt/airflow/dags/startup_health_score_dag.py
+[2025-07-23T05:15:27.694+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:15:27.693+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-07-23T05:15:27.702+0000] {logging_mixin.py:190} INFO - [2025-07-23T05:15:27.702+0000] {dag.py:4180} INFO - Setting next_dagrun for startup_health_score_full_pipeline to None, run_after=None
+[2025-07-23T05:15:27.710+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/startup_health_score_dag.py took 0.684 seconds
