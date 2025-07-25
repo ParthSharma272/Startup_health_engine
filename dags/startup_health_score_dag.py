@@ -24,6 +24,9 @@ CONFIG_DIR = os.path.join(BASE_DIR, 'config')
 UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 PROCESSED_DATA_DIR = os.path.join(BASE_DIR, 'processed_data')
 
+# --- IMPORTANT FIX: Add BASE_DIR to sys.path ---
+# This ensures Python can find 'src' and 'config' modules when imported
+# from within the DAG file, as they are relative to /opt/airflow.
 if BASE_DIR not in sys.path:
     sys.path.append(BASE_DIR)
 # --- END FIX ---
@@ -47,6 +50,16 @@ setup_logging() # Ensure logging is set up for DAG tasks
 def _check_for_documents(**kwargs):
     # Get the DAG run configuration
     dag_run = kwargs.get('dag_run')
+    
+    # --- NEW DEBUG LOGGING FOR DAG RUN CONF ---
+    logger.info(f"DAG Run context received: {kwargs}")
+    logger.info(f"DAG Run object: {dag_run}")
+    if dag_run and dag_run.conf:
+        logger.info(f"DAG Run conf received: {dag_run.conf}")
+    else:
+        logger.info("No DAG Run conf found in context.")
+    # --- END NEW DEBUG LOGGING ---
+
     if dag_run and dag_run.conf and 'file_name' in dag_run.conf:
         file_name_from_conf = dag_run.conf['file_name']
         logger.info(f"Received file_name from DAG run config: {file_name_from_conf}")
@@ -96,7 +109,7 @@ def _extract_raw_text(**kwargs):
         output_file_name = os.path.basename(document_path).replace('.', '_') + "_extracted_text.txt"
         extracted_text_file_path = os.path.join(PROCESSED_DATA_DIR, output_file_name)
         try:
-            with open(extracted_text_file_path, 'w', encoding='utf-8') as f:
+            with open(extracted_text_file_path, "w", encoding='utf-8') as f:
                 f.write(extracted_content)
             logger.info(f"Extracted raw text saved to {extracted_text_file_path}")
             kwargs['ti'].xcom_push(key='raw_extracted_text', value=extracted_content)
@@ -173,9 +186,15 @@ def _calculate_scores(**kwargs):
             logger.error(f"Failed to read or parse extracted KPI file {latest_kpi_file}: {e}")
             raise AirflowException(f"Failed to load extracted KPIs: {e}")
 
+    # Get OpenAI API key from environment for ScoringEngine
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
+    if not openai_api_key:
+        logger.warning("OPENAI_API_KEY environment variable not set. LLM-based suggestions in ScoringEngine will be skipped.")
+
     try:
         config_loader = ConfigLoader(config_dir=CONFIG_DIR)
-        scoring_engine = ScoringEngine(config_loader=config_loader)
+        # Pass the API key to ScoringEngine
+        scoring_engine = ScoringEngine(config_loader=config_loader, openai_api_key=openai_api_key)
 
         results = scoring_engine.calculate_scores(kpi_input_data)
 
@@ -188,7 +207,7 @@ def _calculate_scores(**kwargs):
             json.dump(results, f, indent=2)
         logger.info(f"Scoring results saved to {score_output_file_path}")
 
-        if "error" in results:
+        if "error" in results: # Check for a general error key, though specific errors are now handled by AirflowException
             logger.error(f"Scoring completed with errors: {results['error']}")
             raise AirflowException(f"Scoring failed: {results['error']}")
         else:

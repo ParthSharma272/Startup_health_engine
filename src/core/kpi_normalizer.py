@@ -4,38 +4,14 @@ from typing import Dict, Any, Union, List
 from src.utils.logger_config import logger
 
 class KPINormalizer:
-
     def __init__(self, kpi_benchmark_map: Dict[str, Dict[str, Any]]):
-
         self.kpi_benchmark_map = kpi_benchmark_map
-        self.kpi_formula_aliases = self._create_kpi_aliases()
-        logger.info("KPINormalizer initialized with KPI formula aliases.")
-
-    def _create_kpi_aliases(self) -> Dict[str, str]:
-
-        alias_map = {}
-        for full_name in self.kpi_benchmark_map.keys():
-            # Try to extract alias from parentheses (e.g., MRR from Monthly Recurring Revenue (MRR))
-            match = re.search(r'\((.*?)\)', full_name)
-            if match:
-                alias = match.group(1).strip()
-            else:
-
-                # Remove common suffixes and spaces to create a clean alias
-                alias = full_name.replace(' (%)', '').replace('%', '').replace(' ', '').replace('(inMonths)', '').strip()
-            
-
-            # Replace hyphens with underscores, remove special characters
-            alias = re.sub(r'[^a-zA-Z0-9_]', '', alias)
-            if not alias: # Fallback if cleaning results in empty string
-                alias = full_name.replace(' ', '_').replace('(', '').replace(')', '').replace('%', '').replace('-', '_').strip()
-
-            alias_map[full_name] = alias
-        logger.debug(f"KPI Aliases created: {alias_map}")
-        return alias_map
+        logger.info("KPINormalizer initialized with KPI benchmark map.")
 
     def _evaluate_formula(self, formula_str: str, current_kpi_numeric_value: Union[float, int], params: Dict[str, Any], kpi_name_for_logging: str) -> float:
-
+        """
+        Evaluates a mathematical formula string using provided KPI value and parameters.
+        """
         # Define a safe execution environment for eval.
         eval_context = {
             'math': math,
@@ -60,16 +36,19 @@ class KPINormalizer:
             return float(result)
         except ZeroDivisionError:
             logger.error(f"ZeroDivisionError in formula '{formula_str}' for KPI '{kpi_name_for_logging}' with value '{current_kpi_numeric_value}' and params '{params}'.", exc_info=True)
-            raise
+            raise ValueError(f"ZeroDivisionError in formula for KPI '{kpi_name_for_logging}'.")
         except (SyntaxError, NameError, TypeError, ValueError) as e:
             logger.error(f"Error evaluating formula '{formula_str}' for KPI '{kpi_name_for_logging}' with value '{current_kpi_numeric_value}' and params '{params}': {e}. Eval context keys: {list(eval_context.keys())}", exc_info=True)
-            raise ValueError(f"Malformed formula or invalid input: {e}")
+            raise ValueError(f"Malformed formula or invalid input for KPI '{kpi_name_for_logging}': {e}")
         except Exception as e:
             logger.error(f"An unexpected error occurred during formula evaluation for KPI '{kpi_name_for_logging}': {e}", exc_info=True)
             raise
 
     def normalize_kpi(self, kpi_name: str, kpi_value: Any, all_raw_kpis: Dict[str, Any]) -> float:
-
+        """
+        Normalizes a single KPI value based on its defined benchmark formula.
+        Returns a score between 0 and 100.
+        """
         # Handle None values at the very beginning
         if kpi_value is None:
             logger.warning(f"KPI '{kpi_name}' has a None value. Returning 0.0.")
@@ -80,8 +59,8 @@ class KPINormalizer:
             logger.warning(f"No benchmark found for KPI '{kpi_name}'. Returning 0.0.")
             return 0.0
 
-        normalization_method = benchmark_info['normalization']
-        formula_str = benchmark_info.get('formula') # Use .get to handle 'predefined' without formula
+        normalization_method = benchmark_info.get('normalization')
+        formula_str = benchmark_info.get('formula')
         params = benchmark_info.get('params', {})
 
         try:
@@ -89,19 +68,34 @@ class KPINormalizer:
             if normalization_method == "predefined":
                 if isinstance(kpi_value, str):
                     mapping = params # Use the params dict directly as the mapping
-                    return float(mapping.get(kpi_value, 0.0))
+                    # Case-insensitive match for predefined values
+                    for key, score in mapping.items():
+                        if kpi_value.lower() == key.lower():
+                            return float(score)
+                    logger.warning(f"Predefined KPI '{kpi_name}' value '{kpi_value}' not found in mapping. Returning 0.0.")
+                    return 0.0
                 else:
                     logger.warning(f"Predefined KPI '{kpi_name}' has non-string value '{kpi_value}'. Returning 0.0.")
                     return 0.0
-
-            # For numerical KPIs: Preprocess value before passing to formula evaluator
+            
+            # For numerical KPIs: Ensure value is numeric before passing to formula evaluator
             numeric_value: Union[float, int]
             if isinstance(kpi_value, str):
-                # Remove currency symbols (₹, $) AND COMMAS, then convert to float
+                # KPIRAGExtractor should ideally convert these, but as a safeguard
                 cleaned_value_str = re.sub(r'[₹$]', '', kpi_value).replace(',', '').strip()
                 try:
                     if cleaned_value_str.endswith('%'):
                         numeric_value = float(cleaned_value_str.replace('%', ''))
+                    elif re.match(r'^\d+\s*:\s*\d+\.?\d*$', cleaned_value_str): # Handle ratios like "1:9.1"
+                        parts = re.split(r'\s*:\s*', cleaned_value_str)
+                        if float(parts[1]) != 0:
+                            numeric_value = float(parts[0]) / float(parts[1])
+                        else:
+                            numeric_value = 0.0
+                            logger.warning(f"Ratio KPI '{kpi_name}' has zero in denominator: '{cleaned_value_str}'. Setting to 0.")
+                    elif re.match(r'^\d+\.?\d*\s*(months|month|hours|hour|days|day)$', cleaned_value_str, re.IGNORECASE): # Handle time units
+                        num_part = re.search(r'^\d+\.?\d*', cleaned_value_str).group(0)
+                        numeric_value = float(num_part)
                     else:
                         numeric_value = float(cleaned_value_str)
                 except ValueError:

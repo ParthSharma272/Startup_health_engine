@@ -1,123 +1,103 @@
 import os
-from typing import Optional, Union
-from src.utils.logger_config import logger
+from io import BytesIO
+import fitz # PyMuPDF
+from PIL import Image
+import pytesseract
+import logging
 
-# Import OCR and Image/PDF processing libraries
-try:
-    import pytesseract
-    from PIL import Image
-    from pdfminer.high_level import extract_text as pdfminer_extract_text
-    from pdfminer.pdfpage import PDFPage
-    from pdfminer.pdfinterp import PDFResourceManager
-    from pdfminer.converter import TextConverter
-    from pdfminer.layout import LAParams
-    from io import StringIO
-except ImportError as e:
-    logger.error(f"Missing required OCR/PDF libraries: {e}. Please install them using 'pip install -r requirements.txt'")
-    # Define dummy functions or raise an error if libraries are critical
-    pytesseract = None
-    Image = None
-    pdfminer_extract_text = None
-    PDFPage = None
-    PDFResourceManager = None
-    # PDFPageInterpreter = None # Not directly used in final extract_text_from_pdf
-    TextConverter = None
-    LAParams = None
-    StringIO = None
+logger = logging.getLogger(__name__)
 
-
-class KPIExtractor: # Renaming to DocumentTextExtractor might be more accurate for this phase
-
+class KPIExtractor:
     def __init__(self):
+        # Ensure Tesseract is installed and accessible in your environment
+        # If not, you might need to specify pytesseract.pytesseract.tesseract_cmd = '/path/to/tesseract'
+        logger.info("KPIExtractor initialized. Ready for text extraction.")
 
-        if pytesseract is None:
-            logger.critical("pytesseract library not found. OCR functionality will be disabled.")
-            self.tesseract_available = False
-        else:
-            try:
-                # Check if Tesseract executable is in PATH
-                pytesseract.get_tesseract_version()
-                self.tesseract_available = True
-                logger.info(f"Tesseract OCR engine found (version: {pytesseract.get_tesseract_version()}).")
-            except pytesseract.TesseractNotFoundError:
-                logger.critical("Tesseract OCR engine not found in PATH. Please install it. OCR functionality will be disabled.")
-                self.tesseract_available = False
-        logger.info("KPIExtractor initialized.")
+    def extract_text_from_document(self, document_path: str) -> str:
+        """
+        Extracts text from various document types (PDF, TXT, JPG, PNG).
+        """
+        if not os.path.exists(document_path):
+            logger.error(f"Document not found at path: {document_path}")
+            raise FileNotFoundError(f"Document not found: {document_path}")
 
-    def _extract_text_from_image(self, image_path: str) -> Optional[str]:
+        file_extension = os.path.splitext(document_path)[1].lower()
+        extracted_text = ""
 
-        if not self.tesseract_available:
-            logger.error("Tesseract not available. Cannot perform OCR on image.")
-            return None
-        if Image is None:
-            logger.error("Pillow (PIL) library not found. Cannot open image files.")
-            return None
+        try:
+            if file_extension == '.txt':
+                with open(document_path, 'r', encoding='utf-8') as f:
+                    extracted_text = f.read()
+                logger.info(f"Text extracted from TXT file: {document_path}")
+            elif file_extension == '.pdf':
+                extracted_text = self._extract_text_from_pdf(document_path)
+                logger.info(f"Text extracted from PDF file: {document_path}")
+            elif file_extension in ['.jpg', '.jpeg', '.png']:
+                extracted_text = self._extract_text_from_image(document_path)
+                logger.info(f"Text extracted from image file: {document_path}")
+            else:
+                logger.warning(f"Unsupported file type for text extraction: {file_extension} for {document_path}")
+                raise ValueError(f"Unsupported file type: {file_extension}")
+        except Exception as e:
+            logger.error(f"Error during text extraction from {document_path}: {e}", exc_info=True)
+            raise
 
+        return extracted_text
+
+    def _extract_text_from_pdf(self, pdf_path: str) -> str:
+        """
+        Extracts text from a PDF document using PyMuPDF (fitz).
+        If direct text extraction is poor, it falls back to OCR.
+        """
+        text = ""
+        try:
+            document = fitz.open(pdf_path)
+            for page_num in range(len(document)):
+                page = document.load_page(page_num)
+                page_text = page.get_text("text")
+                text += page_text + "\n"
+            document.close()
+            logger.info(f"Successfully extracted text from PDF {pdf_path} using PyMuPDF.")
+        except Exception as e:
+            logger.warning(f"Direct PDF text extraction failed for {pdf_path}: {e}. Attempting OCR fallback.")
+            # Fallback to OCR if direct text extraction fails or is empty
+            text = self._ocr_pdf(pdf_path)
+            if not text:
+                logger.error(f"OCR fallback also failed for PDF {pdf_path}.")
+                raise RuntimeError(f"Failed to extract text from PDF {pdf_path} even with OCR.")
+        return text
+
+    def _ocr_pdf(self, pdf_path: str) -> str:
+        """
+        Performs OCR on each page of a PDF document.
+        """
+        text = ""
+        try:
+            document = fitz.open(pdf_path)
+            for page_num in range(len(document)):
+                page = document.load_page(page_num)
+                pix = page.get_pixmap()
+                img_bytes = pix.tobytes("png")
+                img = Image.open(BytesIO(img_bytes))
+                page_text = pytesseract.image_to_string(img)
+                text += page_text + "\n"
+            document.close()
+            logger.info(f"Successfully extracted text from PDF {pdf_path} using OCR.")
+        except Exception as e:
+            logger.error(f"Error during OCR of PDF {pdf_path}: {e}", exc_info=True)
+            raise
+        return text
+
+    def _extract_text_from_image(self, image_path: str) -> str:
+        """
+        Extracts text from an image file using Tesseract OCR.
+        """
         try:
             img = Image.open(image_path)
-            # You can add language configuration, e.g., lang='eng+hin' for English and Hindi
-            text = pytesseract.image_to_string(img, lang='eng')
-            logger.info(f"Successfully extracted text from image: {image_path}")
-            return text
-        except FileNotFoundError:
-            logger.error(f"Image file not found: {image_path}")
-            return None
+            text = pytesseract.image_to_string(img)
+            logger.info(f"Successfully extracted text from image {image_path} using Tesseract OCR.")
         except Exception as e:
-            logger.error(f"Error during OCR for image {image_path}: {e}", exc_info=True)
-            return None
-
-    def _extract_text_from_pdf(self, pdf_path: str) -> Optional[str]:
-
-        if pdfminer_extract_text is None:
-            logger.error("pdfminer.six library not found. Cannot extract text from PDF.")
-            return None
-
-        try:
-            # Attempt direct text extraction first
-            text = pdfminer_extract_text(pdf_path, laparams=LAParams())
-            if text and len(text.strip()) > 0: # Check if any text was extracted
-                logger.info(f"Successfully extracted text directly from PDF: {pdf_path}")
-                return text
-            else:
-                logger.warning(f"Direct text extraction from PDF {pdf_path} yielded no content or only whitespace. This might be a scanned PDF. For this prototype, we are not implementing PDF to Image conversion for OCR due to external dependency (poppler).")
-                return None # Indicate failure if direct text extraction failed
-        except FileNotFoundError:
-            logger.error(f"PDF file not found: {pdf_path}")
-            return None
-        except Exception as e:
-            logger.error(f"Error during PDF text extraction for {pdf_path}: {e}", exc_info=True)
-            return None
-
-    def extract_text_from_document(self, file_path: str) -> Optional[str]:
-
-        extracted_content: Optional[str] = None
-        file_extension = os.path.splitext(file_path)[1].lower()
-
-        logger.info(f"Attempting to extract raw text from: {file_path} (Type: {file_extension})")
-
-        if file_extension == '.txt':
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    extracted_content = f.read()
-                logger.info(f"Successfully read text from file: {file_path}")
-            except FileNotFoundError:
-                logger.error(f"Text file not found: {file_path}")
-                return None
-            except Exception as e:
-                logger.error(f"Error reading text file {file_path}: {e}", exc_info=True)
-                return None
-        elif file_extension in ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff'):
-            extracted_content = self._extract_text_from_image(file_path)
-        elif file_extension == '.pdf':
-            extracted_content = self._extract_text_from_pdf(file_path)
-        else:
-            logger.error(f"Unsupported file type for raw text extraction: {file_extension}")
-            return None
-
-        if not extracted_content:
-            logger.error(f"No content extracted from {file_path}.")
-            return None
-
-        logger.info(f"Successfully extracted raw text from {file_path}.")
-        return extracted_content
+            logger.error(f"Error during OCR of image {image_path}: {e}", exc_info=True)
+            raise
+        return text
 

@@ -34,6 +34,7 @@ RUN python3 -m pip install --no-cache-dir \
     faiss-cpu \
     sentence-transformers \
     pdfminer.six \
+    PyMuPDF==1.24.5 \
     asyncio \
     aiohttp \
     aiofiles \

@@ -1,155 +1,311 @@
-from typing import Dict, Any, List, Tuple
-from src.core.kpi_normalizer import KPINormalizer
+import json
+import os
+from typing import Dict, Any, List
 from src.core.config_loader import ConfigLoader
+from src.core.kpi_normalizer import KPINormalizer
 from src.utils.logger_config import logger
+import openai # Added for OpenAI API calls
 
 class ScoringEngine:
-
-    def __init__(self, config_loader: ConfigLoader):
-
+    def __init__(self, config_loader: ConfigLoader, openai_api_key: str = None):
         self.config_loader = config_loader
-        self.kpi_configs: Dict[str, Any] = {}
-        self.kpi_normalizer: KPINormalizer
-        self.mandatory_kpis: List[str] = []
-        self.all_kpi_names: List[str] = [] # To store all expected KPI names
+        self.kpi_weights = self.config_loader.load_config(self.config_loader.kpi_weights_path)
+        self.kpi_benchmarks = self.config_loader.load_config(self.config_loader.kpi_benchmarks_path)
+        self.kpi_benchmark_map = self.config_loader.get_kpi_benchmark_map(self.kpi_benchmarks)
+        self.kpi_normalizer = KPINormalizer(self.kpi_benchmark_map) # KPINormalizer now takes kpi_benchmark_map
+        
+        # Load percentile thresholds for score categorization
+        self.percentile_thresholds = self.config_loader.load_config(self.config_loader.percentile_thresholds_path)
+        
+        self.openai_api_key = openai_api_key # Store the API key
+        if self.openai_api_key:
+            self.openai_client = openai.OpenAI(api_key=openai_api_key)
+            self.llm_model_for_suggestions = "gpt-3.5-turbo" # Or "gpt-4o"
+            logger.info(f"OpenAI client initialized for ScoringEngine with model: {self.llm_model_for_suggestions}.")
+        else:
+            self.openai_client = None
+            logger.warning("OPENAI_API_KEY not provided to ScoringEngine. LLM-based suggestions will be skipped.")
 
-        self._load_configurations()
-        self._initialize_normalizer()
-        self._identify_mandatory_kpis()
-        self._collect_all_kpi_names() # New method to collect all KPI names
-        logger.info("ScoringEngine initialized successfully.")
+        logger.info("ScoringEngine initialized with KPI weights, benchmarks, and percentile thresholds.")
 
-    def _load_configurations(self):
-        """Loads KPI benchmarks and weights from configuration files."""
-        try:
-            self.kpi_configs = self.config_loader.load_all_configs()
-            self.kpi_benchmark_map = self.config_loader.get_kpi_benchmark_map(
-                self.kpi_configs['kpi_benchmarks']
-            )
-            self.kpi_weights = self.kpi_configs['kpi_weights']
-        except Exception as e:
-            logger.critical(f"Failed to load scoring engine configurations: {e}")
-            raise
-
-    def _initialize_normalizer(self):
-        """Initializes the KPI normalizer with loaded benchmarks."""
-        self.kpi_normalizer = KPINormalizer(self.kpi_benchmark_map)
-
-    def _identify_mandatory_kpis(self):
-        """Identifies all mandatory KPIs based on the weights configuration."""
-        self.mandatory_kpis = [] # Ensure it's reset
-        for category_kpis in self.kpi_weights['kpi_weights_within_category'].values():
-            for kpi_name, weight_info in category_kpis.items():
-                if weight_info.get('mandatory', False):
-                    self.mandatory_kpis.append(kpi_name)
-        logger.info(f"Identified mandatory KPIs: {self.mandatory_kpis}")
-
-    def _collect_all_kpi_names(self):
-        """Collects all expected KPI names from the configuration."""
-        self.all_kpi_names = [] # Ensure it's reset
-        for category_kpis in self.kpi_weights['kpi_weights_within_category'].values():
-            for kpi_name in category_kpis.keys():
-                self.all_kpi_names.append(kpi_name)
-        logger.info(f"Collected all expected KPI names: {self.all_kpi_names}")
-
-    def _validate_input_kpis(self, kpi_dict: Dict[str, Any]) -> Tuple[List[str], List[str]]:
-
-        missing_mandatory_kpis = [kpi for kpi in self.mandatory_kpis if kpi not in kpi_dict or kpi_dict[kpi] is None]
-
+    def calculate_scores(self, extracted_kpis: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Calculates normalized KPI scores, category scores, and total health score.
+        Also identifies missing mandatory/non-mandatory KPIs.
+        """
+        normalized_kpis = {}
+        missing_mandatory_kpis = []
         missing_non_mandatory_kpis = []
-        for kpi_name in self.all_kpi_names:
-            if kpi_name not in self.mandatory_kpis and (kpi_name not in kpi_dict or kpi_dict[kpi_name] is None):
-                missing_non_mandatory_kpis.append(kpi_name)
+
+        # 1. Normalize KPIs and identify missing ones
+        for category_data in self.kpi_weights['kpi_weights_within_category'].values():
+            for kpi_config in category_data: # kpi_config is a dict like {"kpi": "MRR", "weight": 0.25}
+                kpi_name = kpi_config['kpi']
+                is_mandatory = kpi_config.get('mandatory', False)
+                
+                if kpi_name in extracted_kpis and extracted_kpis[kpi_name] is not None:
+                    try:
+                        # Pass all extracted_kpis to normalizer if needed for compound KPIs
+                        normalized_score = self.kpi_normalizer.normalize_kpi(kpi_name, extracted_kpis[kpi_name], extracted_kpis)
+                        normalized_kpis[kpi_name] = normalized_score
+                        logger.debug(f"Normalized {kpi_name}: {extracted_kpis[kpi_name]} -> {normalized_score:.2f}")
+                    except ValueError as e:
+                        logger.warning(f"Could not normalize KPI '{kpi_name}' with value '{extracted_kpis[kpi_name]}': {e}")
+                        if is_mandatory:
+                            missing_mandatory_kpis.append(kpi_name)
+                        else:
+                            missing_non_mandatory_kpis.append(kpi_name)
+                        normalized_kpis[kpi_name] = 0 # Assign 0 if normalization fails
+                else:
+                    if is_mandatory:
+                        missing_mandatory_kpis.append(kpi_name)
+                        logger.warning(f"Mandatory KPI '{kpi_name}' is missing.")
+                    else:
+                        missing_non_mandatory_kpis.append(kpi_name)
+                        logger.info(f"Non-mandatory KPI '{kpi_name}' is missing.")
+                    normalized_kpis[kpi_name] = 0 # Assign 0 for missing KPIs
+
+        # If any mandatory KPIs are missing, the total score cannot be reliably calculated.
+        # However, we still proceed to calculate what we can and flag the issue.
+        if missing_mandatory_kpis:
+            logger.error(f"Cannot calculate full health score due to missing mandatory KPIs: {missing_mandatory_kpis}")
+
+        # 2. Calculate Category Scores
+        category_scores = {}
+        for category, kpis_in_category_list in self.kpi_weights['kpi_weights_within_category'].items():
+            category_total_score = 0
+            category_total_weight = 0
+            
+            for kpi_config in kpis_in_category_list: # Iterate through the list of KPI dicts
+                kpi_name = kpi_config['kpi']
+                weight = kpi_config['weight']
+                
+                category_total_weight += weight
+                
+                normalized_score = normalized_kpis.get(kpi_name, 0) # Use 0 if KPI was missing/failed normalization
+                category_total_score += normalized_score * weight
+            
+            # Prevent division by zero if a category has no KPIs or weights
+            if category_total_weight > 0:
+                category_scores[category] = category_total_score / category_total_weight
+            else:
+                category_scores[category] = 0
+            logger.debug(f"Calculated score for category '{category}': {category_scores[category]:.2f}")
+
+        # 3. Calculate Total Health Score
+        total_health_score = 0
+        overall_total_weight = 0
+        # FIX: Access the 'weight' key from the category_weights dictionary
+        for category, category_info in self.kpi_weights['category_weights'].items():
+            weight = category_info.get('weight', 0) # Get the actual numerical weight
+            overall_total_weight += weight
+            total_health_score += category_scores.get(category, 0) * weight
+        
+        if overall_total_weight > 0:
+            total_health_score = total_health_score / overall_total_weight
+        else:
+            total_health_score = 0
+        logger.info(f"Calculated total health score: {total_health_score:.2f}")
+
+        # 4. Determine Health Category (Percentile-based)
+        health_category = self._determine_health_category(total_health_score)
+        logger.info(f"Startup Health Category: {health_category['name']} ({health_category['emoji']})")
+
+        # 5. Generate Suggestions and Warnings (now includes LLM-based)
+        suggestions_and_warnings = self._generate_suggestions_and_warnings(
+            total_health_score,
+            category_scores,
+            normalized_kpis,
+            missing_mandatory_kpis,
+            missing_non_mandatory_kpis,
+            health_category
+        )
+
+        return {
+            "total_score": total_health_score,
+            "category_scores": category_scores,
+            "normalized_kpis": normalized_kpis,
+            "missing_mandatory_kpis": missing_mandatory_kpis,
+            "missing_non_mandatory_kpis": missing_non_mandatory_kpis,
+            "health_category": health_category,
+            "suggestions_and_warnings": suggestions_and_warnings
+        }
+
+    def _determine_health_category(self, total_score: float) -> Dict[str, Any]:
+        """
+        Determines the health category based on the total score and predefined thresholds.
+        """
+        for category in self.percentile_thresholds['score_categories']:
+            if category['min_score'] <= total_score <= category['max_score']:
+                return category
+        
+        # Fallback for scores outside defined ranges (shouldn't happen with 0-100)
+        return {
+            "name": "Undetermined",
+            "min_score": 0, "max_score": 100,
+            "emoji": "❓",
+            "description": "Could not determine health category."
+        }
+
+    def _generate_suggestions_and_warnings(
+        self,
+        total_score: float,
+        category_scores: Dict[str, float],
+        normalized_kpis: Dict[str, float],
+        missing_mandatory_kpis: List[str],
+        missing_non_mandatory_kpis: List[str],
+        health_category: Dict[str, Any]
+    ) -> List[str]:
+        """
+        Generates rule-based and LLM-based suggestions and warnings.
+        """
+        suggestions = []
+
+        # Rule-based suggestions (kept as a baseline)
+        suggestions.append(f"**Overall Health:** {health_category['emoji']} {health_category['name']} - {health_category['description']}")
 
         if missing_mandatory_kpis:
-            logger.error(f"Missing mandatory KPIs: {', '.join(missing_mandatory_kpis)}")
+            suggestions.append(f"🚨 **Critical Warning:** The following mandatory KPIs were missing: {', '.join(missing_mandatory_kpis)}. This significantly impacts the accuracy and completeness of the score. Please ensure these metrics are provided.")
+        
         if missing_non_mandatory_kpis:
-            logger.warning(f"Missing non-mandatory KPIs: {', '.join(missing_non_mandatory_kpis)}")
+            suggestions.append(f"⚠️ **Data Gap:** Consider providing the following non-mandatory KPIs for a more comprehensive assessment: {', '.join(missing_non_mandatory_kpis)}.")
 
-        return missing_mandatory_kpis, missing_non_mandatory_kpis
+        sorted_categories = sorted(category_scores.items(), key=lambda item: item[1])
+        if sorted_categories:
+            lowest_category, lowest_score = sorted_categories[0]
+            if lowest_score < 50:
+                suggestions.append(f"📉 **Area for Improvement:** '{lowest_category.replace('_', ' ').title()}' category scored lowest ({lowest_score:.2f}/100). Focus on metrics within this area.")
+                
+                kpis_in_lowest_category = self.kpi_weights['kpi_weights_within_category'].get(lowest_category, [])
+                low_kpis_in_category = []
+                for kpi_config in kpis_in_lowest_category:
+                    kpi_name = kpi_config['kpi']
+                    if normalized_kpis.get(kpi_name, 0) < 30:
+                        low_kpis_in_category.append(kpi_name.replace('_', ' ').title())
+                if low_kpis_in_category:
+                    suggestions.append(f"   - Specifically, review performance in: {', '.join(low_kpis_in_category)}.")
 
-    def calculate_scores(self, kpi_dict: Dict[str, Any]) -> Dict[str, Any]:
+        # LLM-based suggestions
+        if self.openai_client: # Check if client was successfully initialized
+            llm_structured_insights = self._call_llm_for_suggestions(
+                total_score,
+                category_scores,
+                normalized_kpis,
+                missing_mandatory_kpis,
+                missing_non_mandatory_kpis,
+                health_category
+            )
+            if llm_structured_insights:
+                suggestions.append("---")
+                suggestions.append("✨ **AI-Powered Insights & Recommendations:**")
+                
+                # Format and add overall assessment
+                if llm_structured_insights.get("overall_assessment"):
+                    suggestions.append(f"**Overall Assessment:** {llm_structured_insights['overall_assessment']}")
 
-        missing_mandatory_kpis, missing_non_mandatory_kpis = self._validate_input_kpis(kpi_dict)
-        if missing_mandatory_kpis:
-            return {
-                "error": "Missing mandatory KPIs",
+                # Format and add strengths
+                if llm_structured_insights.get("strengths"):
+                    suggestions.append("\n**Strengths by Category:**")
+                    for category, strength_list in llm_structured_insights["strengths"].items():
+                        suggestions.append(f"- **{category.replace('_', ' ').title()}:**")
+                        for strength in strength_list:
+                            suggestions.append(f"  - {strength}")
+
+                # Format and add weaknesses
+                if llm_structured_insights.get("weaknesses"):
+                    suggestions.append("\n**Weaknesses by Category:**")
+                    for category, weakness_list in llm_structured_insights["weaknesses"].items():
+                        suggestions.append(f"- **{category.replace('_', ' ').title()}:**")
+                        for weakness in weakness_list:
+                            suggestions.append(f"  - {weakness}")
+
+                # Format and add actionable recommendations
+                if llm_structured_insights.get("recommendations"):
+                    suggestions.append("\n**Actionable Recommendations:**")
+                    for rec in llm_structured_insights["recommendations"]:
+                        suggestions.append(f"- {rec}")
+
+            else:
+                suggestions.append("⚠️ Could not generate AI-powered insights. Check LLM logs.")
+        else:
+            suggestions.append("ℹ️ LLM API key not configured for advanced AI insights.")
+        
+        return suggestions
+
+    def _call_llm_for_suggestions(
+        self,
+        total_score: float,
+        category_scores: Dict[str, float],
+        normalized_kpis: Dict[str, float],
+        missing_mandatory_kpis: List[str],
+        missing_non_mandatory_kpis: List[str],
+        health_category: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """
+        Calls the LLM (OpenAI GPT) to generate nuanced suggestions and warnings.
+        Returns a structured dictionary of insights.
+        """
+        logger.info("Calling LLM for AI-powered suggestions...")
+        try:
+            # Prepare a concise summary for the LLM
+            summary_for_llm = {
+                "total_score": f"{total_score:.2f}",
+                "health_category": health_category['name'],
+                "category_scores": {k: f"{v:.2f}" for k, v in category_scores.items()},
+                "normalized_kpis": {k: f"{v:.2f}" for k, v in normalized_kpis.items()},
                 "missing_mandatory_kpis": missing_mandatory_kpis,
-                "missing_non_mandatory_kpis": missing_non_mandatory_kpis, # Include for transparency
-                "total_score": 0.0,
-                "category_scores": {},
-                "normalized_kpis": {}
+                "missing_non_mandatory_kpis": missing_non_mandatory_kpis
             }
 
-        normalized_kpis: Dict[str, float] = {}
-        category_weighted_sums: Dict[str, Dict[str, float]] = {
-            category: {"score_sum": 0.0, "weight_sum": 0.0}
-            for category in self.kpi_weights['category_weights'].keys()
-        }
-        output_scores: Dict[str, Any] = {
-            "normalized_kpis": {},
-            "category_scores": {},
-            "total_score": 0.0,
-            "missing_non_mandatory_kpis": missing_non_mandatory_kpis # Add to output
-        }
+            prompt = (
+                "Based on the following startup health analysis, provide a structured assessment. "
+                "Your response MUST be a valid JSON object with the following keys:\n"
+                "- `overall_assessment`: A concise paragraph summarizing the overall health and key takeaways.\n"
+                "- `strengths`: A dictionary where keys are category names (e.g., 'Financial Health') and values are lists of bullet-point strings describing strengths in that category.\n"
+                "- `weaknesses`: A dictionary structured similarly to `strengths`, describing areas for improvement.\n"
+                "- `recommendations`: A list of 3-5 concise, actionable recommendations. Each recommendation should start with an emoji (e.g., '💡', '📈', '📉', '⚠️').\n\n"
+                "Here is the analysis data:\n"
+                f"{json.dumps(summary_for_llm, indent=2)}\n\n"
+                "JSON Output:"
+            )
 
-        # Step 1: Normalize all provided KPIs
-        for kpi_display_name, raw_value in kpi_dict.items():
-            # Only normalize KPIs that are expected in the config
-            if kpi_display_name in self.all_kpi_names:
-                normalized_score = self.kpi_normalizer.normalize_kpi(kpi_display_name, raw_value, kpi_dict)
-
-                normalized_kpis[kpi_display_name] = normalized_score
-                output_scores["normalized_kpis"][kpi_display_name] = round(normalized_score, 2)
-                logger.debug(f"Normalized '{kpi_display_name}' (raw: {raw_value}) to {normalized_score:.2f}")
-
-                # Map KPI to its category and apply its weight
-                for category, kpis_in_category in self.kpi_weights['kpi_weights_within_category'].items():
-                    if kpi_display_name in kpis_in_category:
-                        weight_info = kpis_in_category[kpi_display_name]
-                        kpi_weight_within_category = weight_info['weight']
-
-                        # Add to category score using weighted sum
-                        category_weighted_sums[category]["score_sum"] += normalized_score * kpi_weight_within_category
-                        category_weighted_sums[category]["weight_sum"] += kpi_weight_within_category
-                        break # KPI found in category, move to next KPI
+            chat_completion = self.openai_client.chat.completions.create(
+                model=self.llm_model_for_suggestions,
+                messages=[
+                    {"role": "system", "content": "You are an expert business analyst providing structured insights on startup health. Your output must be a valid JSON object as specified in the prompt."},
+                    {"role": "user", "content": prompt}
+                ],
+                response_format={"type": "json_object"}, # Instruct OpenAI to return JSON
+                max_tokens=1024, # Increased max tokens for more detailed response
+                temperature=0.4 # Slightly higher temperature for more nuanced analysis, but still focused
+            )
+            
+            if chat_completion.choices and chat_completion.choices[0].message and chat_completion.choices[0].message.content:
+                raw_text_content = chat_completion.choices[0].message.content
+                try:
+                    llm_insights = json.loads(raw_text_content)
+                    # Basic validation of the expected structure
+                    if isinstance(llm_insights, dict) and \
+                       "overall_assessment" in llm_insights and \
+                       "strengths" in llm_insights and \
+                       "weaknesses" in llm_insights and \
+                       "recommendations" in llm_insights:
+                        logger.info("Successfully received and parsed structured LLM insights.")
+                        return llm_insights
+                    else:
+                        logger.warning(f"LLM response structure was unexpected: {llm_insights}")
+                        return {"overall_assessment": "LLM returned unexpected format.", "strengths": {}, "weaknesses": {}, "recommendations": []}
+                except json.JSONDecodeError as e:
+                    logger.error(f"LLM response was not valid JSON for insights: {raw_text_content}. Error: {e}")
+                    return {"overall_assessment": f"LLM returned invalid JSON: {e}", "strengths": {}, "weaknesses": {}, "recommendations": []}
             else:
-                logger.warning(f"Input KPI '{kpi_display_name}' is not defined in KPI configurations. Skipping normalization and scoring.")
+                logger.warning(f"LLM returned no candidates or empty response for insights: {chat_completion}")
+                return {"overall_assessment": "LLM returned no content for insights.", "strengths": {}, "weaknesses": {}, "recommendations": []}
 
+        except openai.APIError as e:
+            logger.error(f"OpenAI API error for insights: {e}")
+            return {"overall_assessment": f"LLM API call failed: {e}", "strengths": {}, "weaknesses": {}, "recommendations": []}
+        except Exception as e:
+            logger.error(f"An unexpected error occurred during LLM insight generation: {e}", exc_info=True)
+            return {"overall_assessment": f"Unexpected error during AI insight generation: {e}", "strengths": {}, "weaknesses": {}, "recommendations": []}
 
-        # Step 2: Calculate Category Health Scores (weighted average)
-        contributing_categories = []
-        for category, data in category_weighted_sums.items():
-            if data["weight_sum"] > 0:
-                category_score = round(data["score_sum"] / data["weight_sum"], 2)
-                output_scores["category_scores"][category] = category_score
-                contributing_categories.append(category)
-                logger.debug(f"Calculated category '{category}' score: {category_score:.2f}")
-            else:
-                output_scores["category_scores"][category] = 0.0 # No KPIs for this category or no weight assigned
-                logger.debug(f"No valid KPIs or weights for category '{category}'. Score set to 0.0.")
-
-        # Step 3: Aggregate Category Health Scores to get Total Score (weighted average)
-        total_score_sum = 0.0
-        total_category_overall_weight_sum = 0.0 # Renamed for clarity
-
-        for category in contributing_categories: # Only iterate over categories that actually contributed
-            category_score = output_scores["category_scores"][category]
-            category_overall_weight = self.kpi_weights['category_weights'].get(category, {}).get("weight", 0.0)
-
-            if category_overall_weight > 0: # Only add if the category has an overall weight
-                total_score_sum += category_score * category_overall_weight
-                total_category_overall_weight_sum += category_overall_weight
-                logger.debug(f"Adding category '{category}' score ({category_score:.2f}) with overall weight {category_overall_weight} to total.")
-            else:
-                logger.warning(f"Category '{category}' has score but no overall weight defined. Skipping from total score calculation.")
-
-
-        if total_category_overall_weight_sum > 0:
-            output_scores["total_score"] = round(total_score_sum / total_category_overall_weight_sum, 2)
-            logger.info(f"Calculated total score: {output_scores['total_score']:.2f}")
-        else:
-            output_scores["total_score"] = 0.0
-            logger.warning("No valid category weights or contributing categories found. Total score set to 0.0.")
-
-        return output_scores

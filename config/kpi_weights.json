@@ -33,50 +33,50 @@
     }
   },
   "kpi_weights_within_category": {
-    "Financial Health": {
-      "Monthly Recurring Revenue (MRR)": { "weight": 0.25, "mandatory": true, "justification": "The core measure of a SaaS business's revenue engine and stability.", "source": "SaaSBoomi Playbook: Shaping India’s SaaS Landscape" },
-      "Annual Recurring Revenue (ARR)": { "weight": 0.15, "mandatory": false, "justification": "Provides a long-term view of business scale, critical for valuation.", "source": "Bessemer Venture Partners: The Rise of SaaS in India 2023" },
-      "Burn Rate": { "weight": 0.20, "mandatory": true, "justification": "Directly impacts survival. Capital efficiency is a key focus for Indian investors.", "source": "EY-Upekkha Report: Bellwethers of Indian SaaS" },
-      "Runway (in Months)": { "weight": 0.15, "mandatory": true, "justification": "A direct measure of financial longevity and operational freedom.", "source": "McKinsey Article: Turning India into a SaaS power" },
-      "Gross Margin (%)": { "weight": 0.15, "mandatory": true, "justification": "Indicates core profitability and potential for reinvestment.", "source": "JM Financial Report: India's SaaS: Taking Wings" },
-      "Operating Margin (or EBITDA)": { "weight": 0.10, "mandatory": false, "justification": "Shows overall profitability; its importance grows as a company matures.", "source": "Bain & Company: The Rule of 40 Analysis" }
-    },
-    "Growth & Traction": {
-      "MRR Growth Rate": { "weight": 0.35, "mandatory": true, "justification": "The most powerful signal of current market traction and demand.", "source": "Bain & Company: India SaaS Report 2022" },
-      "User Growth Rate": { "weight": 0.20, "mandatory": false, "justification": "Crucial for demonstrating market adoption, especially for PLG models.", "source": "Sequoia India's 'Surge' Program Focus Areas" },
-      "Lead-to-Customer Conversion Rate": { "weight": 0.15, "mandatory": false, "justification": "Evaluates the overall effectiveness of the go-to-market funnel.", "source": "SaaS Go-to-Market Strategy Reports" },
-      "Trial-to-Paid Conversion Rate": { "weight": 0.10, "mandatory": false, "justification": "A key metric for measuring the efficiency of product-led growth strategies.", "source": "ChartMogul Global SaaS Benchmarks" },
-      "Signup-to-MRR Ratio": { "weight": 0.10, "mandatory": false, "justification": "Connects user acquisition directly to revenue generation efficiency.", "source": "Product-Led Growth (PLG) Frameworks" },
-      "Expansion Revenue": { "weight": 0.10, "mandatory": false, "justification": "Demonstrates the ability to grow with customers, a sign of a strong product.", "source": "High Alpha: 2024 SaaS Benchmarks Report" }
-    },
-    "Unit Economics & Efficiency": {
-      "Customer Acquisition Cost (CAC)": { "weight": 0.30, "mandatory": true, "justification": "Marketing and sales efficiency are critical in a cost-sensitive market like India.", "source": "Tracxn & Sequoia Capital GTM Analysis" },
-      "Customer Lifetime Value (CLV or LTV)": { "weight": 0.20, "mandatory": false, "justification": "Demonstrates the long-term revenue potential that justifies acquisition spend.", "source": "Chiratae-Zinnov Report: India SaaSonomics 2023" },
-      "CAC-to-CLV Ratio": { "weight": 0.25, "mandatory": false, "justification": "The definitive ratio for a sustainable growth model and ROI.", "source": "Bain & Company and BCG Publications" },
-      "CAC Payback Period": { "weight": 0.15, "mandatory": false, "justification": "Measures how quickly the initial investment in customer acquisition is recovered.", "source": "Bessemer Venture Partners: The Rise of SaaS in India Report" },
-      "Contribution Margin": { "weight": 0.10, "mandatory": false, "justification": "Reveals per-unit profitability, a core component of financial health.", "source": "Standard Financial & Management Accounting Principles" }
-    },
-    "Retention & Stickiness": {
-      "Net Revenue Retention (NRR)": { "weight": 0.35, "mandatory": true, "justification": "A holistic measure of customer health, combining retention and expansion.", "source": "BCG & Accel India SaaS Reports" },
-      "Customer (Logo) Churn Rate": { "weight": 0.20, "mandatory": true, "justification": "A direct indicator of customer attrition; a high rate is a major red flag.", "source": "Stellaris Venture Partners Article: How Founders Assess Churn" },
-      "Revenue Churn Rate": { "weight": 0.15, "mandatory": false, "justification": "Quantifies the financial impact of customer churn.", "source": "Recurly Research Reports on Subscription Metrics" },
-      "Daily Active Users / Monthly Active Users (DAU/MAU)": { "weight": 0.15, "mandatory": false, "justification": "Indicates product stickiness and how deeply it is embedded in users' workflows.", "source": "Product Management & Engagement Metric Guides" },
-      "Day-30 Retention Rate": { "weight": 0.10, "mandatory": false, "justification": "Assesses the effectiveness of early onboarding and initial product experience.", "source": "Pendo Report: 2024 SaaS User Retention Benchmarks" },
-      "Day-90 Retention Rate": { "weight": 0.05, "mandatory": false, "justification": "Shows the product's ability to create lasting habits and deliver long-term value.", "source": "Pendo Report: 2024 SaaS User Retention Benchmarks" }
-    },
-    "Execution & Team Quality": {
-      "Founder Commitment (Full-Time)": { "weight": 0.40, "mandatory": true, "justification": "The most critical qualitative factor. Investor confidence is heavily dependent on it.", "source": "Sequoia Capital & Accel India Founder Playbooks" },
-      "Arr per Fte": { "weight": 0.25, "mandatory": false, "justification": "A key measure of operational and capital efficiency.", "source": "SaaS Capital: 2024 Revenue Per Employee Benchmarks" },
-      "Team Size": { "weight": 0.10, "mandatory": false, "justification": "Provides context for other efficiency metrics like ARR per FTE.", "source": "Innoven Capital: Startup Outlook Report 2024" },
-      "KPI Update Frequency": { "weight": 0.15, "mandatory": false, "justification": "Acts as a proxy for a data-driven culture and operational discipline.", "source": "Agile & Lean Startup Methodologies" },
-      "Time Since Last Fundraise": { "weight": 0.10, "mandatory": false, "justification": "Offers context on financial runway and capital management.", "source": "PwC India: Startup Deals Tracker Reports" }
-    },
-    "Customer Success & Relationship Health": {
-      "Net Promoter Score (NPS)": { "weight": 0.35, "mandatory": false, "justification": "A strong indicator of customer loyalty and potential for word-of-mouth growth.", "source": "CustomerGauge & Retently NPS Benchmark Reports" },
-      "Customer Satisfaction Score (CSAT)": { "weight": 0.20, "mandatory": false, "justification": "Measures transactional satisfaction and provides immediate feedback on service quality.", "source": "Zendesk & Freshdesk Customer Experience Reports" },
-      "Onboarding Completion Rate": { "weight": 0.20, "mandatory": true, "justification": "A crucial leading indicator for long-term customer retention and success.", "source": "BCG Article on Lean Scaling for Start-ups" },
-      "Average Time to Resolution (Support)": { "weight": 0.15, "mandatory": false, "justification": "A key driver of customer perception of service quality and efficiency.", "source": "Zendesk Customer Experience Trends Report" },
-      "Support Ticket Volume": { "weight": 0.10, "mandatory": false, "justification": "Can highlight product usability issues or opportunities for better self-service.", "source": "Gainsight & Customer Success Best Practices" }
-    }
+    "Financial Health": [
+      { "kpi": "Monthly Recurring Revenue (MRR)", "weight": 0.25, "mandatory": true, "justification": "The core measure of a SaaS business's revenue engine and stability.", "source": "SaaSBoomi Playbook: Shaping India’s SaaS Landscape" },
+      { "kpi": "Annual Recurring Revenue (ARR)", "weight": 0.15, "mandatory": false, "justification": "Provides a long-term view of business scale, critical for valuation.", "source": "Bessemer Venture Partners: The Rise of SaaS in India 2023" },
+      { "kpi": "Burn Rate", "weight": 0.20, "mandatory": true, "justification": "Directly impacts survival. Capital efficiency is a key focus for Indian investors.", "source": "EY-Upekkha Report: Bellwethers of Indian SaaS" },
+      { "kpi": "Runway (in Months)", "weight": 0.15, "mandatory": true, "justification": "A direct measure of financial longevity and operational freedom.", "source": "McKinsey Article: Turning India into a SaaS power" },
+      { "kpi": "Gross Margin (%)", "weight": 0.15, "mandatory": true, "justification": "Indicates core profitability and potential for reinvestment.", "source": "JM Financial Report: India's SaaS: Taking Wings" },
+      { "kpi": "Operating Margin (or EBITDA)", "weight": 0.10, "mandatory": false, "justification": "Shows overall profitability; its importance grows as a company matures.", "source": "Bain & Company: The Rule of 40 Analysis" }
+    ],
+    "Growth & Traction": [
+      { "kpi": "MRR Growth Rate", "weight": 0.35, "mandatory": true, "justification": "The most powerful signal of current market traction and demand.", "source": "Bain & Company: India SaaS Report 2022" },
+      { "kpi": "User Growth Rate", "weight": 0.20, "mandatory": false, "justification": "Crucial for demonstrating market adoption, especially for PLG models.", "source": "Sequoia India's 'Surge' Program Focus Areas" },
+      { "kpi": "Lead-to-Customer Conversion Rate", "weight": 0.15, "mandatory": false, "justification": "Evaluates the overall effectiveness of the go-to-market funnel.", "source": "SaaS Go-to-Market Strategy Reports" },
+      { "kpi": "Trial-to-Paid Conversion Rate", "weight": 0.10, "mandatory": false, "justification": "A key metric for measuring the efficiency of product-led growth strategies.", "source": "ChartMogul Global SaaS Benchmarks" },
+      { "kpi": "Signup-to-MRR Ratio", "weight": 0.10, "mandatory": false, "justification": "Connects user acquisition directly to revenue generation efficiency.", "source": "Product-Led Growth (PLG) Frameworks" },
+      { "kpi": "Expansion Revenue", "weight": 0.10, "mandatory": false, "justification": "Demonstrates the ability to grow with customers, a sign of a strong product.", "source": "High Alpha: 2024 SaaS Benchmarks Report" }
+    ],
+    "Unit Economics & Efficiency": [
+      { "kpi": "Customer Acquisition Cost (CAC)", "weight": 0.30, "mandatory": true, "justification": "Marketing and sales efficiency are critical in a cost-sensitive market like India.", "source": "Tracxn & Sequoia Capital GTM Analysis" },
+      { "kpi": "Customer Lifetime Value (CLV or LTV)", "weight": 0.20, "mandatory": false, "justification": "Demonstrates the long-term revenue potential that justifies acquisition spend.", "source": "Chiratae-Zinnov Report: India SaaSonomics 2023" },
+      { "kpi": "CAC-to-CLV Ratio", "weight": 0.25, "mandatory": false, "justification": "The definitive ratio for a sustainable growth model and ROI.", "source": "Bain & Company and BCG Publications" },
+      { "kpi": "CAC Payback Period", "weight": 0.15, "mandatory": false, "justification": "Measures how quickly the initial investment in customer acquisition is recovered.", "source": "Bessemer Venture Partners: The Rise of SaaS in India Report" },
+      { "kpi": "Contribution Margin", "weight": 0.10, "mandatory": false, "justification": "Reveals per-unit profitability, a core component of financial health.", "source": "Standard Financial & Management Accounting Principles" }
+    ],
+    "Retention & Stickiness": [
+      { "kpi": "Net Revenue Retention (NRR)", "weight": 0.35, "mandatory": true, "justification": "A holistic measure of customer health, combining retention and expansion.", "source": "BCG & Accel India SaaS Reports" },
+      { "kpi": "Customer (Logo) Churn Rate", "weight": 0.20, "mandatory": true, "justification": "A direct indicator of customer attrition; a high rate is a major red flag.", "source": "Stellaris Venture Partners Article: How Founders Assess Churn" },
+      { "kpi": "Revenue Churn Rate", "weight": 0.15, "mandatory": false, "justification": "Quantifies the financial impact of customer churn.", "source": "Recurly Research Reports on Subscription Metrics" },
+      { "kpi": "Daily Active Users / Monthly Active Users (DAU/MAU)", "weight": 0.15, "mandatory": false, "justification": "Indicates product stickiness and how deeply it is embedded in users' workflows.", "source": "Product Management & Engagement Metric Guides" },
+      { "kpi": "Day-30 Retention Rate", "weight": 0.10, "mandatory": false, "justification": "Assesses the effectiveness of early onboarding and initial product experience.", "source": "Pendo Report: 2024 SaaS User Retention Benchmarks" },
+      { "kpi": "Day-90 Retention Rate", "weight": 0.05, "mandatory": false, "justification": "Shows the product's ability to create lasting habits and deliver long-term value.", "source": "Pendo Report: 2024 SaaS User Retention Benchmarks" }
+    ],
+    "Execution & Team Quality": [
+      { "kpi": "Founder Commitment", "weight": 0.40, "mandatory": true, "justification": "The most critical qualitative factor. Investor confidence is heavily dependent on it.", "source": "Sequoia Capital & Accel India Founder Playbooks" },
+      { "kpi": "Arr per Fte", "weight": 0.25, "mandatory": false, "justification": "A key measure of operational and capital efficiency.", "source": "SaaS Capital: 2024 Revenue Per Employee Benchmarks" },
+      { "kpi": "Team Size", "weight": 0.10, "mandatory": false, "justification": "Provides context for other efficiency metrics like ARR per FTE.", "source": "Innoven Capital: Startup Outlook Report 2024" },
+      { "kpi": "KPI Update Frequency", "weight": 0.15, "mandatory": false, "justification": "Acts as a proxy for a data-driven culture and operational discipline.", "source": "Agile & Lean Startup Methodologies" },
+      { "kpi": "Time Since Last Fundraise", "weight": 0.10, "mandatory": false, "justification": "Offers context on financial runway and capital management.", "source": "PwC India: Startup Deals Tracker Reports" }
+    ],
+    "Customer Success & Relationship Health": [
+      { "kpi": "Net Promoter Score (NPS)", "weight": 0.35, "mandatory": false, "justification": "A strong indicator of customer loyalty and potential for word-of-mouth growth.", "source": "CustomerGauge & Retently NPS Benchmark Reports" },
+      { "kpi": "Customer Satisfaction Score (CSAT)", "weight": 0.20, "mandatory": false, "justification": "Measures transactional satisfaction and provides immediate feedback on service quality.", "source": "Zendesk & Freshdesk Customer Experience Reports" },
+      { "kpi": "Onboarding Completion Rate", "weight": 0.20, "mandatory": true, "justification": "A crucial leading indicator for long-term customer retention and success.", "source": "BCG Article on Lean Scaling for Start-ups" },
+      { "kpi": "Average Time to Resolution (Support)", "weight": 0.15, "mandatory": false, "justification": "A key driver of customer perception of service quality and efficiency.", "source": "Zendesk Customer Experience Trends Report" },
+      { "kpi": "Support Ticket Volume", "weight": 0.10, "mandatory": false, "justification": "Can highlight product usability issues or opportunities for better self-service.", "source": "Gainsight & Customer Success Best Practices" }
+    ]
   }
 }

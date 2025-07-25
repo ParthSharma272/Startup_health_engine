@@ -1,27 +1,23 @@
 import json
 import re
-from typing import Dict, Any, Tuple, Optional, List
+from typing import Dict, Any, List, Tuple
 import openai
 from src.utils.logger_config import logger
 
 class KPIRAGExtractor:
-
-
     def __init__(self, kpi_benchmarks: List[Dict[str, Any]], openai_api_key: str, kpi_benchmark_map: Dict[str, Any]):
-
         self.client = openai.OpenAI(api_key=openai_api_key)
-        self.model_name = "gpt-3.5-turbo" # You can change this to "gpt-4o" for potentially better results
+        self.model_name = "gpt-3.5-turbo" # Or "gpt-4o" for potentially better results
         self.kpi_list = [kpi['kpi'] for kpi in kpi_benchmarks]
-        self.kpi_benchmark_map = kpi_benchmark_map # Store the map for type checking
+        self.kpi_benchmark_map = kpi_benchmark_map 
         logger.info(f"KPIRAGExtractor initialized with OpenAI model: {self.model_name}.")
 
     def _construct_prompt(self, text_content: str) -> str:
-
         kpi_names_str = ", ".join(self.kpi_list)
 
         # Adding a few-shot example to guide the LLM more effectively
         example_document = "Our MRR is $100,000. Burn Rate is $50,000. Founder commitment is Full-Time."
-        example_json_output = '{"Monthly Recurring Revenue (MRR)": 100000, "Burn Rate": 50000, "Founder Commitment (Full-Time)": "Full-Time"}' # Corrected example KPI name
+        example_json_output = '{"Monthly Recurring Revenue (MRR)": 100000, "Burn Rate": 50000, "Founder Commitment": "Full-Time"}' 
 
         prompt = f"""
         Analyze the following business document and extract the specified Key Performance Indicators (KPIs) and their numerical or string values.
@@ -49,7 +45,6 @@ class KPIRAGExtractor:
         return prompt.strip()
 
     def extract_kpis(self, text_content: str) -> Tuple[Dict[str, Any], str]:
-
         if not self.client:
             logger.error("OpenAI client not initialized. Cannot extract KPIs.")
             return {}, "OpenAI client failed to initialize."
@@ -57,8 +52,8 @@ class KPIRAGExtractor:
         prompt = self._construct_prompt(text_content)
         logger.debug(f"Sending prompt to OpenAI LLM:\n{prompt}")
 
-        llm_response_string = "" # Initialize to empty string
-        parsed_kpis = {} # Initialize to empty dict
+        llm_response_string = ""
+        parsed_kpis = {}
 
         try:
             chat_completion = self.client.chat.completions.create(
@@ -81,22 +76,16 @@ class KPIRAGExtractor:
             logger.debug(f"Raw LLM response received:\n{llm_response_string}")
 
             # --- Robust JSON/KPI Parsing Logic ---
-            json_match = re.search(r"\{.*\}", llm_response_string, re.DOTALL)
-            if json_match:
-                json_string = json_match.group(0)
-                try:
-                    parsed_kpis = json.loads(json_string)
-                    logger.info("Successfully parsed KPIs from LLM response as JSON.")
-                except json.JSONDecodeError as e:
-                    logger.error(f"Failed to decode JSON from LLM response: {e}. Attempting fallback parsing. Raw JSON string: {json_string[:500]}...", exc_info=True)
-                    parsed_kpis = self._parse_comma_separated_kpis(llm_response_string)
-            else:
-                logger.warning("No JSON object found in LLM response. Attempting fallback parsing (comma-separated).")
+            # Attempt to parse the raw text content as JSON
+            try:
+                parsed_kpis = json.loads(llm_response_string)
+                logger.info("Successfully parsed KPIs from LLM response as JSON.")
+            except json.JSONDecodeError as e:
+                logger.error(f"Failed to decode JSON from LLM response: {e}. Attempting fallback parsing. Raw JSON string: {llm_response_string[:500]}...", exc_info=True)
+                # Fallback to comma-separated parsing if direct JSON parse fails
                 parsed_kpis = self._parse_comma_separated_kpis(llm_response_string)
-
-            # --- NEW DEBUG LOG HERE ---
+            
             logger.debug(f"Parsed KPIs before cleaning (from LLM/fallback): {parsed_kpis}")
-            # --- END NEW DEBUG LOG ---
 
             # Final cleaning and type conversion for parsed KPIs
             cleaned_kpis = {}
@@ -106,7 +95,6 @@ class KPIRAGExtractor:
                 
                 if kpi_info and kpi_info.get('normalization') == 'predefined':
                     # For predefined KPIs, keep the value as a string, strip whitespace
-                    # Also, ensure the string matches one of the predefined params keys if possible
                     cleaned_string_value = str(value).strip() if value is not None else None
                     if cleaned_string_value and kpi_info.get('params'):
                         # Try to find a case-insensitive match among predefined options
@@ -120,24 +108,48 @@ class KPIRAGExtractor:
                     logger.debug(f"Predefined KPI '{kpi_name}' kept as string: '{cleaned_kpis[kpi_name]}'")
                 elif isinstance(value, str):
                     # For other KPIs, attempt numeric conversion
-                    # Remove currency symbols (₹, $) AND COMMAS, then convert to float
-                    cleaned_value = re.sub(r'[₹$]', '', value).replace(',', '').strip()
+                    cleaned_value = value.strip()
                     try:
+                        # Handle percentages (e.g., "72%")
                         if cleaned_value.endswith('%'):
                             cleaned_kpis[kpi_name] = float(cleaned_value.replace('%', ''))
+                        # Handle currency with suffixes (e.g., "$1.5M", "₹3,50,000")
+                        elif re.match(r'^[₹$]?[\d,]+\.?\d*[MK]?$', cleaned_value, re.IGNORECASE):
+                            clean_num_str = re.sub(r'[₹$,]', '', cleaned_value)
+                            if clean_num_str.lower().endswith('m'):
+                                cleaned_kpis[kpi_name] = float(clean_num_str[:-1]) * 1_000_000
+                            elif clean_num_str.lower().endswith('k'):
+                                cleaned_kpis[kpi_name] = float(clean_num_str[:-1]) * 1_000
+                            else:
+                                cleaned_kpis[kpi_name] = float(clean_num_str)
+                        # Handle ratios (e.g., "1:9.1")
+                        elif re.match(r'^\d+\s*:\s*\d+\.?\d*$', cleaned_value):
+                            parts = re.split(r'\s*:\s*', cleaned_value)
+                            if float(parts[1]) != 0:
+                                cleaned_kpis[kpi_name] = float(parts[0]) / float(parts[1])
+                            else:
+                                cleaned_kpis[kpi_name] = 0.0 # Avoid division by zero
+                                logger.warning(f"Ratio KPI '{kpi_name}' has zero in denominator: '{cleaned_value}'. Setting to 0.")
+                        # Handle time units (e.g., "18 Hours", "15.5 months")
+                        elif re.match(r'^\d+\.?\d*\s*(months|month|hours|hour|days|day)$', cleaned_value, re.IGNORECASE):
+                            num_part = re.search(r'^\d+\.?\d*', cleaned_value).group(0)
+                            cleaned_kpis[kpi_name] = float(num_part)
                         else:
-                            cleaned_kpis[kpi_name] = float(cleaned_value)
-                        logger.debug(f"Numeric KPI '{kpi_name}' converted to float: {cleaned_kpis[kpi_name]}")
+                            cleaned_kpis[kpi_name] = float(cleaned_value) # Try direct float conversion as a last resort
+                        logger.debug(f"Numeric KPI '{kpi_name}' converted from string '{value}' to float: {cleaned_kpis[kpi_name]}")
                     except ValueError:
                         # If it's a string that can't be converted to float, keep as string
                         cleaned_kpis[kpi_name] = value
-                        logger.warning(f"Could not convert '{value}' to float for KPI '{kpi_name}'. Keeping as string.")
+                        logger.warning(f"Could not convert '{value}' to float for KPI '{kpi_name}'. Keeping as original string.")
                 else:
                     # Keep non-string, non-predefined values as they are (e.g., already numbers from JSON)
                     cleaned_kpis[kpi_name] = value
                     logger.debug(f"KPI '{kpi_name}' kept as original type: {cleaned_kpis[kpi_name]}")
 
-            return cleaned_kpis, llm_response_string
+            # Filter out any KPIs that are not in our predefined benchmark map
+            final_kpis = {k: v for k, v in cleaned_kpis.items() if k in self.kpi_benchmark_map}
+            logger.info(f"Post-processed and filtered KPIs: {final_kpis}")
+            return final_kpis, llm_response_string
 
         except openai.APIError as e:
             logger.error(f"OpenAI API error during KPI extraction: {e}", exc_info=True)
@@ -147,14 +159,18 @@ class KPIRAGExtractor:
             return {}, llm_response_string if llm_response_string else f"Error during LLM inference: {e}"
 
     def _parse_comma_separated_kpis(self, text: str) -> Dict[str, Any]:
-
+        """
+        Parses a string of comma-separated 'Key: Value' pairs into a dictionary using a more robust splitting strategy.
+        This is a fallback if the LLM doesn't produce valid JSON.
+        """
         parsed_data = {}
 
         # Normalize the input string: remove leading/trailing spaces, and ensure consistent ": " delimiter
         text = text.strip()
         text = re.sub(r'\s*:\s*', ': ', text) # Replace any amount of whitespace around colon with ': '
         # Split by comma followed by a space, but only if the space is followed by an uppercase letter (start of a new KPI)
-        kpi_entries = re.split(r',\s*(?=[A-Z])', text)
+        kpi_entries = re.split(r',\s*(?=[A-Z][a-zA-Z]*(?:\s+[a-zA-Z]+)*:)', text)
+
 
         logger.debug(f"Raw text for parsing in _parse_comma_separated_kpis: {text}")
         logger.debug(f"Split KPI entries: {kpi_entries}")
