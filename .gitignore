@@ -1,0 +1,28 @@
+# Python virtual environment
+venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Airflow specific
+logs/
+webserver_config.py
+airflow.cfg
+airflow.db
+
+# Environment variables
+.env
+
+# Processed data
+processed_data/
+
+# Uploads (if you don't want to track them)
+uploads/
+
+# IDE specific
+.vscode/
+.idea/
+
+# macOS specific
+.DS_Store
