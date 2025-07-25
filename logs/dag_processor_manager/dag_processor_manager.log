@@ -7477,3 +7477,11 @@ File Path                                      PID    Runtime      # DAGs    # E
 ================================================================================
 [2025-07-25T07:52:21.219+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
 [2025-07-25T07:52:21.234+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2025-07-25T07:52:24.926+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/startup_health_score_dag.py                           1           0  1.52s           2025-07-25T07:52:14                      10
+================================================================================
