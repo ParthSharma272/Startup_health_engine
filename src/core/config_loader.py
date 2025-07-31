@@ -6,10 +6,17 @@ from src.utils.logger_config import logger
 class ConfigLoader:
     def __init__(self, config_dir: str):
         self.config_dir = config_dir
-        self.kpi_weights_path = os.path.join(self.config_dir, 'kpi_weights.json')
-        self.kpi_benchmarks_path = os.path.join(self.config_dir, 'kpi_benchmarks.json')
-        self.percentile_thresholds_path = os.path.join(self.config_dir, 'percentile_thresholds.json') # New path
-        logger.info(f"ConfigLoader initialized with config directory: {self.config_dir}")
+        self.kpi_weights_path = os.path.join(config_dir, 'kpi_weights.json')
+        self.kpi_benchmarks_path = os.path.join(config_dir, 'kpi_benchmarks.json')
+        self.percentile_thresholds_path = os.path.join(config_dir, 'percentile_thresholds.json')
+        logger.info(f"ConfigLoader initialized with config directory: {config_dir}")
+        
+        # Verify all config files exist
+        for config_file in [self.kpi_weights_path, self.kpi_benchmarks_path, self.percentile_thresholds_path]:
+            if not os.path.exists(config_file):
+                logger.error(f"Required config file not found: {config_file}")
+            else:
+                logger.info(f"Config file found: {config_file}")
 
     def load_config(self, config_path: str) -> Dict[str, Any]:
         """

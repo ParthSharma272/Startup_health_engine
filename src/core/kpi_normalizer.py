@@ -93,7 +93,11 @@ class KPINormalizer:
                         else:
                             numeric_value = 0.0
                             logger.warning(f"Ratio KPI '{kpi_name}' has zero in denominator: '{cleaned_value_str}'. Setting to 0.")
+                    # Handle time units (e.g., "18 Hours", "15.5 months")
                     elif re.match(r'^\d+\.?\d*\s*(months|month|hours|hour|days|day)$', cleaned_value_str, re.IGNORECASE): # Handle time units
+                        num_part = re.search(r'^\d+\.?\d*', cleaned_value_str).group(0)
+                        numeric_value = float(num_part)
+                    elif re.match(r'^\d+\.?\d*\s*(ftes?|fte)$', cleaned_value_str, re.IGNORECASE): # Handle FTE units
                         num_part = re.search(r'^\d+\.?\d*', cleaned_value_str).group(0)
                         numeric_value = float(num_part)
                     else:

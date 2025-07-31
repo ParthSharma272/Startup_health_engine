@@ -7,14 +7,14 @@ WORKDIR /app
 # Install Python dependencies
 # Ensure 'requests' is included as app.py uses it for Airflow API calls
 # 'pandas' and 'numpy' are included as common Streamlit dependencies for data display
-# 'python-dotenv' is not strictly needed in the container if .env is handled by docker-compose,
-# but can be kept if there's a fallback mechanism or other .env usage within the app.
+# 'plotly' is added for advanced charting
 RUN pip install --no-cache-dir \
     streamlit==1.36.0 \
     pandas \
     numpy \
     python-dotenv \
-    requests
+    requests \
+    plotly 
 
 # Expose the port Streamlit runs on
 EXPOSE 8501

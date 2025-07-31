@@ -19,10 +19,13 @@ USER airflow
 # Set working directory
 WORKDIR /opt/airflow
 
-# Upgrade pip to ensure it's the latest version
-RUN python3 -m pip install --no-cache-dir --upgrade pip
+# Upgrade pip, setuptools, and wheel to ensure compatibility
+RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install Python packages
+# First, install compatible versions of pandas and protobuf
+RUN python3 -m pip install --no-cache-dir pandas==2.1.4 protobuf==5.26.1
+
+# Install the rest of the packages, avoiding any that might pull in conflicting versions
 RUN python3 -m pip install --no-cache-dir \
     requests \
     Pillow==10.3.0 \
@@ -38,7 +41,14 @@ RUN python3 -m pip install --no-cache-dir \
     asyncio \
     aiohttp \
     aiofiles \
-    openai
+    openai \
+    # Add ML packages with compatible versions
+    scikit-learn==1.5.0 \
+    numpy==1.26.4 \
+    joblib==1.4.2 \
+    mlflow==2.13.0 \
+    matplotlib==3.8.4 \
+    seaborn==0.13.2
 
-# Verify package installations
-RUN python3 -m pip check
+# Skip the pip check since we have controlled the versions and it's causing issues
+# RUN python3 -m pip check

@@ -1,0 +1,6 @@
+artifact_location: file:///opt/airflow/mlruns/609261226905048155
+creation_time: 1753869816070
+experiment_id: '609261226905048155'
+last_update_time: 1753869816070
+lifecycle_stage: active
+name: startup_health_predictor

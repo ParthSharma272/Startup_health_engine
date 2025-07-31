@@ -10,7 +10,6 @@ import re
 import pandas as pd
 
 # Configure Streamlit page
-# Removed 'icon' argument again due to persistent TypeError.
 st.set_page_config(layout="wide", page_title="Startup Health Score Dashboard 🚀")
 
 # Define paths relative to the Streamlit app's container WORKDIR (/app)
@@ -38,34 +37,23 @@ app_logger = logging.getLogger(__name__)
 def trigger_airflow_dag(dag_id: str, file_name: str) -> dict:
     """Triggers an Airflow DAG run via the REST API."""
     
-    # Sanitize file_name for dag_run_id: replace non-alphanumeric, non-underscore, non-dot, non-tilde, non-colon, non-plus, non-hyphen with underscore
-    # This matches Airflow's allowed pattern: '^[A-Za-z0-9_.~:+-]+$'
     sanitized_file_name = re.sub(r'[^A-Za-z0-9_.~:+-]', '_', file_name)
-    
     dag_run_id = f"streamlit_trigger_{sanitized_file_name}_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-
     endpoint = f"{AIRFLOW_API_BASE_URL}/dags/{dag_id}/dagRuns"
     payload = {
-        "dag_run_id": dag_run_id, # Use the sanitized ID
-        "conf": {"file_name": file_name} # Pass original file name in conf
+        "dag_run_id": dag_run_id,
+        "conf": {"file_name": file_name}
     }
     headers = {"Content-Type": "application/json"}
-    auth = HTTPBasicAuth(AIRFLOW_USERNAME, AIRFLOW_PASSWORD)
 
     app_logger.info(f"Attempting to trigger DAG {dag_id} with run ID '{dag_run_id}' at {endpoint}")
     try:
+        # Use basic auth since authentication can't be fully disabled
+        auth = HTTPBasicAuth(AIRFLOW_USERNAME, AIRFLOW_PASSWORD)
         response = requests.post(endpoint, json=payload, headers=headers, auth=auth, timeout=10)
         response.raise_for_status()
         app_logger.info(f"Successfully triggered DAG {dag_id}. Response: {response.json()}")
         return response.json()
-    except requests.exceptions.ConnectionError as e:
-        app_logger.error(f"Connection error to Airflow API: {e}. Is Airflow webserver running and accessible?")
-        st.error(f"Connection Error: Could not connect to Airflow API. Is the Airflow webserver running? ({AIRFLOW_API_BASE_URL})")
-        return {}
-    except requests.exceptions.Timeout:
-        app_logger.error("Timeout connecting to Airflow API.")
-        st.error("Timeout: Airflow API did not respond in time.")
-        return {}
     except requests.exceptions.RequestException as e:
         app_logger.error(f"Failed to trigger DAG {dag_id}. Error: {e}")
         st.error(f"Failed to trigger Airflow DAG. Error: {e}")
@@ -118,6 +106,7 @@ def load_output_data_for_document(file_name_prefix: str) -> tuple[dict, dict]:
 
 def get_file_prefix(file_name: str) -> str:
     """Generates the file prefix used for processed output files."""
+    # Ensure this matches the DAG's file naming convention
     return file_name.replace('.', '_')
 
 # --- Streamlit UI ---
@@ -169,22 +158,29 @@ if 'documents' not in st.session_state:
 if 'selected_document_id' not in st.session_state:
     st.session_state['selected_document_id'] = None
 
-uploaded_files = st.file_uploader(
+# Store the current list of uploaded files from the widget
+current_uploaded_files = st.file_uploader(
     "Drag and drop your document(s) here or click to browse",
     type=["txt", "jpg", "jpeg", "png", "pdf"],
     accept_multiple_files=True, # Allow multiple files
     key="file_uploader"
 )
 
-# Handle file upload and saving
-if uploaded_files:
-    new_files_uploaded = False
-    for uploaded_file in uploaded_files:
-        # Check if this file is already in our session state
-        if not any(doc['name'] == uploaded_file.name for doc in st.session_state['documents']):
+# Process newly uploaded files only if the widget's value has changed
+if current_uploaded_files:
+    # Get names of files already in session state
+    existing_file_names = {doc['name'] for doc in st.session_state['documents']}
+    
+    new_files_to_add = []
+    for uploaded_file in current_uploaded_files:
+        if uploaded_file.name not in existing_file_names:
+            new_files_to_add.append(uploaded_file)
+            
+    if new_files_to_add:
+        for uploaded_file in new_files_to_add:
             file_path_in_uploads = os.path.join(UPLOADS_DIR, uploaded_file.name)
             try:
-                # Clear previous files in uploads to ensure only one is processed
+                # Clear previous files in uploads to ensure only one is processed per run
                 # This logic is now handled by the "Reset" button or when a new analysis is triggered
                 # For multiple uploads, we want to keep them until explicitly cleared.
                 with open(file_path_in_uploads, "wb") as f:
@@ -204,13 +200,10 @@ if uploaded_files:
                     'scores': {},
                     'last_update': datetime.now()
                 })
-                new_files_uploaded = True
             except Exception as e:
                 st.error(f"❌ Error saving file '{uploaded_file.name}': {e}")
                 app_logger.error(f"Error saving uploaded file: {e}", exc_info=True)
-    
-    if new_files_uploaded:
-        st.rerun() # Rerun to display new files in the table
+        st.rerun() # Rerun only if new files were added
 
 # Display uploaded documents and their status
 if st.session_state['documents']:
@@ -369,7 +362,7 @@ if st.session_state['documents']:
 
             if extracted_kpis and final_scores:
                 # --- Overall Score & Health Category ---
-                col1, col2 = st.columns([2, 1])
+                col1, col2, col3 = st.columns([2, 1, 1])
                 with col1:
                     total_score = final_scores.get('total_score', 0.0)
                     st.markdown(f"""
@@ -398,6 +391,40 @@ if st.session_state['documents']:
                         st.info(health_category.get('description', ''))
                     else:
                         st.warning("Health category could not be determined.")
+                with col3:
+                    st.markdown("<br>", unsafe_allow_html=True)
+                    confidence_score = final_scores.get('confidence_score', 0.0)
+                    prediction_method = final_scores.get('prediction_method', 'unknown')
+                    
+                    if confidence_score >= 80:
+                        confidence_color = "#4CAF50"
+                        confidence_label = "High"
+                    elif confidence_score >= 60:
+                        confidence_color = "#FFC107"
+                        confidence_label = "Medium"
+                    else:
+                        confidence_color = "#F44336"
+                        confidence_label = "Low"
+                        
+                    st.markdown(f"""
+                        <div style="
+                            background-color: #262730; 
+                            padding: 15px; 
+                            border-radius: 15px; 
+                            text-align: center; 
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                            margin-bottom: 20px;
+                        ">
+                            <h3 style="color: #ADD8E6; margin-bottom: 10px;">Confidence</h3>
+                            <p style="
+                                font-size: 2.5em; 
+                                font-weight: bold; 
+                                color: {confidence_color}; 
+                                line-height: 1;
+                            ">{confidence_score:.1f}%</p>
+                            <p style="color: white; font-size: 0.9em;">{confidence_label} ({prediction_method})</p>
+                        </div>
+                    """, unsafe_allow_html=True)
 
                 st.markdown("---")
                 
@@ -451,39 +478,63 @@ if st.session_state['documents']:
                 suggestions_and_warnings_list = final_scores.get('suggestions_and_warnings', [])
                 
                 if suggestions_and_warnings_list:
-                    # The first item in the list is now the structured LLM output (a dict)
-                    # The rest are rule-based strings
-                    llm_structured_insights = suggestions_and_warnings_list[0]
-                    rule_based_suggestions = suggestions_and_warnings_list[1:]
-
-                    # Display rule-based suggestions first
-                    for item in rule_based_suggestions:
-                        st.markdown(f"- {item}")
+                    # Check if the last item is a dictionary (structured LLM output)
+                    llm_structured_insights = None
+                    if suggestions_and_warnings_list and isinstance(suggestions_and_warnings_list[-1], dict) and \
+                       "overall_assessment" in suggestions_and_warnings_list[-1]:
+                        llm_structured_insights = suggestions_and_warnings_list.pop(-1) # Get and remove from list
                     
-                    st.markdown("---") # Separator for AI insights
-                    st.markdown("✨ **AI-Powered Insights & Recommendations:**")
+                    # Display rule-based suggestions first
+                    if suggestions_and_warnings_list:
+                        st.markdown("#### Rule-Based Alerts:")
+                        for item in suggestions_and_warnings_list:
+                            st.markdown(f"- {item}")
+                        st.markdown("---") # Separator for AI insights
 
-                    if llm_structured_insights.get("overall_assessment"):
-                        st.markdown(f"**Overall Assessment:** {llm_structured_insights['overall_assessment']}")
+                    # Display AI-Powered Insights
+                    if llm_structured_insights:
+                        st.markdown("#### AI-Powered Insights:")
+                        
+                        # Overall Assessment
+                        if llm_structured_insights.get("overall_assessment"):
+                            st.markdown(f"**Overall Assessment:** {llm_structured_insights['overall_assessment']}")
 
-                    if llm_structured_insights.get("strengths"):
-                        st.markdown("\n**Strengths by Category:**")
-                        for category, strength_list in llm_structured_insights["strengths"].items():
-                            st.markdown(f"- **{category.replace('_', ' ').title()}:**")
-                            for strength in strength_list:
-                                st.markdown(f"  - {strength}")
+                        # Strengths by Category
+                        if llm_structured_insights.get("strengths"):
+                            st.markdown("\n**Strengths by Category:**")
+                            for category, strength_list in llm_structured_insights["strengths"].items():
+                                st.markdown(f"- **{category.replace('_', ' ').title()}:**")
+                                if strength_list:
+                                    for strength in strength_list:
+                                        st.markdown(f"  - <span style='color: #4CAF50;'>✅</span> {strength}", unsafe_allow_html=True)
+                                else:
+                                    st.markdown("  - *No specific strengths identified for this category.*")
+                            if not llm_structured_insights["strengths"]:
+                                st.markdown("  - *No specific strengths identified by AI.*")
 
-                    if llm_structured_insights.get("weaknesses"):
-                        st.markdown("\n**Weaknesses by Category:**")
-                        for category, weakness_list in llm_structured_insights["weaknesses"].items():
-                            st.markdown(f"- **{category.replace('_', ' ').title()}:**")
-                            for weakness in weakness_list:
-                                st.markdown(f"  - {weakness}")
+                        # Weaknesses by Category
+                        if llm_structured_insights.get("weaknesses"):
+                            st.markdown("\n**Weaknesses by Category:**")
+                            for category, weakness_list in llm_structured_insights["weaknesses"].items():
+                                st.markdown(f"- **{category.replace('_', ' ').title()}:**")
+                                if weakness_list:
+                                    for weakness in weakness_list:
+                                        st.markdown(f"  - <span style='color: #FF6347;'>❌</span> {weakness}", unsafe_allow_html=True)
+                                else:
+                                    st.markdown("  - *No specific weaknesses identified for this category.*")
+                            if not llm_structured_insights["weaknesses"]:
+                                st.markdown("  - *No specific weaknesses identified by AI.*")
 
-                    if llm_structured_insights.get("recommendations"):
-                        st.markdown("\n**Actionable Recommendations:**")
-                        for rec in llm_structured_insights["recommendations"]:
-                            st.markdown(f"- {rec}")
+                        # Actionable Recommendations
+                        if llm_structured_insights.get("recommendations"):
+                            st.markdown("\n**Actionable Recommendations:**")
+                            for rec in llm_structured_insights["recommendations"]:
+                                st.markdown(f"- 💡 {rec}") # Using a consistent emoji for recommendations
+                            if not llm_structured_insights["recommendations"]:
+                                st.markdown("  - *No specific recommendations provided by AI.*")
+                    else:
+                        st.info("No AI-powered insights generated (e.g., LLM API key not configured or LLM error).")
+
                 else:
                     st.info("No specific suggestions or warnings generated for this analysis.")
 
@@ -492,4 +543,7 @@ if st.session_state['documents']:
         else:
             st.info("Select a processed document from the dropdown above to view its dashboard.")
     else:
-        st.info("⬆️ Upload document(s) to begin the analysis.")
+        st.info("No documents have been processed yet. Upload a document and click 'Start Analysis'.")
+
+else:
+    st.info("⬆️ Upload document(s) to begin the analysis.")

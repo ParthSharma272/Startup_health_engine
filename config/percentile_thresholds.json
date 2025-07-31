@@ -1,39 +1,34 @@
 {
-  "score_categories": [
+  "health_categories": [
     {
       "name": "Excellent",
-      "min_score": 85,
-      "max_score": 100,
-      "emoji": "🌟",
-      "description": "The startup demonstrates exceptional health and strong performance across most key metrics, significantly exceeding industry benchmarks."
+      "emoji": "🟢",
+      "min_score": 80,
+      "description": "Outstanding performance across most metrics. This startup shows strong fundamentals and growth potential."
     },
     {
       "name": "Good",
-      "min_score": 70,
-      "max_score": 84.99,
-      "emoji": "✅",
-      "description": "The startup shows good overall health, meeting or exceeding many industry benchmarks. Areas for minor improvement may exist."
+      "emoji": "🟡",
+      "min_score": 60,
+      "description": "Solid performance with room for improvement in some areas. Generally healthy trajectory."
     },
     {
       "name": "Average",
-      "min_score": 50,
-      "max_score": 69.99,
-      "emoji": "➡️",
-      "description": "The startup's health is in line with average industry performance. There are clear opportunities for improvement in several areas."
+      "emoji": "🟠",
+      "min_score": 40,
+      "description": "Mixed performance with significant areas needing attention. Moderate risk profile."
     },
     {
-      "name": "Needs Attention",
-      "min_score": 25,
-      "max_score": 49.99,
-      "emoji": "⚠️",
-      "description": "The startup's health indicates areas of concern, falling below average benchmarks. Critical metrics require immediate attention."
+      "name": "Poor",
+      "emoji": "🔴",
+      "min_score": 20,
+      "description": "Multiple critical issues requiring immediate attention. High risk of failure."
     },
     {
       "name": "Critical",
+      "emoji": "⚠️",
       "min_score": 0,
-      "max_score": 24.99,
-      "emoji": "🚨",
-      "description": "The startup is facing significant challenges, with performance critically low across multiple key metrics. Urgent intervention is recommended."
+      "description": "Severe issues across multiple areas. Urgent intervention needed to avoid failure."
     }
   ]
 }

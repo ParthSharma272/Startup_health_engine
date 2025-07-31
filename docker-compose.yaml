@@ -1,40 +1,4 @@
 # docker-compose.yaml
-version: '3.8'
-
-x-airflow-common:
-  &airflow-common
-  build:
-    context: . # Build from the current directory (where Dockerfile is)
-    dockerfile: Dockerfile # Use the Dockerfile in the current directory
-  environment:
-    AIRFLOW__CORE__FERNET_KEY: '_aGq_b8Y-gN-L_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z' # Replace with a strong key in production
-    AIRFLOW__CORE__EXECUTOR: CeleryExecutor # Or LocalExecutor for simpler setup
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
-    AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
-    AIRFLOW__WEBSERVER__AUTHENTICATE: 'False' # For local testing, set to True for production
-    AIRFLOW__WEBSERVER__RBAC: 'False' # For local testing, set to True for production
-    AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'True' # Required for passing complex objects via XCom
-    PYTHONPATH: /opt/airflow # This ensures Python can find your 'src' modules
-    AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth' # This forces basic auth for API
-    AIRFLOW__API__ENABLE_EXPERIMENTAL_API: 'True' # Keep this as it helps with API triggers
-    # OPENAI_API_KEY is loaded from .env file
-  env_file: # To load OPENAI_API_KEY from .env
-    - .env
-  volumes:
-    - ./dags:/opt/airflow/dags # Mount your DAGs folder
-    - ./logs:/opt/airflow/logs # Mount logs folder
-    - ./plugins:/opt/airflow/plugins # Mount plugins folder (if any)
-    - ./config:/opt/airflow/config # Mount your config directory
-    - ./src:/opt/airflow/src # Mount your source code directory
-    - ./uploads:/opt/airflow/uploads # Mount your uploads directory (shared)
-    - ./processed_data:/opt/airflow/processed_data # Mount your processed_data directory (shared)
-  depends_on:
-    postgres:
-      condition: service_healthy
-    redis:
-      condition: service_healthy
-
 services:
   postgres:
     image: postgres:13
@@ -47,35 +11,90 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   redis:
-    image: redis:latest
+    image: redis:7-alpine  # Use Alpine version for smaller size
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 5s
       retries: 5
+    volumes:
+      - redis_data:/data
 
   airflow-init:
-    <<: *airflow-common
-    command: bash -c "airflow db migrate && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "
+      echo 'Starting database initialization...' &&
+      airflow db init &&
+      echo 'Creating admin user...' &&
+      airflow users delete --username admin || true &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com &&
+      echo 'Initialization complete'"
+    environment:
+      AIRFLOW__CORE__FERNET_KEY: 'd56lTnYHSibGIBPojxUJJ487xZ53LNT6q4ffCTR1LHE='
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
+      AIRFLOW__WEBSERVER__AUTHENTICATE: 'True'
+      AIRFLOW__WEBSERVER__RBAC: 'True'
+      AIRFLOW__WEBSERVER__WTF_CSRF_ENABLED: 'False'
+      AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+      PYTHONPATH: /opt/airflow
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
+    restart: "no"
 
   airflow-webserver:
-    <<: *airflow-common
-    command: airflow webserver
-    ports: # Explicitly define ports only for the webserver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash -c "airflow webserver --port 8080"
+    ports:
       - "8080:8080"
-    healthcheck: # Specific healthcheck for the webserver
-      test: ["CMD-SHELL", "curl --fail http://localhost:8080/health"]
-      interval: 10s
-      timeout: 10s
-      retries: 10
-      start_period: 30s
+    environment:
+      AIRFLOW__CORE__FERNET_KEY: 'd56lTnYHSibGIBPojxUJJ487xZ53LNT6q4ffCTR1LHE='
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
+      AIRFLOW__WEBSERVER__AUTHENTICATE: 'True'
+      AIRFLOW__WEBSERVER__RBAC: 'True'
+      AIRFLOW__WEBSERVER__WTF_CSRF_ENABLED: 'False'
+      AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+      AIRFLOW__API__ENABLE_EXPERIMENTAL_API: 'True'
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'True'
+      AIRFLOW__WEBSERVER__SECRET_KEY: '454dcb3fa57ff9bf19d5cfe268f378859b67e62a59a4ee6e080685353081'
+      AIRFLOW__WEBSERVER__WORKERS: '1'
+      AIRFLOW__WEBSERVER__WORKER_TIMEOUT: '180'
+      AIRFLOW__WEBSERVER__WORKER_CLASS: 'sync'
+      PYTHONPATH: /opt/airflow
+    env_file:
+      - .env  # Add this line to include the .env file
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 45s
+      timeout: 20s
+      retries: 5
+      start_period: 120s
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+      - ./src:/opt/airflow/src
+      - ./uploads:/opt/airflow/uploads
+      - ./processed_data:/opt/airflow/processed_data
+      - ./ml_models:/opt/airflow/ml_models
+      - ./mlruns:/opt/airflow/mlruns
     depends_on:
       airflow-init:
         condition: service_completed_successfully
@@ -85,9 +104,32 @@ services:
         condition: service_healthy
 
   airflow-scheduler:
-    <<: *airflow-common
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: airflow scheduler
-    # Removed explicit Celery environment variables here
+    environment:
+      AIRFLOW__CORE__FERNET_KEY: 'd56lTnYHSibGIBPojxUJJ487xZ53LNT6q4ffCTR1LHE='
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
+      AIRFLOW__WEBSERVER__AUTHENTICATE: 'True'
+      AIRFLOW__WEBSERVER__RBAC: 'True'
+      AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+      MLFLOW_TRACKING_URI: file:///opt/airflow/mlruns
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+      - ./src:/opt/airflow/src
+      - ./uploads:/opt/airflow/uploads
+      - ./processed_data:/opt/airflow/processed_data
+      - ./ml_models:/opt/airflow/ml_models
+      - ./mlruns:/opt/airflow/mlruns
     depends_on:
       airflow-webserver:
         condition: service_started
@@ -97,16 +139,41 @@ services:
         condition: service_healthy
 
   airflow-worker:
-    <<: *airflow-common
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: airflow celery worker
+    environment:
+      AIRFLOW__CORE__FERNET_KEY: 'd56lTnYHSibGIBPojxUJJ487xZ53LNT6q4ffCTR1LHE='
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CELERY__RESULT_BACKEND: redis://redis:6379/0
+      AIRFLOW__WEBSERVER__AUTHENTICATE: 'True'
+      AIRFLOW__WEBSERVER__RBAC: 'True'
+      AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+      AIRFLOW__API__ENABLE_EXPERIMENTAL_API: 'True'
+      MLFLOW_TRACKING_URI: file:///opt/airflow/mlruns
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+      - ./src:/opt/airflow/src
+      - ./uploads:/opt/airflow/uploads
+      - ./processed_data:/opt/airflow/processed_data
+      - ./ml_models:/opt/airflow/ml_models
+      - ./mlruns:/opt/airflow/mlruns
     depends_on:
       airflow-scheduler:
         condition: service_started
 
   streamlit:
     build:
-      context: . # Build context is now the root directory
-      dockerfile: ./streamlit/Dockerfile # Specify path to Streamlit's Dockerfile
+      context: .
+      dockerfile: ./streamlit/Dockerfile
     ports:
       - "8501:8501"
     volumes:
@@ -114,10 +181,29 @@ services:
       - ./processed_data:/app/processed_data
       - ./config:/app/config
       - ./src:/app/src
-      - ./streamlit/app.py:/app/app.py # Explicitly mount app.py
+      - ./ml_models:/app/ml_models
+      - ./streamlit/app.py:/app/app.py
     environment:
       AIRFLOW_API_BASE_URL: "http://airflow-webserver:8080/api/v1"
       AIRFLOW_UI_BASE_URL: "http://localhost:8080"
+      AIRFLOW_USERNAME: "admin"
+      AIRFLOW_PASSWORD: "admin"
     depends_on:
       airflow-webserver:
         condition: service_healthy
+
+  mlflow:
+    image: python:3.9-slim
+    command: bash -c "pip install mlflow && mlflow server --backend-store-uri /opt/airflow/mlruns --default-artifact-root /opt/airflow/mlruns --host 0.0.0.0 --port 5001"
+    ports:
+      - "5001:5001"  # Use port 5001 instead of 5000
+    volumes:
+      - ./mlruns:/opt/airflow/mlruns
+    depends_on:
+      airflow-webserver:
+        condition: service_started
+
+# Add named volumes for data persistence
+volumes:
+  postgres_data:
+  redis_data:
