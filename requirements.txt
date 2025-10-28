@@ -1,10 +1,43 @@
-requests
+
+mlflow
+# Core Airflow and workflow orchestration
 apache-airflow[cncf.kubernetes]==2.11.0
+
+# Web framework and API
+streamlit
+requests
+flask
+
+# Data processing and analysis
+pandas
+numpy
+scikit-learn
+plotly
+
+# Machine Learning and AI
+transformers==4.42.3
+torch==2.3.1
+openai
+sentence-transformers
+
+# Document processing
 Pillow==10.3.0
 pytesseract==0.3.10
 pdfminer.six==20221105
-transformers==4.42.3
-torch==2.3.1
-streamlit
-plotly
-scikit-learn
+
+# ML tracking and model management
+mlflow
+
+# Environment and configuration
+python-dotenv
+
+# Database connectivity
+psycopg2-binary
+redis
+
+# Utilities and helpers
+celery
+typing-extensions
+
+# Optional but recommended for production
+gunicorn

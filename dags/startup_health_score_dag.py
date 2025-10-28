@@ -164,6 +164,11 @@ def _extract_kpis_rag(**kwargs):
 def _calculate_scores(**kwargs):
     logger.info("Calculating startup health scores...")
     kpi_input_data = kwargs['ti'].xcom_pull(key='extracted_kpi_dict')
+    
+    # Get document name from the path
+    document_path_from_xcom = kwargs['ti'].xcom_pull(key='document_to_process_path')
+    document_name = os.path.basename(document_path_from_xcom) if document_path_from_xcom else "unknown"
+    
     if not kpi_input_data:
         logger.warning(f"KPI dict not found in XCom. Attempting to load from file: {PROCESSED_DATA_DIR}/*.json") # Adjusting warning
         # Try to find the latest extracted_kpis.json if not in XCom (fallback for manual debugging)
@@ -193,10 +198,11 @@ def _calculate_scores(**kwargs):
 
     try:
         config_loader = ConfigLoader(config_dir=CONFIG_DIR)
-        # Pass the API key to ScoringEngine
+        openai_api_key = os.environ.get("OPENAI_API_KEY")
         scoring_engine = ScoringEngine(config_loader=config_loader, openai_api_key=openai_api_key)
 
-        results = scoring_engine.calculate_scores(kpi_input_data)
+        # Pass document_name to calculate_scores
+        results = scoring_engine.calculate_scores(kpi_input_data, document_name=document_name)
 
         # Ensure the output file name is unique per run or based on input file
         document_path_from_xcom = kwargs['ti'].xcom_pull(key='document_to_process_path')

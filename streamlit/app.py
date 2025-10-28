@@ -8,9 +8,37 @@ from datetime import datetime
 import logging
 import re
 import pandas as pd
+import plotly.express as px
 
 # Configure Streamlit page
-st.set_page_config(layout="wide", page_title="Startup Health Score Dashboard 🚀")
+st.set_page_config(layout="wide", page_title="Startup Health Score Dashboard 🚀", initial_sidebar_state="expanded")
+
+# --- Custom modern styling (fonts, colors, cards) ---
+CUSTOM_CSS = """
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+:root{--bg:#071029;--bg-2:#0f1724;--card:#071428;--muted:#94a3b8;--accent:#06b6d4;--accent-2:#7c3aed;--glass: rgba(255,255,255,0.03)}
+html,body, [data-testid="stAppViewContainer"] {background: linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%); font-family: 'Inter', sans-serif;}
+.stApp .stMarkdown p {color: #cbd5e1}
+.stApp .stTitle {color: #E6EEF6}
+.stButton>button {background: linear-gradient(90deg,var(--accent),var(--accent-2))!important; color: white; border: none;}
+.card {background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.01)); border-radius:14px; padding:18px; box-shadow:0 8px 26px rgba(2,6,23,0.65);}
+.header-title {color:#E6EEF6; font-weight:700; font-size:28px; margin:0}
+.header-subtitle {color:var(--muted); font-size:14px; margin-top:6px;}
+.metric-card {background: linear-gradient(90deg, rgba(6,182,212,0.06), rgba(124,58,237,0.04)); border-radius:12px; padding:14px; text-align:center;}
+.kpi-table th {background:transparent; color:#cbd5e1;}
+.sidebar-card {background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:12px; border-radius:12px;}
+.logo-wrap {display:flex;align-items:center;gap:12px}
+.logo-wrap img{height:56px}
+.small-muted {color:#9aa6b2; font-size:13px}
+.pill {display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:#cfeff6; font-weight:600}
+.cta-btn {background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; border-radius:10px; padding:10px 14px; text-decoration:none}
+.bucket {padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent)}
+@media (max-width: 800px){ .header-title {font-size:22px} }
+</style>
+"""
+
+st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
 # Define paths relative to the Streamlit app's container WORKDIR (/app)
 UPLOADS_DIR = './uploads'
@@ -109,13 +137,46 @@ def get_file_prefix(file_name: str) -> str:
     # Ensure this matches the DAG's file naming convention
     return file_name.replace('.', '_')
 
+
+def render_metric_card(title: str, value: str, subtitle: str = "", color: str = "#06b6d4") -> None:
+    """Render a small metric card with a title, value and optional subtitle.
+
+    Inputs:
+    - title: label for the metric
+    - value: main value text
+    - subtitle: secondary text
+    - color: accent color for value
+    """
+    st.markdown(
+        f"""
+        <div class="metric-card">
+          <div style="font-size:12px;color:#9aa6b2">{title}</div>
+          <div style="font-size:26px;font-weight:700;color:{color};margin-top:6px">{value}</div>
+          <div style="font-size:12px;color:#94a3b8;margin-top:6px">{subtitle}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # --- Streamlit UI ---
-st.title("🚀 Startup Health Score Dashboard")
-st.markdown("""
-Welcome! Upload business documents (TXT, JPG, PNG, PDF) to get automated health scores.
-Our intelligent pipeline, powered by Airflow, will extract key performance indicators (KPIs)
-using advanced AI and calculate a comprehensive health score based on industry benchmarks.
-""")
+# Hero card (first updated UI)
+st.markdown(
+        """
+        <div class="card">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:24px">
+                <div style="flex:1">
+                    <h1 class="header-title">Startup Health Score Dashboard 🚀</h1>
+                    <p class="header-subtitle">Upload business documents (TXT, JPG, PNG, PDF) to get automated health scores. AI-powered KPI extraction & benchmarking with clear recommendations.</p>
+                </div>
+                <div style="text-align:right;min-width:220px;">
+                    <div style="font-size:12px;color:#94a3b8">Connected to Airflow:</div>
+                    <div style="margin-top:6px"><a href="%s" style="color: #9be7ff; text-decoration:none">Open Airflow UI →</a></div>
+                </div>
+            </div>
+        </div>
+        """ % AIRFLOW_UI_BASE_URL,
+        unsafe_allow_html=True,
+)
 
 # Sidebar for controls and info
 with st.sidebar:
