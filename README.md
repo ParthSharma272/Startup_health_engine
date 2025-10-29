@@ -6,6 +6,9 @@
 [![MLflow](https://img.shields.io/badge/Tracking-MLflow-0194E2?logo=mlflow&logoColor=white)](https://mlflow.org/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
 
+<img width="1680" height="727" alt="Screenshot 2025-10-29 at 9 43 23 AM" src="https://github.com/user-attachments/assets/8202fe6c-0db7-4006-ab1a-383586958b16" />
+
+
 An AI-powered platform that analyzes business documents (PDF, TXT, images) to extract KPIs and compute a standardized startup health score. The project uses a Streamlit UI as the frontend and an Airflow-orchestrated pipeline for processing and scoring.
 
 ## Table of contents
@@ -47,6 +50,9 @@ This project implements a complete pipeline from document ingestion to an interp
 	- Normalizes raw KPI values to comparable scales using configurable benchmarks and percentile thresholds (see `config/` files).
 	- Computes category-level scores and an aggregate startup health score (0–100).
 
+<img width="401" height="733" alt="Screenshot 2025-10-29 at 9 45 53 AM" src="https://github.com/user-attachments/assets/cc7e599a-cf01-4557-9a28-354f39a86b15" />
+<img width="570" height="729" alt="Screenshot 2025-10-29 at 9 46 34 AM" src="https://github.com/user-attachments/assets/debe5008-c271-4d32-bdfd-1963578bf582" />
+
 - Confidence & prediction metadata
 	- Generates a confidence score for each prediction and records which method produced the value (rule-based, ML, LLM).
 
@@ -80,6 +86,7 @@ This project implements a complete pipeline from document ingestion to an interp
 Notes: exact pinned versions are maintained in `requirements.txt`; in production consider using explicit pins and a lockfile.
 
 ## Quickstart
+
 
 Run the full stack locally with Docker Compose (recommended for development/testing).
 
