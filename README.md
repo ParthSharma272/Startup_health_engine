@@ -9,13 +9,18 @@
 An AI-powered platform that analyzes business documents (PDF, TXT, images) to extract KPIs and compute a standardized startup health score. The project uses a Streamlit UI as the frontend and an Airflow-orchestrated pipeline for processing and scoring.
 
 ## Table of contents
+
 - [What's included](#whats-included)
+- [Features](#features)
+- [Tech stack](#tech-stack)
 - [Quickstart — local (recommended)](#quickstart)
 - [Running Streamlit locally (dev)](#running-streamlit-locally-dev)
+- [Environment variables & configuration](#environment-variables--configuration)
 - [Deployment options](#deployment-options)
-- [Architecture & design notes](#architecture--design-notes)
+- [Architecture & how it works](#architecture--how-it-works)
+- [Operational considerations](#operational-considerations)
 - [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
+- [Roadmap](#roadmap)
 - [License](#license)
 
 ## What's included
@@ -26,41 +31,88 @@ An AI-powered platform that analyzes business documents (PDF, TXT, images) to ex
 - `dags/` — Airflow DAGs for the pipeline.
 - `processed_data/`, `uploads/`, `mlruns/`, `ml_models/` — data & model artifacts (volume-backed in Compose).
 
+## Features (expanded)
+
+This project implements a complete pipeline from document ingestion to an interpretable startup health score. Key capabilities:
+
+- Document ingestion and OCR
+	- Upload PDFs, images (PNG/JPG) and plain text via the Streamlit UI.
+	- OCR using Tesseract and PDF parsing via `pdfminer.six`.
+
+- Automated KPI extraction
+	- Extracts financial and non-financial KPIs (revenue, growth, burn rate, runway, team size, traction signals, product metrics, etc.).
+	- Uses rule-based extraction and optional LLM-assisted extraction when OpenAI is configured.
+
+- Normalization and benchmarking
+	- Normalizes raw KPI values to comparable scales using configurable benchmarks and percentile thresholds (see `config/` files).
+	- Computes category-level scores and an aggregate startup health score (0–100).
+
+- Confidence & prediction metadata
+	- Generates a confidence score for each prediction and records which method produced the value (rule-based, ML, LLM).
+
+- Actionable insights & recommendations
+	- Combines rule-based alerts and AI-assisted recommendations to surface strengths, weaknesses, and prioritized next steps.
+
+- Orchestration & observability
+	- Airflow DAGs manage end-to-end processing with retries, logging and task-level visibility.
+	- MLflow tracks model experiments, artifacts, and model versions.
+
+- Export & integrations
+	- Download full analysis as JSON.
+	- Extensible outputs for BI tools or downstream systems (CSV/JSON/MLflow artifacts).
+
+## Tech stack (details & core versions)
+
+- Frontend: Streamlit (app at `streamlit/app.py`)
+- Orchestration: Apache Airflow (tested with `apache-airflow[cncf.kubernetes]==2.11.0`)
+- Containers: Docker & Docker Compose
+- Database: PostgreSQL (metadata)
+- Broker: Redis (Celery broker)
+- ML tracking: MLflow
+- Important Python libraries (as listed in `requirements.txt`):
+	- pandas, numpy, scikit-learn
+	- plotly (visualization)
+	- transformers==4.42.3, torch==2.3.1 (optional LLM/embedding workloads)
+	- pdfminer.six==20221105, Pillow==10.3.0, pytesseract==0.3.10 (document processing)
+	- openai, sentence-transformers (LLM and embedding integrations)
+- Optional runtime: Gunicorn for WSGI services
+
+Notes: exact pinned versions are maintained in `requirements.txt`; in production consider using explicit pins and a lockfile.
+
 ## Quickstart
 
-These instructions launch the full stack locally using Docker Compose (recommended for development/testing).
+Run the full stack locally with Docker Compose (recommended for development/testing).
 
 ### Prerequisites
-- Docker and Docker Compose (or Docker Compose plugin) installed
-- (Optional) `python3`, a virtualenv if you want to run Streamlit outside Docker
+
+- Docker & Docker Compose installed
+- Optional: Python 3.10+ for local Streamlit development
 
 ### Start the stack (from repository root)
 
 ```bash
-# 1) Start dependent services (postgres + redis) first
+# 1) Start core infra (Postgres + Redis)
 docker compose up -d postgres redis
 
-# 2) Initialize Airflow (run until it completes; shows logs)
+# 2) Initialize Airflow (this runs DB init and creates the admin user)
 docker compose up --build airflow-init
 
-# 3) Start the full stack (webserver, scheduler, worker, streamlit, mlflow)
+# 3) Start the remaining services
 docker compose up -d --build
 
-# 4) Verify
+# 4) Confirm services are running
 docker compose ps
 ```
 
-Open the UIs in your browser:
-- Airflow:  http://localhost:8080  (default admin/admin created by init)
+Web UIs:
+
+- Airflow: http://localhost:8080 (default admin/admin created by `airflow-init`)
 - Streamlit: http://localhost:8501
 - MLflow: http://localhost:5001
 
-Notes
-- If port 8501 (Streamlit) is already in use locally, stop the local process or change the `ports` mapping in `docker-compose.yaml` (e.g., `8502:8501`).
-
 ## Running Streamlit locally (dev)
 
-If you prefer to run the Streamlit app outside Docker for faster iteration:
+For faster iteration you can run the Streamlit app locally without Docker:
 
 ```bash
 python3 -m venv .venv
@@ -69,110 +121,71 @@ pip install -r requirements.txt
 streamlit run streamlit/app.py
 ```
 
-### Environment variables
+## Environment variables & configuration
+
+Recommended environment variables (use a `.env` loaded by Compose or set in your shell):
+
 - `AIRFLOW_API_BASE_URL` — Airflow REST API base (default: `http://airflow-webserver:8080/api/v1`)
 - `AIRFLOW_UI_BASE_URL` — Airflow UI URL for links in the app
-- `AIRFLOW_USERNAME` / `AIRFLOW_PASSWORD` — credentials used by the Streamlit app to trigger DAGs (do not store in public repos)
+- `AIRFLOW_USERNAME` / `AIRFLOW_PASSWORD` — credentials used by the Streamlit app to trigger DAGs
+- `OPENAI_API_KEY` — (optional) set to enable LLM suggestions and embedding calls
+- `MLFLOW_TRACKING_URI` — optional override if you host MLflow elsewhere
 
-Set these via a `.env` that your Compose file/containers load or export them in your shell for local runtimes.
+Configuration files:
+
+- `config/` contains JSON files for KPI weights, benchmarks and percentile thresholds. Tweak these to adapt scoring to different industries.
 
 ## Deployment options
 
-You can deploy this project in multiple ways depending on scale and budget. The two recommended options:
+Choose based on scale and operational preferences:
 
-1) Single VM (Docker Compose) + Traefik (recommended for small teams)
-- Run the whole stack on a Linux server using Docker Compose.
-- Use Traefik as a reverse proxy for automatic TLS (Let's Encrypt).
-- Good for small-to-medium workloads and keeps volumes and Airflow local to the host.
+- Single VM with Docker Compose + Traefik (recommended for small teams)
+	- Simple to operate, supports persistent volumes and Traefik-managed TLS.
+	- Good for proof-of-concept and internal deployments.
 
-2) Cloud / Managed (Kubernetes or PaaS)
-- Production-grade: deploy Airflow with an official Helm chart (Kubernetes), use managed Postgres, and run Streamlit/Next.js as services behind an Ingress + cert-manager.
-- Use object storage (S3) for artifacts and backups.
+- Managed / Kubernetes (for production scale)
+	- Use the official Airflow Helm chart, managed Postgres (RDS/Cloud SQL), object storage (S3/Spaces) and an Ingress with cert-manager.
+	- Scales better for many concurrent DAGs and workers.
 
-### Important note about Vercel / Streamlit Cloud
-Vercel is great to host a Next.js frontend, but it cannot run your stateful services (Airflow, Postgres, Redis) and cannot mount local volumes. If you later migrate the frontend to Next.js, host the backend on a VM or Kubernetes and point the frontend to secure API endpoints.
+- PaaS options for Streamlit only
+	- Streamlit Cloud, Render or Vercel (if you migrate to Next.js). If you host Streamlit separately, ensure the backend APIs remain reachable and secure.
 
-## Architecture & design notes
+## Architecture & how it works
 
-- Airflow orchestrates the end-to-end pipeline: extraction -> KPI normalization -> scoring -> writing outputs to `processed_data/`.
-- Streamlit is a thin frontend that uploads files to `uploads/`, triggers the Airflow DAG, polls for results in `processed_data/`, and renders a dashboard with KPI tables and charts.
-- ML models and tracking use `mlruns/` and `ml_models/` (MLflow integration).
+High-level flow:
+
+1. User uploads a document in the Streamlit UI. The file is saved to `uploads/` (shared volume).
+2. The UI triggers an Airflow DAG run with the file name in `conf`.
+3. Airflow tasks extract text (OCR/parsing), run KPI extraction (rules + models), normalize scores, and persist results to `processed_data/` as JSON.
+4. Streamlit polls `processed_data/` and displays results (scores, KPI tables, Plotly charts). The user can download the full JSON.
+
+Data & observability:
+
+- Airflow logs are written to `logs/` and visible via the Airflow UI.
+- MLflow stores experiments in `mlruns/` (local by default).
+
+## Operational considerations
+
+- Secrets & credentials: do NOT commit credentials. Use environment variables, Docker secrets, or a secrets manager.
+- Backups: schedule periodic Postgres dumps and back up `mlruns/` if experiments matter.
+- Storage: for production, replace local volume artifact storage with S3 (or S3-compatible) to simplify scaling and backups.
+- Monitoring: add Prometheus/Grafana or a cloud provider monitoring for CPU/Memory and Airflow task failures.
+- Scaling: increase Airflow workers and move to Kubernetes if you need horizontal scaling and task isolation.
 
 ## Troubleshooting
 
-- Port conflicts: if `docker compose up` fails due to ports in use (e.g., 8501), identify and stop the local process (`lsof -nP -iTCP:8501 -sTCP:LISTEN`) or change the port mapping in `docker-compose.yaml`.
-- Airflow init failures: re-run `docker compose up --build airflow-init` and inspect logs; ensure Postgres and Redis are healthy.
-- Missing dependencies locally: install Python packages from `requirements.txt` (Streamlit, pandas, plotly, etc.).
+- Port conflicts: run `lsof -nP -iTCP:8501 -sTCP:LISTEN` to locate processes blocking Streamlit.
+- Airflow init errors: check `docker compose logs airflow-init` and ensure Postgres/Redis are healthy.
+- Missing Python deps: `pip install -r requirements.txt` in a venv for local runs.
 
-## Contributing
 
-Contributions are welcome. Suggested flow:
+## Roadmap
 
-1. Fork the repo and create a feature branch
-2. Run tests / lint locally (add tests where possible)
-3. Open a pull request with a clear description
-
-Please keep secrets out of PRs and use `.env` local files for credentials.
-
-## What's next / roadmap
-
-- Improve frontend UI (optional migration to Next.js for a richer dashboard)
-- Add authenticated API endpoints for Streamlit to call (reduce direct Airflow exposure)
-- Implement CI to build and publish Docker images and a deploy workflow
+- Improve Streamlit UI (UX polish, metric cards, theme toggle)
+- Add authenticated, server-side APIs to reduce direct exposure of Airflow
+- Add CI/CD: build/publish images and automations to deploy to a Linux host or registry
 
 ## License
 
 This project is released under the MIT License. See `LICENSE` for details.
 
----
-
-If you'd like, I can add a `docker-compose.traefik.yml`, update `docker-compose.yaml` with recommended Traefik labels, and add a `deploy/README.md` with exact commands.
-# 🚀 Startup Health Score Dashboard  
-
-[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)  
-[![Apache Airflow](https://img.shields.io/badge/Orchestration-Airflow-017CEE?logo=apache-airflow&logoColor=white)](https://airflow.apache.org/)  
-[![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)  
-[![MLflow](https://img.shields.io/badge/Tracking-MLflow-0194E2?logo=mlflow&logoColor=white)](https://mlflow.org/)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
-
-An **AI-powered platform** to automatically score startup health by analyzing business documents using a **Streamlit UI** and an orchestrated **Airflow pipeline**.  
-
----
-
-## ✨ Features  
-
-- 🔍 **Automated KPI Extraction** → Extracts **33+ KPIs** from PDFs, TXT, and images using an **OpenAI RAG model**  
-- 📊 **Standardized Scoring** → Normalizes KPIs against **industry benchmarks** to generate an objective health score  
-- 🤖 **ML-Powered Confidence** → A **RandomForest model** predicts a confidence score for each assessment’s reliability  
-- ⚙️ **End-to-End Orchestration** → Automated with **Apache Airflow + Docker**  
-- 🔄 **Continuous Learning** → Periodic retraining with **MLflow experiment tracking**  
-
----
-
-## 🏗️ System Architecture  
-![photo_2025-08-30_10-53-44](https://github.com/user-attachments/assets/04d3bfdb-a4d2-46ec-8d3b-8c5ffd1d3eee)
-
-
-## 🛠️ Tech Stack
-
-- **Frontend / UI** → Streamlit  
-- **Pipeline Orchestration** → Apache Airflow  
-- **Containerization** → Docker, Docker Compose  
-- **AI / ML** → OpenAI, Scikit-learn, MLflow  
-- **Databases** → PostgreSQL, Redis  
-
----
-
-## ⚡ Quickstart
-
-### ✅ Prerequisites
-- Docker & Docker Compose installed  
-- OpenAI API Key  
-
-### 🚀 Setup & Run
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/startup-health-engine.git
-cd startup-health-engine
